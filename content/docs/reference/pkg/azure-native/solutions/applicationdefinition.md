@@ -69,7 +69,7 @@ package main
 
 import (
 	solutions "github.com/pulumi/pulumi-azure-native/sdk/go/azure/solutions"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -168,19 +168,45 @@ const applicationDefinition = new azure_native.solutions.ApplicationDefinition("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationDefinitionArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationAuthorizationArgs]]</span> = None<span class="p">, </span><span class="nx">create_ui_definition</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">deployment_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationDeploymentPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[ApplicationLockLevel]</span> = None<span class="p">, </span><span class="nx">locking_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationPackageLockingPolicyDefinitionArgs]</span> = None<span class="p">, </span><span class="nx">main_template</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationManagementPolicyArgs]</span> = None<span class="p">, </span><span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationNotificationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">application_definition_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationDefinitionArtifactArgs]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">authorizations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationAuthorizationArgs]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">create_ui_definition</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                          <span class="nx">deployment_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationDeploymentPolicyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">lock_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationLockLevel]]</span> = None<span class="p">,</span>
+                          <span class="nx">locking_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationPackageLockingPolicyDefinitionArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">main_template</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                          <span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">management_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationManagementPolicyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationNotificationPolicyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">package_file_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationPolicyArgs]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplicationDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplicationDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApplicationDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApplicationDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApplicationDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -215,22 +241,32 @@ const applicationDefinition = new azure_native.solutions.ApplicationDefinition("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApplicationDefinitionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +682,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#locklevel_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlocklevel">Application<wbr>Lock<wbr>Level</a></span>
+        <span class="property-type"><a href="#applicationlocklevel">pulumi.<wbr>Input<Application<wbr>Lock<wbr>Level></a></span>
     </dt>
     <dd>{{% md %}}The managed application lock level.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -654,7 +690,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +698,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#applicationdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Definition<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the managed application definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +706,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifact">Application<wbr>Definition<wbr>Artifact[]</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifact">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Definition<wbr>Artifact<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +714,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorization">Application<wbr>Authorization[]</a></span>
+        <span class="property-type"><a href="#applicationauthorization">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Authorization<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +730,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#deploymentpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicy">Application<wbr>Deployment<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicy">pulumi.<wbr>Input<Application<wbr>Deployment<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +738,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +746,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +754,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the package is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +762,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +770,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#lockingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">pulumi.<wbr>Input<Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +786,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the resource that manages this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +794,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#managementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicy">Application<wbr>Management<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicy">pulumi.<wbr>Input<Application<wbr>Management<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +802,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#notificationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicy">Application<wbr>Notification<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicy">pulumi.<wbr>Input<Application<wbr>Notification<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +810,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#packagefileuri_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>File<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition package file Uri. Use this element{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +818,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicy">Application<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#applicationpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +826,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +834,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -810,7 +846,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#lock_level_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlocklevel">Application<wbr>Lock<wbr>Level</a></span>
+        <span class="property-type"><a href="#applicationlocklevel">Input[Application<wbr>Lock<wbr>Level]</a></span>
     </dt>
     <dd>{{% md %}}The managed application lock level.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -818,7 +854,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +862,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#application_definition_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>definition_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the managed application definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +870,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifact">Sequence[Application<wbr>Definition<wbr>Artifact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifact">Input[Application<wbr>Definition<wbr>Artifact<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +878,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorization">Sequence[Application<wbr>Authorization<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationauthorization">Input[Application<wbr>Authorization<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +894,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#deployment_policy_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicy">Application<wbr>Deployment<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicy">Input[Application<wbr>Deployment<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +902,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +910,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +918,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the package is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +926,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +934,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#locking_policy_python" style="color: inherit; text-decoration: inherit;">locking_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Input[Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +950,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the resource that manages this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +958,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#management_policy_python" style="color: inherit; text-decoration: inherit;">management_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicy">Application<wbr>Management<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicy">Input[Application<wbr>Management<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +966,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicy">Application<wbr>Notification<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicy">Input[Application<wbr>Notification<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +974,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#package_file_uri_python" style="color: inherit; text-decoration: inherit;">package_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition package file Uri. Use this element{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +982,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicy">Sequence[Application<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationpolicy">Input[Application<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +990,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +998,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1257,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1265,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1285,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationdefinitionartifactname">Application<wbr>Definition<wbr>Artifact<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#applicationdefinitionartifactname">pulumi.<wbr>Input<Application<wbr>Definition<wbr>Artifact<wbr>Name></a></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationartifacttype">Application<wbr>Artifact<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationartifacttype">pulumi.<wbr>Input<Application<wbr>Artifact<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact blob uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1383,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#applicationdefinitionartifactname">Application<wbr>Definition<wbr>Artifact<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#applicationdefinitionartifactname">Input[Application<wbr>Definition<wbr>Artifact<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1391,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationartifacttype">Application<wbr>Artifact<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationartifacttype">Input[Application<wbr>Artifact<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1399,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact blob uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact blob uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application definition artifact blob uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1585,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deploymentmode">Deployment<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#deploymentmode">pulumi.<wbr>Input<Deployment<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#deploymentmode">Deployment<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#deploymentmode">Input[Deployment<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1635,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application deployment mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1647,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application deployment mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#applicationmanagementmode">Application<wbr>Management<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#applicationmanagementmode">pulumi.<wbr>Input<Application<wbr>Management<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The managed application management mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#applicationmanagementmode">Application<wbr>Management<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#applicationmanagementmode">Input[Application<wbr>Management<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The managed application management mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application management mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1807,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application management mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1845,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1895,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1907,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1945,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">Application<wbr>Notification<wbr>Endpoint[]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Notification<wbr>Endpoint<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1957,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">Input[Application<wbr>Notification<wbr>Endpoint<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1995,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">Application<wbr>Notification<wbr>Endpoint<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2007,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">Input[Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2045,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedactions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2057,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_actions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2095,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedactions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2107,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_actions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The deny assignment excluded actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy definition Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2205,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy definition Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2291,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2299,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy definition Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2319,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy definition Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2483,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2515,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2523,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2535,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2543,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2551,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2567,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2693,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2745,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The SKU capacity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU family.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}

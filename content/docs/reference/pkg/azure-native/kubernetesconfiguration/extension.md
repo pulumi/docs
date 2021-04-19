@@ -78,7 +78,7 @@ package main
 
 import (
 	kubernetesconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kubernetesconfiguration"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -202,19 +202,39 @@ const extension = new azure_native.kubernetesconfiguration.Extension("extension"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_upgrade_minor_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_rp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_protected_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">configuration_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">extension_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extension_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ConfigurationIdentityArgs]</span> = None<span class="p">, </span><span class="nx">release_train</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ScopeArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExtensionStatusArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">auto_upgrade_minor_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">cluster_resource_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">cluster_rp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">configuration_protected_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">configuration_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">extension_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">extension_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConfigurationIdentityArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">release_train</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScopeArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ExtensionStatusArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExtension</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Extension</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExtension</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Extension</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Extension</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExtensionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -249,22 +269,32 @@ const extension = new azure_native.kubernetesconfiguration.Extension("extension"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ExtensionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +614,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -592,7 +622,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#clusterresourcename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -600,7 +630,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#clusterrp_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Rp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -608,7 +638,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +646,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to note if this instance participates in auto upgrade of minor version, or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +654,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configurationprotectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Protected<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +662,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configurationsettings_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Configuration settings, as name-value pairs for configuring this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +670,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#extensioninstancename_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of an instance of the Extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +678,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#extensiontype_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +686,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationidentity">Configuration<wbr>Identity</a></span>
+        <span class="property-type"><a href="#configurationidentity">pulumi.<wbr>Input<Configuration<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The identity of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +694,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#releasetrain_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Train</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +702,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope</a></span>
+        <span class="property-type"><a href="#scope">pulumi.<wbr>Input<Scope<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Scope at which the extension instance is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +710,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionstatus">Extension<wbr>Status[]</a></span>
+        <span class="property-type"><a href="#extensionstatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Extension<wbr>Status<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Status from this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +718,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -700,7 +730,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -708,7 +738,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cluster_resource_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -716,7 +746,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cluster_rp_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>rp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -724,7 +754,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +762,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to note if this instance participates in auto upgrade of minor version, or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +770,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configuration_protected_settings_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>protected_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +778,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configuration_settings_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Configuration settings, as name-value pairs for configuring this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +786,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#extension_instance_name_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of an instance of the Extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +794,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#extension_type_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +802,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationidentity">Configuration<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationidentity">Input[Configuration<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The identity of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -780,7 +810,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#release_train_python" style="color: inherit; text-decoration: inherit;">release_<wbr>train</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +818,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Input[Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Scope at which the extension instance is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +826,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionstatus">Sequence[Extension<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extensionstatus">Input[Extension<wbr>Status<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Status from this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +834,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity which is used by the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1253,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity which is used by the configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1281,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity which is used by the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1343,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service specific error code which serves as the substatus for the HTTP error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1351,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service specific error code which serves as the substatus for the HTTP error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status code provided by the Extension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Short description of status of this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#leveltype">Level<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#leveltype">pulumi.<wbr>Input<Level<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Level of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Detailed message of the status from the Extension instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DateLiteral (per ISO8601) noting the time of installation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1517,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status code provided by the Extension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Short description of status of this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#leveltype">Level<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#leveltype">Input[Level<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Level of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Detailed message of the status from the Extension instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DateLiteral (per ISO8601) noting the time of installation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1651,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status code provided by the Extension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Short description of status of this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1667,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Level of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Detailed message of the status from the Extension instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DateLiteral (per ISO8601) noting the time of installation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1695,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status code provided by the Extension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1703,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Short description of status of this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Level of the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Detailed message of the status from the Extension instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1727,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DateLiteral (per ISO8601) noting the time of installation status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1837,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopecluster">Scope<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#scopecluster">pulumi.<wbr>Input<Scope<wbr>Cluster<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespace">Scope<wbr>Namespace</a></span>
+        <span class="property-type"><a href="#scopenamespace">pulumi.<wbr>Input<Scope<wbr>Namespace<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopecluster">Scope<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopecluster">Input[Scope<wbr>Cluster<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespace">Scope<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespace">Input[Scope<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasenamespace_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1915,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_namespace_python" style="color: inherit; text-decoration: inherit;">release_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1953,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasenamespace_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1965,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_namespace_python" style="color: inherit; text-decoration: inherit;">release_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2015,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2053,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2065,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2119,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeclusterresponse">Scope<wbr>Cluster<wbr>Response</a></span>
+        <span class="property-type"><a href="#scopeclusterresponse">pulumi.<wbr>Input<Scope<wbr>Cluster<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespaceresponse">Scope<wbr>Namespace<wbr>Response</a></span>
+        <span class="property-type"><a href="#scopenamespaceresponse">pulumi.<wbr>Input<Scope<wbr>Namespace<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeclusterresponse">Scope<wbr>Cluster<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopeclusterresponse">Input[Scope<wbr>Cluster<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespaceresponse">Scope<wbr>Namespace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespaceresponse">Input[Scope<wbr>Namespace<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2265,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2273,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2281,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2289,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2305,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2341,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2349,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2357,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

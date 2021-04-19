@@ -89,7 +89,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -286,7 +286,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -389,19 +389,53 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceExternalAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_zone_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityWithUserAssignedIdentitiesArgs]</span> = None<span class="p">, </span><span class="nx">instance_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedServerCreateMode]]</span> = None<span class="p">, </span><span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_override</span><span class="p">:</span> <span class="nx">Optional[Union[str, ManagedInstanceProxyOverride]]</span> = None<span class="p">, </span><span class="nx">public_data_endpoint_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_managed_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageAccountType]]</span> = None<span class="p">, </span><span class="nx">storage_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedInstanceExternalAdministratorArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">dns_zone_partner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdentityWithUserAssignedIdentitiesArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">instance_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ManagedInstanceLicenseType]]]</span> = None<span class="p">,</span>
+                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">managed_instance_create_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ManagedServerCreateMode]]]</span> = None<span class="p">,</span>
+                    <span class="nx">managed_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">proxy_override</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ManagedInstanceProxyOverride]]]</span> = None<span class="p">,</span>
+                    <span class="nx">public_data_endpoint_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">source_managed_instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, StorageAccountType]]]</span> = None<span class="p">,</span>
+                    <span class="nx">storage_size_in_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">timezone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">v_cores</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagedInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -436,22 +470,32 @@ const managedInstance = new azure_native.sql.ManagedInstance("managedInstance", 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagedInstanceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1013,7 +1057,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1065,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1073,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The administrator login password (required for managed instance creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1081,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administrators_nodejs" style="color: inherit; text-decoration: inherit;">administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator</a></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">pulumi.<wbr>Input<Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1089,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Collation of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1097,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#dnszonepartner_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Partner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id of another managed instance whose DNS zone this managed instance will share after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1105,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1113,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#instancepoolid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Id of the instance pool this managed server belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1121,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1129,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedinstancelicensetype">Managed<wbr>Instance<wbr>License<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedinstancelicensetype">pulumi.<wbr>Input<Managed<wbr>Instance<wbr>License<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1137,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1145,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#maintenanceconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies maintenance configuration id to apply to this managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1153,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#managedinstancecreatemode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedservercreatemode">Managed<wbr>Server<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedservercreatemode">pulumi.<wbr>Input<Managed<wbr>Server<wbr>Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of database creation.
 
@@ -1121,7 +1165,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#managedinstancename_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1173,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1181,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#primaryuserassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1189,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#proxyoverride_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedinstanceproxyoverride">Managed<wbr>Instance<wbr>Proxy<wbr>Override</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedinstanceproxyoverride">pulumi.<wbr>Input<Managed<wbr>Instance<wbr>Proxy<wbr>Override></a></span>
     </dt>
     <dd>{{% md %}}Connection type used for connecting to the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1197,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#publicdataendpointenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Data<wbr>Endpoint<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the public data endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1205,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1213,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1221,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#sourcemanagedinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Managed<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source managed instance associated with create operation of this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1229,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storageaccounttype">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1237,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#storagesizeingb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1245,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet resource ID for the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1253,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1261,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#timezoneid_nodejs" style="color: inherit; text-decoration: inherit;">timezone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the timezone. Allowed values are timezones supported by Windows.
 Windows keeps details on supported timezones, including the id, in registry under
@@ -1230,7 +1274,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#vcores_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Cores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1282,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the multi-az is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1294,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1302,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,7 +1310,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The administrator login password (required for managed instance creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1318,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#administrators_python" style="color: inherit; text-decoration: inherit;">administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceexternaladministrator">Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceexternaladministrator">Input[Managed<wbr>Instance<wbr>External<wbr>Administrator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory administrator of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1326,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Collation of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1334,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#dns_zone_partner_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>partner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id of another managed instance whose DNS zone this managed instance will share after creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1342,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Input[Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1350,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#instance_pool_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Id of the instance pool this managed server belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1314,7 +1358,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1366,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedinstancelicensetype">Managed<wbr>Instance<wbr>License<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedinstancelicensetype">Input[Managed<wbr>Instance<wbr>License<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1330,7 +1374,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1382,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#maintenance_configuration_id_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies maintenance configuration id to apply to this managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1390,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#managed_instance_create_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedservercreatemode">Managed<wbr>Server<wbr>Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedservercreatemode">Input[Managed<wbr>Server<wbr>Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of database creation.
 
@@ -1358,7 +1402,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#managed_instance_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1410,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1418,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#primary_user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>user_<wbr>assigned_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1426,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#proxy_override_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedinstanceproxyoverride">Managed<wbr>Instance<wbr>Proxy<wbr>Override</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedinstanceproxyoverride">Input[Managed<wbr>Instance<wbr>Proxy<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}Connection type used for connecting to the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1434,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#public_data_endpoint_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>data_<wbr>endpoint_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the public data endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1442,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1450,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1458,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#source_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source managed instance associated with create operation of this instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1466,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storageaccounttype">Input[Storage<wbr>Account<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1474,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#storage_size_in_gb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1482,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet resource ID for the managed instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1490,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1498,7 @@ Restore: Creates an instance by restoring a set of backups to specific point in 
 <a href="#timezone_id_python" style="color: inherit; text-decoration: inherit;">timezone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the timezone. Allowed values are timezones supported by Windows.
 Windows keeps details on supported timezones, including the id, in registry under
@@ -1467,7 +1511,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#v_cores_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1519,7 @@ An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standar
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the multi-az is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1934,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#administratortype">Administrator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#administratortype">pulumi.<wbr>Input<Administrator<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1942,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureadonlyauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ADOnly<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1958,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#principaltype">Principal<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#principaltype">pulumi.<wbr>Input<Principal<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1986,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#administratortype">Administrator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#administratortype">Input[Administrator<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1994,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_ad_only_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>ad_<wbr>only_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#principaltype">Principal<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#principaltype">Input[Principal<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2144,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureadonlyauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ADOnly<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2196,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2204,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_ad_only_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>ad_<wbr>only_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2212,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2220,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2236,7 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2316,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2324,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">pulumi.<wbr>Input<Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2336,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2344,7 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointconnectionpropertiesresponse">Input[Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2414,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2422,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">pulumi.<wbr>Input<Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">pulumi.<wbr>Input<Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2442,7 +2486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2450,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointpropertyresponse">Input[Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2458,7 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstatepropertyresponse">Input[Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2496,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2508,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2578,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2586,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2594,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2606,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2614,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2622,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2762,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#identitytype">pulumi.<wbr>Input<Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2770,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2782,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#identitytype">Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#identitytype">Input[Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2790,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2876,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2884,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2892,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2900,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2912,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2920,7 +2964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2928,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Identity<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3038,7 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3046,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,7 +3098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3062,7 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3082,7 +3126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3090,7 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3098,7 +3142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3106,7 +3150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3114,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3216,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3224,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3232,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3248,7 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3260,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3268,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3276,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3284,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3292,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3376,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3384,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3396,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3404,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
 {{% /choosable %}}

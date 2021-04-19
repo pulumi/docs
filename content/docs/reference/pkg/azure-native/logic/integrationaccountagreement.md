@@ -236,7 +236,7 @@ package main
 
 import (
 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -765,19 +765,37 @@ const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">agreement_type</span><span class="p">:</span> <span class="nx">Optional[AgreementType]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[AgreementContentArgs]</span> = None<span class="p">, </span><span class="nx">guest_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">guest_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_identity</span><span class="p">:</span> <span class="nx">Optional[BusinessIdentityArgs]</span> = None<span class="p">, </span><span class="nx">host_partner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                <span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">agreement_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AgreementType]]</span> = None<span class="p">,</span>
+                                <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AgreementContentArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">guest_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BusinessIdentityArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">guest_partner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">host_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BusinessIdentityArgs]]</span> = None<span class="p">,</span>
+                                <span class="nx">host_partner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAgreement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAgreement</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountAgreement</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountAgreement</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountAgreement</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationAccountAgreementArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -812,22 +830,32 @@ const integrationAccountAgreement = new azure_native.logic.IntegrationAccountAgr
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntegrationAccountAgreementArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1115,7 +1143,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreementtype_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementtype">Agreement<wbr>Type</a></span>
+        <span class="property-type"><a href="#agreementtype">pulumi.<wbr>Input<Agreement<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1151,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementcontent">Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#agreementcontent">pulumi.<wbr>Input<Agreement<wbr>Content<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1159,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#guestidentity_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1167,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#guestpartner_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Partner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1147,7 +1175,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#hostidentity_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1155,7 +1183,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#hostpartner_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Partner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1191,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1171,7 +1199,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1207,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreementname_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1215,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1231,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1243,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreement_type_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementtype">Agreement<wbr>Type</a></span>
+        <span class="property-type"><a href="#agreementtype">Input[Agreement<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The agreement type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1251,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agreementcontent">Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#agreementcontent">Input[Agreement<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The agreement content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1231,7 +1259,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#guest_identity_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the guest partner.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1239,7 +1267,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#guest_partner_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>partner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The integration account partner that is set as guest partner for this agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1247,7 +1275,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#host_identity_python" style="color: inherit; text-decoration: inherit;">host_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The business identity of the host partner.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1255,7 +1283,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#host_partner_python" style="color: inherit; text-decoration: inherit;">host_<wbr>partner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The integration account partner that is set as host partner for this agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1291,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1271,7 +1299,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1307,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#agreement_name_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1315,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1331,7 @@ The IntegrationAccountAgreement resource accepts the following [input]({{< relre
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1582,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorecertificatenamemismatch_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1590,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keephttpconnectionalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Http<wbr>Connection<wbr>Alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1598,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supporthttpstatuscodecontinue_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1606,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfoldhttpheaders_nodejs" style="color: inherit; text-decoration: inherit;">unfold<wbr>Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1618,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_certificate_name_mismatch_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>certificate_<wbr>name_<wbr>mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1626,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keep_http_connection_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>http_<wbr>connection_<wbr>alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1634,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#support_http_status_code_continue_python" style="color: inherit; text-decoration: inherit;">support_<wbr>http_<wbr>status_<wbr>code_<wbr>continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1642,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfold_http_headers_python" style="color: inherit; text-decoration: inherit;">unfold_<wbr>http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1728,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorecertificatenamemismatch_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1736,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keephttpconnectionalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Http<wbr>Connection<wbr>Alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1744,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supporthttpstatuscodecontinue_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1752,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfoldhttpheaders_nodejs" style="color: inherit; text-decoration: inherit;">unfold<wbr>Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_certificate_name_mismatch_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>certificate_<wbr>name_<wbr>mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1772,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keep_http_connection_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>http_<wbr>connection_<wbr>alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1780,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#support_http_status_code_continue_python" style="color: inherit; text-decoration: inherit;">support_<wbr>http_<wbr>status_<wbr>code_<wbr>continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1788,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfold_http_headers_python" style="color: inherit; text-decoration: inherit;">unfold_<wbr>http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1842,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">pulumi.<wbr>Input<AS2One<wbr>Way<wbr>Agreement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1850,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">pulumi.<wbr>Input<AS2One<wbr>Way<wbr>Agreement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1862,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">Input[AS2One<wbr>Way<wbr>Agreement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1870,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreement">AS2One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreement">Input[AS2One<wbr>Way<wbr>Agreement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1924,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">pulumi.<wbr>Input<AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1932,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">pulumi.<wbr>Input<AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1944,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Input[AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1952,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Input[AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2054,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autogeneratefilename_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>File<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2062,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenametemplate_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2070,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagecontenttype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2078,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendmessageonfilenamegenerationerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Message<wbr>On<wbr>File<wbr>Name<wbr>Generation<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2086,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transmitfilenameinmimeheader_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>File<wbr>Name<wbr>In<wbr>Mime<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2098,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autogenerate_file_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2106,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_name_template_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2114,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_content_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2122,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_message_on_file_name_generation_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>message_<wbr>on_<wbr>file_<wbr>name_<wbr>generation_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2130,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transmit_file_name_in_mime_header_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>file_<wbr>name_<wbr>in_<wbr>mime_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2232,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autogeneratefilename_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>File<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2240,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenametemplate_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Name<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2248,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagecontenttype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2256,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendmessageonfilenamegenerationerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Message<wbr>On<wbr>File<wbr>Name<wbr>Generation<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2264,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transmitfilenameinmimeheader_nodejs" style="color: inherit; text-decoration: inherit;">transmit<wbr>File<wbr>Name<wbr>In<wbr>Mime<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2276,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autogenerate_file_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>file_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to auto generate file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2284,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_name_template_python" style="color: inherit; text-decoration: inherit;">file_<wbr>name_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template for file name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2292,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_content_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2300,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_message_on_file_name_generation_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>message_<wbr>on_<wbr>file_<wbr>name_<wbr>generation_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend message on file name generation error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2308,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transmit_file_name_in_mime_header_python" style="color: inherit; text-decoration: inherit;">transmit_<wbr>file_<wbr>name_<wbr>in_<wbr>mime_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to transmit file name in mime header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2362,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resendifmdnnotreceived_nodejs" style="color: inherit; text-decoration: inherit;">resend<wbr>If<wbr>MDNNot<wbr>Received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2370,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Duplicate<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2382,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resend_if_mdn_not_received_python" style="color: inherit; text-decoration: inherit;">resend_<wbr>if_<wbr>mdn_<wbr>not_<wbr>received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2390,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_duplicate_message_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>duplicate_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2444,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resendifmdnnotreceived_nodejs" style="color: inherit; text-decoration: inherit;">resend<wbr>If<wbr>MDNNot<wbr>Received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2452,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Duplicate<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2464,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resend_if_mdn_not_received_python" style="color: inherit; text-decoration: inherit;">resend_<wbr>if_<wbr>mdn_<wbr>not_<wbr>received</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to resend message If MDN is not received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2472,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_duplicate_message_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>duplicate_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend duplicate message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2638,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#michashingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">mic<wbr>Hashing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hashingalgorithm">Hashing<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hashingalgorithm">pulumi.<wbr>Input<Hashing<wbr>Algorithm></a></span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2646,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needmdn_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2654,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendinboundmdntomessagebox_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Inbound<wbr>MDNTo<wbr>Message<wbr>Box</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2662,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendmdnasynchronously_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>MDNAsynchronously</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2670,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signmdn_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2678,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signoutboundmdnifoptional_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Outbound<wbr>MDNIf<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2686,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dispositionnotificationto_nodejs" style="color: inherit; text-decoration: inherit;">disposition<wbr>Notification<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2694,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdntext_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiptdeliveryurl_nodejs" style="color: inherit; text-decoration: inherit;">receipt<wbr>Delivery<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2714,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mic_hashing_algorithm_python" style="color: inherit; text-decoration: inherit;">mic_<wbr>hashing_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hashingalgorithm">Hashing<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hashingalgorithm">Input[Hashing<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2722,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_mdn_python" style="color: inherit; text-decoration: inherit;">need_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2730,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_inbound_mdn_to_message_box_python" style="color: inherit; text-decoration: inherit;">send_<wbr>inbound_<wbr>mdn_<wbr>to_<wbr>message_<wbr>box</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2738,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_mdnasynchronously_python" style="color: inherit; text-decoration: inherit;">send_<wbr>mdnasynchronously</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2746,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sign_mdn_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2754,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sign_outbound_mdn_if_optional_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>outbound_<wbr>mdn_<wbr>if_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2762,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disposition_notification_to_python" style="color: inherit; text-decoration: inherit;">disposition_<wbr>notification_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2770,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdn_text_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2778,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receipt_delivery_url_python" style="color: inherit; text-decoration: inherit;">receipt_<wbr>delivery_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2944,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#michashingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">mic<wbr>Hashing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2952,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needmdn_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2960,7 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendinboundmdntomessagebox_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Inbound<wbr>MDNTo<wbr>Message<wbr>Box</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2968,7 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendmdnasynchronously_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>MDNAsynchronously</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2976,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signmdn_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2984,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signoutboundmdnifoptional_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Outbound<wbr>MDNIf<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2992,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dispositionnotificationto_nodejs" style="color: inherit; text-decoration: inherit;">disposition<wbr>Notification<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3000,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdntext_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3008,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiptdeliveryurl_nodejs" style="color: inherit; text-decoration: inherit;">receipt<wbr>Delivery<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3020,7 +3048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mic_hashing_algorithm_python" style="color: inherit; text-decoration: inherit;">mic_<wbr>hashing_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The signing or hashing algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3028,7 +3056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_mdn_python" style="color: inherit; text-decoration: inherit;">need_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3036,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_inbound_mdn_to_message_box_python" style="color: inherit; text-decoration: inherit;">send_<wbr>inbound_<wbr>mdn_<wbr>to_<wbr>message_<wbr>box</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send inbound MDN to message box.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3044,7 +3072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_mdnasynchronously_python" style="color: inherit; text-decoration: inherit;">send_<wbr>mdnasynchronously</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send the asynchronous MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3052,7 +3080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sign_mdn_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the MDN needs to be signed or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3060,7 +3088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sign_outbound_mdn_if_optional_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>outbound_<wbr>mdn_<wbr>if_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to sign the outbound MDN if optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3068,7 +3096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disposition_notification_to_python" style="color: inherit; text-decoration: inherit;">disposition_<wbr>notification_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The disposition notification to header value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3076,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdn_text_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The MDN text.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3084,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receipt_delivery_url_python" style="color: inherit; text-decoration: inherit;">receipt_<wbr>delivery_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receipt delivery URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3170,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorecertificatenamemismatch_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3178,7 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keephttpconnectionalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Http<wbr>Connection<wbr>Alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3186,7 +3214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supporthttpstatuscodecontinue_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3194,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfoldhttpheaders_nodejs" style="color: inherit; text-decoration: inherit;">unfold<wbr>Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3206,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_certificate_name_mismatch_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>certificate_<wbr>name_<wbr>mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3214,7 +3242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keep_http_connection_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>http_<wbr>connection_<wbr>alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3222,7 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#support_http_status_code_continue_python" style="color: inherit; text-decoration: inherit;">support_<wbr>http_<wbr>status_<wbr>code_<wbr>continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3230,7 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfold_http_headers_python" style="color: inherit; text-decoration: inherit;">unfold_<wbr>http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3316,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignorecertificatenamemismatch_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Certificate<wbr>Name<wbr>Mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3324,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keephttpconnectionalive_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Http<wbr>Connection<wbr>Alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3332,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supporthttpstatuscodecontinue_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Http<wbr>Status<wbr>Code<wbr>Continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3340,7 +3368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfoldhttpheaders_nodejs" style="color: inherit; text-decoration: inherit;">unfold<wbr>Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3352,7 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_certificate_name_mismatch_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>certificate_<wbr>name_<wbr>mismatch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to ignore mismatch in certificate name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3360,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keep_http_connection_alive_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>http_<wbr>connection_<wbr>alive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to keep the connection alive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3368,7 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#support_http_status_code_continue_python" style="color: inherit; text-decoration: inherit;">support_<wbr>http_<wbr>status_<wbr>code_<wbr>continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to support HTTP status code 'CONTINUE'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3376,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unfold_http_headers_python" style="color: inherit; text-decoration: inherit;">unfold_<wbr>http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to unfold the HTTP headers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3446,7 +3474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettings">AS2Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2protocolsettings">pulumi.<wbr>Input<AS2Protocol<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3454,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3462,7 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3474,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettings">AS2Protocol<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2protocolsettings">Input[AS2Protocol<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3482,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3490,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3560,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">pulumi.<wbr>Input<AS2Protocol<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3568,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3576,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3588,7 +3616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">Input[AS2Protocol<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3596,7 +3624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Input[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3604,7 +3632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Input[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3738,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">AS2Acknowledgement<wbr>Connection<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">pulumi.<wbr>Input<AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3746,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettings">AS2Envelope<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2envelopesettings">pulumi.<wbr>Input<AS2Envelope<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3754,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsettings_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettings">AS2Error<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2errorsettings">pulumi.<wbr>Input<AS2Error<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3762,7 +3790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdnsettings_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettings">AS2Mdn<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2mdnsettings">pulumi.<wbr>Input<AS2Mdn<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3770,7 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettings">AS2Message<wbr>Connection<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettings">pulumi.<wbr>Input<AS2Message<wbr>Connection<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3778,7 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettings">AS2Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2securitysettings">pulumi.<wbr>Input<AS2Security<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3786,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettings">AS2Validation<wbr>Settings</a></span>
+        <span class="property-type"><a href="#as2validationsettings">pulumi.<wbr>Input<AS2Validation<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3798,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_connection_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>connection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettings">Input[AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3806,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettings">AS2Envelope<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2envelopesettings">Input[AS2Envelope<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3814,7 +3842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_settings_python" style="color: inherit; text-decoration: inherit;">error_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettings">AS2Error<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2errorsettings">Input[AS2Error<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3822,7 +3850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdn_settings_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettings">AS2Mdn<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2mdnsettings">Input[AS2Mdn<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3830,7 +3858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_connection_settings_python" style="color: inherit; text-decoration: inherit;">message_<wbr>connection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettings">AS2Message<wbr>Connection<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettings">Input[AS2Message<wbr>Connection<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3838,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettings">AS2Security<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2securitysettings">Input[AS2Security<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3846,7 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettings">AS2Validation<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2validationsettings">Input[AS2Validation<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3980,7 +4008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">pulumi.<wbr>Input<AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3988,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">pulumi.<wbr>Input<AS2Envelope<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3996,7 +4024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorsettings_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">pulumi.<wbr>Input<AS2Error<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4004,7 +4032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdnsettings_nodejs" style="color: inherit; text-decoration: inherit;">mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">pulumi.<wbr>Input<AS2Mdn<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4012,7 +4040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageconnectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">pulumi.<wbr>Input<AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4020,7 +4048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">pulumi.<wbr>Input<AS2Security<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4028,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">pulumi.<wbr>Input<AS2Validation<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4040,7 +4068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_connection_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>connection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Input[AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4048,7 +4076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">Input[AS2Envelope<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4056,7 +4084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_settings_python" style="color: inherit; text-decoration: inherit;">error_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">Input[AS2Error<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4064,7 +4092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mdn_settings_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">Input[AS2Mdn<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4072,7 +4100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_connection_settings_python" style="color: inherit; text-decoration: inherit;">message_<wbr>connection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Input[AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4080,7 +4108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">Input[AS2Security<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4088,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">Input[AS2Validation<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4270,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforinbounddecodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>Decoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4278,7 +4306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforinboundencodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>Encoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4286,7 +4314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforinboundmdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4294,7 +4322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforoutbounddecodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>Decoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4302,7 +4330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforoutboundencodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>Encoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4310,7 +4338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforoutboundmdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4318,7 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overridegroupsigningcertificate_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Group<wbr>Signing<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4326,7 +4354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptioncertificatename_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4334,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha2algorithmformat_nodejs" style="color: inherit; text-decoration: inherit;">sha2Algorithm<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4342,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4354,7 +4382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_inbound_decoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>decoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4362,7 +4390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_inbound_encoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>encoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4370,7 +4398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_inbound_mdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4378,7 +4406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_outbound_decoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>decoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4386,7 +4414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_outbound_encoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>encoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4394,7 +4422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_outbound_mdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4402,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#override_group_signing_certificate_python" style="color: inherit; text-decoration: inherit;">override_<wbr>group_<wbr>signing_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4410,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_certificate_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4418,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha2_algorithm_format_python" style="color: inherit; text-decoration: inherit;">sha2_<wbr>algorithm_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4426,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_certificate_name_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4608,7 +4636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforinbounddecodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>Decoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4616,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforinboundencodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>Encoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4624,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforinboundmdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Inbound<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4632,7 +4660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforoutbounddecodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>Decoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4640,7 +4668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforoutboundencodedmessages_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>Encoded<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4648,7 +4676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenrrforoutboundmdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>NRRFor<wbr>Outbound<wbr>MDN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4656,7 +4684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overridegroupsigningcertificate_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Group<wbr>Signing<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4664,7 +4692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptioncertificatename_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4672,7 +4700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha2algorithmformat_nodejs" style="color: inherit; text-decoration: inherit;">sha2Algorithm<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4680,7 +4708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4692,7 +4720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_inbound_decoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>decoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4700,7 +4728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_inbound_encoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>encoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4708,7 +4736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_inbound_mdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>inbound_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for inbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4716,7 +4744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_outbound_decoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>decoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound decoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4724,7 +4752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_outbound_encoded_messages_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>encoded_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound encoded messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4732,7 +4760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nrr_for_outbound_mdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nrr_<wbr>for_<wbr>outbound_<wbr>mdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable NRR for outbound MDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4740,7 +4768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#override_group_signing_certificate_python" style="color: inherit; text-decoration: inherit;">override_<wbr>group_<wbr>signing_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send or request a MDN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4748,7 +4776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_certificate_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the encryption certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4756,7 +4784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sha2_algorithm_format_python" style="color: inherit; text-decoration: inherit;">sha2_<wbr>algorithm_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4764,7 +4792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_certificate_name_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the signing certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4946,7 +4974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkcertificaterevocationlistonreceive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Receive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4954,7 +4982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkcertificaterevocationlistonsend_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4962,7 +4990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4970,7 +4998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressmessage_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4978,7 +5006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptmessage_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4986,7 +5014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encryptionalgorithm">pulumi.<wbr>Input<Encryption<wbr>Algorithm></a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4994,7 +5022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangeduplicatesvaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Duplicates<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5002,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overridemessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5010,7 +5038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signmessage_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5018,7 +5046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#signingalgorithm">Signing<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#signingalgorithm">pulumi.<wbr>Input<Signing<wbr>Algorithm></a></span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5030,7 +5058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_certificate_revocation_list_on_receive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>certificate_<wbr>revocation_<wbr>list_<wbr>on_<wbr>receive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5038,7 +5066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_certificate_revocation_list_on_send_python" style="color: inherit; text-decoration: inherit;">check_<wbr>certificate_<wbr>revocation_<wbr>list_<wbr>on_<wbr>send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5046,7 +5074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_message_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5054,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compress_message_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5062,7 +5090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encrypt_message_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5070,7 +5098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encryptionalgorithm">Input[Encryption<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5078,7 +5106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_duplicates_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>duplicates_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5086,7 +5114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#override_message_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5094,7 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sign_message_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5102,7 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_algorithm_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#signingalgorithm">Signing<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#signingalgorithm">Input[Signing<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5284,7 +5312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkcertificaterevocationlistonreceive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Receive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5292,7 +5320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkcertificaterevocationlistonsend_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Certificate<wbr>Revocation<wbr>List<wbr>On<wbr>Send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5300,7 +5328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicatemessage_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5308,7 +5336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressmessage_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5316,7 +5344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptmessage_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5324,7 +5352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5332,7 +5360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangeduplicatesvaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Duplicates<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5340,7 +5368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overridemessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5348,7 +5376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signmessage_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5356,7 +5384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5368,7 +5396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_certificate_revocation_list_on_receive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>certificate_<wbr>revocation_<wbr>list_<wbr>on_<wbr>receive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on receive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5376,7 +5404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_certificate_revocation_list_on_send_python" style="color: inherit; text-decoration: inherit;">check_<wbr>certificate_<wbr>revocation_<wbr>list_<wbr>on_<wbr>send</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for certificate revocation list on send.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5384,7 +5412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_message_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5392,7 +5420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compress_message_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be compressed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5400,7 +5428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encrypt_message_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be encrypted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5408,7 +5436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5416,7 +5444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_duplicates_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>duplicates_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of days to look back for duplicate interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5424,7 +5452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#override_message_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to override incoming message properties with those in agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5432,7 +5460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sign_message_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message has to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5440,7 +5468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signing_algorithm_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The signing algorithm.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5510,7 +5538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#as2_nodejs" style="color: inherit; text-decoration: inherit;">a<wbr>S2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontent">AS2Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#as2agreementcontent">pulumi.<wbr>Input<AS2Agreement<wbr>Content<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5518,7 +5546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_nodejs" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontent">Edifact<wbr>Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#edifactagreementcontent">pulumi.<wbr>Input<Edifact<wbr>Agreement<wbr>Content<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5526,7 +5554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_nodejs" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontent">X12Agreement<wbr>Content</a></span>
+        <span class="property-type"><a href="#x12agreementcontent">pulumi.<wbr>Input<X12Agreement<wbr>Content<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5538,7 +5566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#a_s2_python" style="color: inherit; text-decoration: inherit;">a_<wbr>s2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontent">AS2Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2agreementcontent">Input[AS2Agreement<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5546,7 +5574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_python" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontent">Edifact<wbr>Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactagreementcontent">Input[Edifact<wbr>Agreement<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5554,7 +5582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_python" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontent">X12Agreement<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12agreementcontent">Input[X12Agreement<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5624,7 +5652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#as2_nodejs" style="color: inherit; text-decoration: inherit;">a<wbr>S2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">pulumi.<wbr>Input<AS2Agreement<wbr>Content<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5632,7 +5660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_nodejs" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">pulumi.<wbr>Input<Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5640,7 +5668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_nodejs" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">pulumi.<wbr>Input<X12Agreement<wbr>Content<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5652,7 +5680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#a_s2_python" style="color: inherit; text-decoration: inherit;">a_<wbr>s2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">Input[AS2Agreement<wbr>Content<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5660,7 +5688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_python" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Input[Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5668,7 +5696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_python" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">Input[X12Agreement<wbr>Content<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5756,7 +5784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5764,7 +5792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5776,7 +5804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5784,7 +5812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5838,7 +5866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5846,7 +5874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5858,7 +5886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5866,7 +5894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6064,7 +6092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6072,7 +6100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6080,7 +6108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchfunctionalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Functional<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6088,7 +6116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchtechnicalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Technical<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6096,7 +6124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needfunctionalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Functional<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6104,7 +6132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needloopforvalidmessages_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6112,7 +6140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needtechnicalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Technical<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6120,7 +6148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloveracknowledgementcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6128,7 +6156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendsynchronousacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Synchronous<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6136,7 +6164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6144,7 +6172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6156,7 +6184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6164,7 +6192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6172,7 +6200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_functional_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>functional_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6180,7 +6208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_technical_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>technical_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6188,7 +6216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_functional_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>functional_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6196,7 +6224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_loop_for_valid_messages_python" style="color: inherit; text-decoration: inherit;">need_<wbr>loop_<wbr>for_<wbr>valid_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6204,7 +6232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_technical_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>technical_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6212,7 +6240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_acknowledgement_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>acknowledgement_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6220,7 +6248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_synchronous_acknowledgement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>synchronous_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6228,7 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6236,7 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6434,7 +6462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6442,7 +6470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6450,7 +6478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchfunctionalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Functional<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6458,7 +6486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchtechnicalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Technical<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6466,7 +6494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needfunctionalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Functional<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6474,7 +6502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needloopforvalidmessages_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6482,7 +6510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needtechnicalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Technical<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6490,7 +6518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloveracknowledgementcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6498,7 +6526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendsynchronousacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Synchronous<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6506,7 +6534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6514,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6526,7 +6554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6534,7 +6562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6542,7 +6570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_functional_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>functional_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6550,7 +6578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_technical_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>technical_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6558,7 +6586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_functional_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>functional_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6566,7 +6594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_loop_for_valid_messages_python" style="color: inherit; text-decoration: inherit;">need_<wbr>loop_<wbr>for_<wbr>valid_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6574,7 +6602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_technical_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>technical_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6582,7 +6610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_acknowledgement_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>acknowledgement_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6590,7 +6618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_synchronous_acknowledgement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>synchronous_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6598,7 +6626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6606,7 +6634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6660,7 +6688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">pulumi.<wbr>Input<Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6668,7 +6696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">pulumi.<wbr>Input<Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6680,7 +6708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">Input[Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6688,7 +6716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreement">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreement">Input[Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6742,7 +6770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">pulumi.<wbr>Input<Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6750,7 +6778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">pulumi.<wbr>Input<Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6762,7 +6790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Input[Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6770,7 +6798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Input[Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7092,7 +7120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7100,7 +7128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7108,7 +7136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdecimalindicator">Edifact<wbr>Decimal<wbr>Indicator</a></span>
+        <span class="property-type"><a href="#edifactdecimalindicator">pulumi.<wbr>Input<Edifact<wbr>Decimal<wbr>Indicator></a></span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7116,7 +7144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releaseindicator_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7124,7 +7152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetitionseparator_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7132,7 +7160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7140,7 +7168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">pulumi.<wbr>Input<Segment<wbr>Terminator<wbr>Suffix></a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7148,7 +7176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7156,7 +7184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7164,7 +7192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7172,7 +7200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7180,7 +7208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7192,7 +7220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7200,7 +7228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7208,7 +7236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdecimalindicator">Edifact<wbr>Decimal<wbr>Indicator</a></span>
+        <span class="property-type"><a href="#edifactdecimalindicator">Input[Edifact<wbr>Decimal<wbr>Indicator]</a></span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7216,7 +7244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7224,7 +7252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7232,7 +7260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7240,7 +7268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Input[Segment<wbr>Terminator<wbr>Suffix]</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7248,7 +7276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7256,7 +7284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7264,7 +7292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7272,7 +7300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7280,7 +7308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7494,7 +7522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7502,7 +7530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7510,7 +7538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7518,7 +7546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releaseindicator_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7526,7 +7554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetitionseparator_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7534,7 +7562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7542,7 +7570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7550,7 +7578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7558,7 +7586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7566,7 +7594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7574,7 +7602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7582,7 +7610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7594,7 +7622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7602,7 +7630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7610,7 +7638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The decimal point indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7618,7 +7646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7626,7 +7654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7634,7 +7662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7642,7 +7670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7650,7 +7678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7658,7 +7686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7666,7 +7694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7674,7 +7702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7682,7 +7710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7944,7 +7972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationpassword_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7952,7 +7980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7960,7 +7988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controllingagencycode_nodejs" style="color: inherit; text-decoration: inherit;">controlling<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7968,7 +7996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7976,7 +8004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadermessagerelease_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7984,7 +8012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadermessageversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7992,7 +8020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8000,7 +8028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8008,7 +8036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8016,7 +8044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8024,7 +8052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8032,7 +8060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8040,7 +8068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8048,7 +8076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8056,7 +8084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8068,7 +8096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_password_python" style="color: inherit; text-decoration: inherit;">application_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8076,7 +8104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8084,7 +8112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">controlling_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8092,7 +8120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8100,7 +8128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8108,7 +8136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8116,7 +8144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8124,7 +8152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8132,7 +8160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8140,7 +8168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8148,7 +8176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8156,7 +8184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_qualifier_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8164,7 +8192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8172,7 +8200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8180,7 +8208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8442,7 +8470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationpassword_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8450,7 +8478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8458,7 +8486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controllingagencycode_nodejs" style="color: inherit; text-decoration: inherit;">controlling<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8466,7 +8494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8474,7 +8502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadermessagerelease_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8482,7 +8510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadermessageversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8490,7 +8518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8498,7 +8526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8506,7 +8534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8514,7 +8542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8522,7 +8550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8530,7 +8558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8538,7 +8566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8546,7 +8574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8554,7 +8582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8566,7 +8594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_password_python" style="color: inherit; text-decoration: inherit;">application_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8574,7 +8602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8582,7 +8610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">controlling_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8590,7 +8618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8598,7 +8626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8606,7 +8634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8614,7 +8642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">message_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8622,7 +8650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8630,7 +8658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message release version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8638,7 +8666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8646,7 +8674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8654,7 +8682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_qualifier_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8662,7 +8690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8670,7 +8698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8678,7 +8706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9356,7 +9384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applydelimiterstringadvice_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Delimiter<wbr>String<wbr>Advice</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9364,7 +9392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creategroupingsegments_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Grouping<wbr>Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9372,7 +9400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledefaultgroupheaders_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Default<wbr>Group<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9380,7 +9408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9388,7 +9416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9396,7 +9424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9404,7 +9432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9412,7 +9440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#istestinterchange_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Test<wbr>Interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9420,7 +9448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwriteexistingtransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9428,7 +9456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovergroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9436,7 +9464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9444,7 +9472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovertransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9452,7 +9480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9460,7 +9488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9468,7 +9496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9476,7 +9504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communicationagreementid_nodejs" style="color: inherit; text-decoration: inherit;">communication<wbr>Agreement<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9484,7 +9512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9492,7 +9520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationpassword_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9500,7 +9528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationreceiverid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Receiver<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9508,7 +9536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationreceiverqualifier_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Receiver<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9516,7 +9544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationsenderid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9524,7 +9552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationsenderqualifier_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Sender<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9532,7 +9560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9540,7 +9568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9548,7 +9576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9556,7 +9584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrollingagencycode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Controlling<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9564,7 +9592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupmessagerelease_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9572,7 +9600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupmessageversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9580,7 +9608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9588,7 +9616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9596,7 +9624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingprioritycode_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Priority<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9604,7 +9632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverinternalidentification_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Internal<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9612,7 +9640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverinternalsubidentification_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Internal<wbr>Sub<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9620,7 +9648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverreverseroutingaddress_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Reverse<wbr>Routing<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9628,7 +9656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipientreferencepasswordqualifier_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Reference<wbr>Password<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9636,7 +9664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipientreferencepasswordvalue_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Reference<wbr>Password<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9644,7 +9672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderinternalidentification_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Internal<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9652,7 +9680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderinternalsubidentification_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Internal<wbr>Sub<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9660,7 +9688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderreverseroutingaddress_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Reverse<wbr>Routing<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9668,7 +9696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9676,7 +9704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9688,7 +9716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apply_delimiter_string_advice_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>delimiter_<wbr>string_<wbr>advice</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9696,7 +9724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_grouping_segments_python" style="color: inherit; text-decoration: inherit;">create_<wbr>grouping_<wbr>segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9704,7 +9732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_default_group_headers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>default_<wbr>group_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9712,7 +9740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9720,7 +9748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9728,7 +9756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9736,7 +9764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9744,7 +9772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_test_interchange_python" style="color: inherit; text-decoration: inherit;">is_<wbr>test_<wbr>interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9752,7 +9780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_existing_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9760,7 +9788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_group_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9768,7 +9796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9776,7 +9804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9784,7 +9812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9792,7 +9820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9800,7 +9828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_reference_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9808,7 +9836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communication_agreement_id_python" style="color: inherit; text-decoration: inherit;">communication_<wbr>agreement_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9816,7 +9844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9824,7 +9852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_password_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9832,7 +9860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_receiver_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>receiver_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9840,7 +9868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_receiver_qualifier_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>receiver_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9848,7 +9876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_sender_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>sender_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9856,7 +9884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_sender_qualifier_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>sender_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9864,7 +9892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9872,7 +9900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9880,7 +9908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9888,7 +9916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>controlling_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9896,7 +9924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9904,7 +9932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9912,7 +9940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9920,7 +9948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9928,7 +9956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processing_priority_code_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>priority_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9936,7 +9964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_internal_identification_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>internal_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9944,7 +9972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_internal_sub_identification_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>internal_<wbr>sub_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9952,7 +9980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_reverse_routing_address_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>reverse_<wbr>routing_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9960,7 +9988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipient_reference_password_qualifier_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>reference_<wbr>password_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9968,7 +9996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipient_reference_password_value_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>reference_<wbr>password_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9976,7 +10004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_internal_identification_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>internal_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9984,7 +10012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_internal_sub_identification_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>internal_<wbr>sub_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9992,7 +10020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_reverse_routing_address_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>reverse_<wbr>routing_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10000,7 +10028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10008,7 +10036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10686,7 +10714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applydelimiterstringadvice_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Delimiter<wbr>String<wbr>Advice</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10694,7 +10722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creategroupingsegments_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Grouping<wbr>Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10702,7 +10730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledefaultgroupheaders_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Default<wbr>Group<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10710,7 +10738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10718,7 +10746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10726,7 +10754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10734,7 +10762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10742,7 +10770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#istestinterchange_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Test<wbr>Interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10750,7 +10778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwriteexistingtransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10758,7 +10786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovergroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10766,7 +10794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10774,7 +10802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovertransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10782,7 +10810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10790,7 +10818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10798,7 +10826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10806,7 +10834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communicationagreementid_nodejs" style="color: inherit; text-decoration: inherit;">communication<wbr>Agreement<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10814,7 +10842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10822,7 +10850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationpassword_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10830,7 +10858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationreceiverid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Receiver<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10838,7 +10866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationreceiverqualifier_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Receiver<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10846,7 +10874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationsenderid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10854,7 +10882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupapplicationsenderqualifier_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Application<wbr>Sender<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10862,7 +10890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupassociationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10870,7 +10898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10878,7 +10906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10886,7 +10914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrollingagencycode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Controlling<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10894,7 +10922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupmessagerelease_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10902,7 +10930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupmessageversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10910,7 +10938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10918,7 +10946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10926,7 +10954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingprioritycode_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Priority<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10934,7 +10962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverinternalidentification_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Internal<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10942,7 +10970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverinternalsubidentification_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Internal<wbr>Sub<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10950,7 +10978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverreverseroutingaddress_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Reverse<wbr>Routing<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10958,7 +10986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipientreferencepasswordqualifier_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Reference<wbr>Password<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10966,7 +10994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipientreferencepasswordvalue_nodejs" style="color: inherit; text-decoration: inherit;">recipient<wbr>Reference<wbr>Password<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10974,7 +11002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderinternalidentification_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Internal<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10982,7 +11010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderinternalsubidentification_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Internal<wbr>Sub<wbr>Identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10990,7 +11018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderreverseroutingaddress_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Reverse<wbr>Routing<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10998,7 +11026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11006,7 +11034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11018,7 +11046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apply_delimiter_string_advice_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>delimiter_<wbr>string_<wbr>advice</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to apply delimiter string advice.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11026,7 +11054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_grouping_segments_python" style="color: inherit; text-decoration: inherit;">create_<wbr>grouping_<wbr>segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create grouping segments.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11034,7 +11062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_default_group_headers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>default_<wbr>group_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11042,7 +11070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11050,7 +11078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11058,7 +11086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The interchange control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11066,7 +11094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The interchange control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11074,7 +11102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_test_interchange_python" style="color: inherit; text-decoration: inherit;">is_<wbr>test_<wbr>interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether the message is a test interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11082,7 +11110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_existing_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11090,7 +11118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_group_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11098,7 +11126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11106,7 +11134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11114,7 +11142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11122,7 +11150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11130,7 +11158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_reference_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application reference id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11138,7 +11166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communication_agreement_id_python" style="color: inherit; text-decoration: inherit;">communication_<wbr>agreement_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The communication agreement id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11146,7 +11174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11154,7 +11182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_password_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11162,7 +11190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_receiver_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>receiver_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application receiver id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11170,7 +11198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_receiver_qualifier_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>receiver_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application receiver qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11178,7 +11206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_sender_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>sender_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application sender id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11186,7 +11214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_application_sender_qualifier_python" style="color: inherit; text-decoration: inherit;">group_<wbr>application_<wbr>sender_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group application sender qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11194,7 +11222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_association_assigned_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11202,7 +11230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11210,7 +11238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11218,7 +11246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_controlling_agency_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>controlling_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group controlling agency code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11226,7 +11254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_message_release_python" style="color: inherit; text-decoration: inherit;">group_<wbr>message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group message release.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11234,7 +11262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_message_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group message version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11242,7 +11270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The interchange control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11250,7 +11278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The interchange control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11258,7 +11286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processing_priority_code_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>priority_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The processing priority code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11266,7 +11294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_internal_identification_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>internal_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11274,7 +11302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_internal_sub_identification_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>internal_<wbr>sub_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11282,7 +11310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_reverse_routing_address_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>reverse_<wbr>routing_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11290,7 +11318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipient_reference_password_qualifier_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>reference_<wbr>password_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recipient reference password qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11298,7 +11326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recipient_reference_password_value_python" style="color: inherit; text-decoration: inherit;">recipient_<wbr>reference_<wbr>password_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recipient reference password value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11306,7 +11334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_internal_identification_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>internal_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender internal identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11314,7 +11342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_internal_sub_identification_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>internal_<wbr>sub_<wbr>identification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender internal sub identification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11322,7 +11350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_reverse_routing_address_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>reverse_<wbr>routing_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender reverse routing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11330,7 +11358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11338,7 +11366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11536,7 +11564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#edifactcharacterset">Edifact<wbr>Character<wbr>Set</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#edifactcharacterset">pulumi.<wbr>Input<Edifact<wbr>Character<wbr>Set></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11544,7 +11572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11552,7 +11580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11560,7 +11588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdecimalindicator">Edifact<wbr>Decimal<wbr>Indicator</a></span>
+        <span class="property-type"><a href="#edifactdecimalindicator">pulumi.<wbr>Input<Edifact<wbr>Decimal<wbr>Indicator></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11568,7 +11596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11576,7 +11604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releaseindicator_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11584,7 +11612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetitionseparator_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11592,7 +11620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11600,7 +11628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">pulumi.<wbr>Input<Segment<wbr>Terminator<wbr>Suffix></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11608,7 +11636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterencoding_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11616,7 +11644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecodelistdirectoryversion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Code<wbr>List<wbr>Directory<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11628,7 +11656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#edifactcharacterset">Edifact<wbr>Character<wbr>Set</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#edifactcharacterset">Input[Edifact<wbr>Character<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11636,7 +11664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11644,7 +11672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11652,7 +11680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdecimalindicator">Edifact<wbr>Decimal<wbr>Indicator</a></span>
+        <span class="property-type"><a href="#edifactdecimalindicator">Input[Edifact<wbr>Decimal<wbr>Indicator]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11660,7 +11688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11668,7 +11696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11676,7 +11704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11684,7 +11712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11692,7 +11720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Input[Segment<wbr>Terminator<wbr>Suffix]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11700,7 +11728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_encoding_python" style="color: inherit; text-decoration: inherit;">character_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11708,7 +11736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_code_list_directory_version_python" style="color: inherit; text-decoration: inherit;">service_<wbr>code_<wbr>list_<wbr>directory_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11906,7 +11934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11914,7 +11942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11922,7 +11950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11930,7 +11958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimalpointindicator_nodejs" style="color: inherit; text-decoration: inherit;">decimal<wbr>Point<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11938,7 +11966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11946,7 +11974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releaseindicator_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11954,7 +11982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetitionseparator_nodejs" style="color: inherit; text-decoration: inherit;">repetition<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11962,7 +11990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11970,7 +11998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11978,7 +12006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterencoding_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11986,7 +12014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicecodelistdirectoryversion_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Code<wbr>List<wbr>Directory<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11998,7 +12026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting characterSet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12006,7 +12034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12014,7 +12042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12022,7 +12050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#decimal_point_indicator_python" style="color: inherit; text-decoration: inherit;">decimal_<wbr>point_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting decimal indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12030,7 +12058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12038,7 +12066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_indicator_python" style="color: inherit; text-decoration: inherit;">release_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The release indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12046,7 +12074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repetition_separator_python" style="color: inherit; text-decoration: inherit;">repetition_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The repetition separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12054,7 +12082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12062,7 +12090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The EDIFACT frame setting segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12070,7 +12098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_encoding_python" style="color: inherit; text-decoration: inherit;">character_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The character encoding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12078,7 +12106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_code_list_directory_version_python" style="color: inherit; text-decoration: inherit;">service_<wbr>code_<wbr>list_<wbr>directory_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service code list directory version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12116,7 +12144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#messagefiltertype">Message<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#messagefiltertype">pulumi.<wbr>Input<Message<wbr>Filter<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12128,7 +12156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#messagefiltertype">Message<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#messagefiltertype">Input[Message<wbr>Filter<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12166,7 +12194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12178,7 +12206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12216,7 +12244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12228,7 +12256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12266,7 +12294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12278,7 +12306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12348,7 +12376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettings">Edifact<wbr>Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettings">pulumi.<wbr>Input<Edifact<wbr>Protocol<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12356,7 +12384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12364,7 +12392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12376,7 +12404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettings">Edifact<wbr>Protocol<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettings">Input[Edifact<wbr>Protocol<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12384,7 +12412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12392,7 +12420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12462,7 +12490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">pulumi.<wbr>Input<Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12470,7 +12498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12478,7 +12506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12490,7 +12518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Input[Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12498,7 +12526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Input[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12506,7 +12534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Input[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12608,7 +12636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createemptyxmltagsfortrailingseparators_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12616,7 +12644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masksecurityinfo_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Security<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12624,7 +12652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserveinterchange_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12632,7 +12660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendinterchangeonerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Interchange<wbr>On<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12640,7 +12668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedotasdecimalseparator_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12652,7 +12680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_empty_xml_tags_for_trailing_separators_python" style="color: inherit; text-decoration: inherit;">create_<wbr>empty_<wbr>xml_<wbr>tags_<wbr>for_<wbr>trailing_<wbr>separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12660,7 +12688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mask_security_info_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>security_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12668,7 +12696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserve_interchange_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12676,7 +12704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_interchange_on_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>interchange_<wbr>on_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12684,7 +12712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_dot_as_decimal_separator_python" style="color: inherit; text-decoration: inherit;">use_<wbr>dot_<wbr>as_<wbr>decimal_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12786,7 +12814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createemptyxmltagsfortrailingseparators_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12794,7 +12822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masksecurityinfo_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Security<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12802,7 +12830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserveinterchange_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12810,7 +12838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendinterchangeonerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Interchange<wbr>On<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12818,7 +12846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedotasdecimalseparator_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12830,7 +12858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_empty_xml_tags_for_trailing_separators_python" style="color: inherit; text-decoration: inherit;">create_<wbr>empty_<wbr>xml_<wbr>tags_<wbr>for_<wbr>trailing_<wbr>separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12838,7 +12866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mask_security_info_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>security_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12846,7 +12874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserve_interchange_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12854,7 +12882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_interchange_on_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>interchange_<wbr>on_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12862,7 +12890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_dot_as_decimal_separator_python" style="color: inherit; text-decoration: inherit;">use_<wbr>dot_<wbr>as_<wbr>decimal_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13060,7 +13088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettings">Edifact<wbr>Acknowledgement<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettings">pulumi.<wbr>Input<Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13068,7 +13096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettings">Edifact<wbr>Envelope<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettings">pulumi.<wbr>Input<Edifact<wbr>Envelope<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13076,7 +13104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettings">Edifact<wbr>Framing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactframingsettings">pulumi.<wbr>Input<Edifact<wbr>Framing<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13084,7 +13112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilter">Edifact<wbr>Message<wbr>Filter</a></span>
+        <span class="property-type"><a href="#edifactmessagefilter">pulumi.<wbr>Input<Edifact<wbr>Message<wbr>Filter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13092,7 +13120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettings">Edifact<wbr>Processing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettings">pulumi.<wbr>Input<Edifact<wbr>Processing<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13100,7 +13128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareference">Edifact<wbr>Schema<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#edifactschemareference">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Schema<wbr>Reference<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13108,7 +13136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettings">Edifact<wbr>Validation<wbr>Settings</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettings">pulumi.<wbr>Input<Edifact<wbr>Validation<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13116,7 +13144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifactdelimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverride">Edifact<wbr>Delimiter<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverride">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Delimiter<wbr>Override<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13124,7 +13152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverride">Edifact<wbr>Envelope<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverride">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Envelope<wbr>Override<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13132,7 +13160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifier">Edifact<wbr>Message<wbr>Identifier[]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifier">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Message<wbr>Identifier<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13140,7 +13168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverride">Edifact<wbr>Validation<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverride">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Validation<wbr>Override<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13152,7 +13180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettings">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettings">Input[Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13160,7 +13188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettings">Edifact<wbr>Envelope<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettings">Input[Edifact<wbr>Envelope<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13168,7 +13196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettings">Edifact<wbr>Framing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactframingsettings">Input[Edifact<wbr>Framing<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13176,7 +13204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilter">Edifact<wbr>Message<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactmessagefilter">Input[Edifact<wbr>Message<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13184,7 +13212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettings">Edifact<wbr>Processing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettings">Input[Edifact<wbr>Processing<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13192,7 +13220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareference">Sequence[Edifact<wbr>Schema<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactschemareference">Input[Edifact<wbr>Schema<wbr>Reference<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13200,7 +13228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettings">Edifact<wbr>Validation<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettings">Input[Edifact<wbr>Validation<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13208,7 +13236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">edifact_<wbr>delimiter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverride">Sequence[Edifact<wbr>Delimiter<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverride">Input[Edifact<wbr>Delimiter<wbr>Override<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13216,7 +13244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverride">Sequence[Edifact<wbr>Envelope<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverride">Input[Edifact<wbr>Envelope<wbr>Override<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13224,7 +13252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifier">Sequence[Edifact<wbr>Message<wbr>Identifier<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifier">Input[Edifact<wbr>Message<wbr>Identifier<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13232,7 +13260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverride">Sequence[Edifact<wbr>Validation<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverride">Input[Edifact<wbr>Validation<wbr>Override<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13430,7 +13458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">pulumi.<wbr>Input<Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13438,7 +13466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">pulumi.<wbr>Input<Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13446,7 +13474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">pulumi.<wbr>Input<Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13454,7 +13482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">pulumi.<wbr>Input<Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13462,7 +13490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">pulumi.<wbr>Input<Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13470,7 +13498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">Edifact<wbr>Schema<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13478,7 +13506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">pulumi.<wbr>Input<Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13486,7 +13514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifactdelimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Edifact<wbr>Delimiter<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13494,7 +13522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Edifact<wbr>Envelope<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13502,7 +13530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">Edifact<wbr>Message<wbr>Identifier<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13510,7 +13538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Edifact<wbr>Validation<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13522,7 +13550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Input[Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13530,7 +13558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Input[Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13538,7 +13566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Input[Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13546,7 +13574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Input[Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13554,7 +13582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Input[Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13562,7 +13590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">Sequence[Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">Input[Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13570,7 +13598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Input[Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13578,7 +13606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edifact_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">edifact_<wbr>delimiter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Sequence[Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Input[Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13586,7 +13614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Sequence[Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Input[Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13594,7 +13622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">Sequence[Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">Input[Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13602,7 +13630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Sequence[Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Input[Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13736,7 +13764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13744,7 +13772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13752,7 +13780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13760,7 +13788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13768,7 +13796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13776,7 +13804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13784,7 +13812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13796,7 +13824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13804,7 +13832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13812,7 +13840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13820,7 +13848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13828,7 +13856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13836,7 +13864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13844,7 +13872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13978,7 +14006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13986,7 +14014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagerelease_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13994,7 +14022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageversion_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14002,7 +14030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14010,7 +14038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associationassignedcode_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Assigned<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14018,7 +14046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14026,7 +14054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14038,7 +14066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14046,7 +14074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_release_python" style="color: inherit; text-decoration: inherit;">message_<wbr>release</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message release version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14054,7 +14082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_version_python" style="color: inherit; text-decoration: inherit;">message_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14062,7 +14090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14070,7 +14098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#association_assigned_code_python" style="color: inherit; text-decoration: inherit;">association_<wbr>assigned_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The association assigned code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14078,7 +14106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14086,7 +14114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_qualifier_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application qualifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14220,7 +14248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14228,7 +14256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14236,7 +14264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14244,7 +14272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#trailingseparatorpolicy">pulumi.<wbr>Input<Trailing<wbr>Separator<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14252,7 +14280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14260,7 +14288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14268,7 +14296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14280,7 +14308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14288,7 +14316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_character_set_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14296,7 +14324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14304,7 +14332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#trailingseparatorpolicy">Input[Trailing<wbr>Separator<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14312,7 +14340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14320,7 +14348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14328,7 +14356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14462,7 +14490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14470,7 +14498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14478,7 +14506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14486,7 +14514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14494,7 +14522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14502,7 +14530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14510,7 +14538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14522,7 +14550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14530,7 +14558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforce_character_set_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14538,7 +14566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14546,7 +14574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14554,7 +14582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14562,7 +14590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14570,7 +14598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14752,7 +14780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14760,7 +14788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicategroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14768,7 +14796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicateinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14776,7 +14804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicatetransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14784,7 +14812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumbervaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14792,7 +14820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#trailingseparatorpolicy">pulumi.<wbr>Input<Trailing<wbr>Separator<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14800,7 +14828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14808,7 +14836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14816,7 +14844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14824,7 +14852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14836,7 +14864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14844,7 +14872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_group_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14852,7 +14880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14860,7 +14888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14868,7 +14896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14876,7 +14904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#trailingseparatorpolicy">Input[Trailing<wbr>Separator<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14884,7 +14912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14892,7 +14920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14900,7 +14928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14908,7 +14936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15090,7 +15118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15098,7 +15126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicategroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15106,7 +15134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicateinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15114,7 +15142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicatetransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15122,7 +15150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumbervaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15130,7 +15158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15138,7 +15166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15146,7 +15174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15154,7 +15182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15162,7 +15190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15174,7 +15202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15182,7 +15210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_group_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15190,7 +15218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15198,7 +15226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15206,7 +15234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15214,7 +15242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15222,7 +15250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15230,7 +15258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15238,7 +15266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15246,7 +15274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15778,7 +15806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15786,7 +15814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15794,7 +15822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchfunctionalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Functional<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15802,7 +15830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchimplementationacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Implementation<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15810,7 +15838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchtechnicalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Technical<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15818,7 +15846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needfunctionalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Functional<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15826,7 +15854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needimplementationacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Implementation<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15834,7 +15862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needloopforvalidmessages_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15842,7 +15870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needtechnicalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Technical<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15850,7 +15878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloveracknowledgementcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15858,7 +15886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendsynchronousacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Synchronous<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15866,7 +15894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15874,7 +15902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15882,7 +15910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalacknowledgementversion_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Acknowledgement<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15890,7 +15918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementationacknowledgementversion_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Acknowledgement<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15902,7 +15930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15910,7 +15938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15918,7 +15946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_functional_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>functional_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15926,7 +15954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_implementation_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>implementation_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15934,7 +15962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_technical_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>technical_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15942,7 +15970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_functional_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>functional_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15950,7 +15978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_implementation_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>implementation_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15958,7 +15986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_loop_for_valid_messages_python" style="color: inherit; text-decoration: inherit;">need_<wbr>loop_<wbr>for_<wbr>valid_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15966,7 +15994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_technical_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>technical_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15974,7 +16002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_acknowledgement_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>acknowledgement_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15982,7 +16010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_synchronous_acknowledgement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>synchronous_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15990,7 +16018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15998,7 +16026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16006,7 +16034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_acknowledgement_version_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>acknowledgement_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16014,7 +16042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementation_acknowledgement_version_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>acknowledgement_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16276,7 +16304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16284,7 +16312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16292,7 +16320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchfunctionalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Functional<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16300,7 +16328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchimplementationacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Implementation<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16308,7 +16336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchtechnicalacknowledgements_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Technical<wbr>Acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16316,7 +16344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needfunctionalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Functional<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16324,7 +16352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needimplementationacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Implementation<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16332,7 +16360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needloopforvalidmessages_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Loop<wbr>For<wbr>Valid<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16340,7 +16368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#needtechnicalacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">need<wbr>Technical<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16348,7 +16376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloveracknowledgementcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Acknowledgement<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16356,7 +16384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendsynchronousacknowledgement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Synchronous<wbr>Acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16364,7 +16392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16372,7 +16400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16380,7 +16408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalacknowledgementversion_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Acknowledgement<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16388,7 +16416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementationacknowledgementversion_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Acknowledgement<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16400,7 +16428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16408,7 +16436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16416,7 +16444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_functional_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>functional_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch functional acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16424,7 +16452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_implementation_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>implementation_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch implementation acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16432,7 +16460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_technical_acknowledgements_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>technical_<wbr>acknowledgements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to batch the technical acknowledgements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16440,7 +16468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_functional_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>functional_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether functional acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16448,7 +16476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_implementation_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>implementation_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether implementation acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16456,7 +16484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_loop_for_valid_messages_python" style="color: inherit; text-decoration: inherit;">need_<wbr>loop_<wbr>for_<wbr>valid_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether a loop is needed for valid messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16464,7 +16492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#need_technical_acknowledgement_python" style="color: inherit; text-decoration: inherit;">need_<wbr>technical_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether technical acknowledgement is needed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16472,7 +16500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_acknowledgement_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>acknowledgement_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover acknowledgement control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16480,7 +16508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_synchronous_acknowledgement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>synchronous_<wbr>acknowledgement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to send synchronous acknowledgement.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16488,7 +16516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16496,7 +16524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The acknowledgement control number suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16504,7 +16532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_acknowledgement_version_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>acknowledgement_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional acknowledgement version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16512,7 +16540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementation_acknowledgement_version_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>acknowledgement_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The implementation acknowledgement version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16566,7 +16594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">pulumi.<wbr>Input<X12One<wbr>Way<wbr>Agreement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16574,7 +16602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">pulumi.<wbr>Input<X12One<wbr>Way<wbr>Agreement<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16586,7 +16614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">Input[X12One<wbr>Way<wbr>Agreement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16594,7 +16622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreement">X12One<wbr>Way<wbr>Agreement<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreement">Input[X12One<wbr>Way<wbr>Agreement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16648,7 +16676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiveagreement_nodejs" style="color: inherit; text-decoration: inherit;">receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">pulumi.<wbr>Input<X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16656,7 +16684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendagreement_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">pulumi.<wbr>Input<X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16668,7 +16696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Input[X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16676,7 +16704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Input[X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16906,7 +16934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16914,7 +16942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16922,7 +16950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replacecharacter_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16930,7 +16958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replaceseparatorsinpayload_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Separators<wbr>In<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16938,7 +16966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16946,7 +16974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">pulumi.<wbr>Input<Segment<wbr>Terminator<wbr>Suffix></a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16954,7 +16982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16962,7 +16990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16970,7 +16998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16982,7 +17010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16990,7 +17018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16998,7 +17026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17006,7 +17034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_separators_in_payload_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>separators_<wbr>in_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17014,7 +17042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17022,7 +17050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Input[Segment<wbr>Terminator<wbr>Suffix]</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17030,7 +17058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17038,7 +17066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17046,7 +17074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17212,7 +17240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17220,7 +17248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17228,7 +17256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replacecharacter_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17236,7 +17264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replaceseparatorsinpayload_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Separators<wbr>In<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17244,7 +17272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17252,7 +17280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17260,7 +17288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17268,7 +17296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17276,7 +17304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17288,7 +17316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17296,7 +17324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17304,7 +17332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17312,7 +17340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_separators_in_payload_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>separators_<wbr>in_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17320,7 +17348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17328,7 +17356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17336,7 +17364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17344,7 +17372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17352,7 +17380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this delimiter settings has to be applied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17534,7 +17562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12dateformat">X12Date<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#x12dateformat">pulumi.<wbr>Input<X12Date<wbr>Format></a></span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17542,7 +17570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headerversion_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17550,7 +17578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17558,7 +17586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17566,7 +17594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17574,7 +17602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsibleagencycode_nodejs" style="color: inherit; text-decoration: inherit;">responsible<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17582,7 +17610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17590,7 +17618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17598,7 +17626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12timeformat">X12Time<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#x12timeformat">pulumi.<wbr>Input<X12Time<wbr>Format></a></span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17606,7 +17634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalidentifiercode_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Identifier<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17618,7 +17646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#x12dateformat">X12Date<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#x12dateformat">Input[X12Date<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17626,7 +17654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_version_python" style="color: inherit; text-decoration: inherit;">header_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17634,7 +17662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17642,7 +17670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17650,7 +17678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17658,7 +17686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsible_agency_code_python" style="color: inherit; text-decoration: inherit;">responsible_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17666,7 +17694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17674,7 +17702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17682,7 +17710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#x12timeformat">X12Time<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#x12timeformat">Input[X12Time<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17690,7 +17718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_identifier_code_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>identifier_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17872,7 +17900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17880,7 +17908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headerversion_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17888,7 +17916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17896,7 +17924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17904,7 +17932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17912,7 +17940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsibleagencycode_nodejs" style="color: inherit; text-decoration: inherit;">responsible<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17920,7 +17948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17928,7 +17956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetnamespace_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17936,7 +17964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17944,7 +17972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalidentifiercode_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Identifier<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17956,7 +17984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17964,7 +17992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_version_python" style="color: inherit; text-decoration: inherit;">header_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17972,7 +18000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17980,7 +18008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol version on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17988,7 +18016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17996,7 +18024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsible_agency_code_python" style="color: inherit; text-decoration: inherit;">responsible_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The responsible agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18004,7 +18032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18012,7 +18040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_namespace_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target namespace on which this envelope settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18020,7 +18048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18028,7 +18056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_identifier_code_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>identifier_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional identifier code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18434,7 +18462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controlstandardsid_nodejs" style="color: inherit; text-decoration: inherit;">control<wbr>Standards<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18442,7 +18470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controlversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">control<wbr>Version<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18450,7 +18478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledefaultgroupheaders_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Default<wbr>Group<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18458,7 +18486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18466,7 +18494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18474,7 +18502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderagencycode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18482,7 +18510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderdateformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12dateformat">X12Date<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#x12dateformat">pulumi.<wbr>Input<X12Date<wbr>Format></a></span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18490,7 +18518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadertimeformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12timeformat">X12Time<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#x12timeformat">pulumi.<wbr>Input<X12Time<wbr>Format></a></span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18498,7 +18526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18506,7 +18534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18514,7 +18542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18522,7 +18550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwriteexistingtransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18530,7 +18558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18538,7 +18566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovergroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18546,7 +18574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18554,7 +18582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovertransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18562,7 +18590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18570,7 +18598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18578,7 +18606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18586,7 +18614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usageindicator_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usageindicator">Usage<wbr>Indicator</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#usageindicator">pulumi.<wbr>Input<Usage<wbr>Indicator></a></span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18594,7 +18622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecontrolstandardsidasrepetitioncharacter_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Control<wbr>Standards<wbr>Id<wbr>As<wbr>Repetition<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18602,7 +18630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18610,7 +18638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18618,7 +18646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18630,7 +18658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#control_standards_id_python" style="color: inherit; text-decoration: inherit;">control_<wbr>standards_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18638,7 +18666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#control_version_number_python" style="color: inherit; text-decoration: inherit;">control_<wbr>version_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18646,7 +18674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_default_group_headers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>default_<wbr>group_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18654,7 +18682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18662,7 +18690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18670,7 +18698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_agency_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18678,7 +18706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_date_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#x12dateformat">X12Date<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#x12dateformat">Input[X12Date<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18686,7 +18714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_time_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#x12timeformat">X12Time<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#x12timeformat">Input[X12Time<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18694,7 +18722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18702,7 +18730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18710,7 +18738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18718,7 +18746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_existing_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18726,7 +18754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18734,7 +18762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_group_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18742,7 +18770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18750,7 +18778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18758,7 +18786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18766,7 +18794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18774,7 +18802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18782,7 +18810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_indicator_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#usageindicator">Usage<wbr>Indicator</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#usageindicator">Input[Usage<wbr>Indicator]</a></span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18790,7 +18818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_control_standards_id_as_repetition_character_python" style="color: inherit; text-decoration: inherit;">use_<wbr>control_<wbr>standards_<wbr>id_<wbr>as_<wbr>repetition_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18798,7 +18826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18806,7 +18834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18814,7 +18842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19220,7 +19248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controlstandardsid_nodejs" style="color: inherit; text-decoration: inherit;">control<wbr>Standards<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19228,7 +19256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controlversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">control<wbr>Version<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19236,7 +19264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledefaultgroupheaders_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Default<wbr>Group<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19244,7 +19272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19252,7 +19280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19260,7 +19288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderagencycode_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Agency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19268,7 +19296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderdateformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19276,7 +19304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheadertimeformat_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19284,7 +19312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupheaderversion_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Header<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19292,7 +19320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19300,7 +19328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19308,7 +19336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwriteexistingtransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Existing<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19316,7 +19344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19324,7 +19352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovergroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19332,7 +19360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19340,7 +19368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollovertransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19348,7 +19376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19356,7 +19384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberlowerbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Lower<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19364,7 +19392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberupperbound_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Upper<wbr>Bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19372,7 +19400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usageindicator_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19380,7 +19408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecontrolstandardsidasrepetitioncharacter_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Control<wbr>Standards<wbr>Id<wbr>As<wbr>Repetition<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19388,7 +19416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionalgroupid_nodejs" style="color: inherit; text-decoration: inherit;">functional<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19396,7 +19424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumberprefix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19404,7 +19432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transactionsetcontrolnumbersuffix_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Set<wbr>Control<wbr>Number<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19416,7 +19444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#control_standards_id_python" style="color: inherit; text-decoration: inherit;">control_<wbr>standards_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The controls standards id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19424,7 +19452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#control_version_number_python" style="color: inherit; text-decoration: inherit;">control_<wbr>version_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The control version number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19432,7 +19460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_default_group_headers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>default_<wbr>group_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to enable default group headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19440,7 +19468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The group control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19448,7 +19476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">group_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The group control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19456,7 +19484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_agency_code_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>agency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header agency code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19464,7 +19492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_date_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header date format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19472,7 +19500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_time_format_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header time format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19480,7 +19508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_header_version_python" style="color: inherit; text-decoration: inherit;">group_<wbr>header_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group header version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19488,7 +19516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interchange  control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19496,7 +19524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interchange  control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19504,7 +19532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overwrite_existing_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>existing_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to overwrite existing transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19512,7 +19540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_application_id_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19520,7 +19548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_group_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19528,7 +19556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19536,7 +19564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to rollover transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19544,7 +19572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19552,7 +19580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_lower_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>lower_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number lower bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19560,7 +19588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_upper_bound_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>upper_<wbr>bound</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number upper bound.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19568,7 +19596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usage_indicator_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The usage indicator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19576,7 +19604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_control_standards_id_as_repetition_character_python" style="color: inherit; text-decoration: inherit;">use_<wbr>control_<wbr>standards_<wbr>id_<wbr>as_<wbr>repetition_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use control standards id as repetition character.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19584,7 +19612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functional_group_id_python" style="color: inherit; text-decoration: inherit;">functional_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The functional group id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19592,7 +19620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_prefix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19600,7 +19628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transaction_set_control_number_suffix_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>set_<wbr>control_<wbr>number_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The transaction set control number suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19734,7 +19762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#x12characterset">X12Character<wbr>Set</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#x12characterset">pulumi.<wbr>Input<X12Character<wbr>Set></a></span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19742,7 +19770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19750,7 +19778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19758,7 +19786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replacecharacter_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19766,7 +19794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replaceseparatorsinpayload_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Separators<wbr>In<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19774,7 +19802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19782,7 +19810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">pulumi.<wbr>Input<Segment<wbr>Terminator<wbr>Suffix></a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19794,7 +19822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#x12characterset">X12Character<wbr>Set</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#x12characterset">Input[X12Character<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19802,7 +19830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19810,7 +19838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19818,7 +19846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19826,7 +19854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_separators_in_payload_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>separators_<wbr>in_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19834,7 +19862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19842,7 +19870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#segmentterminatorsuffix">Segment<wbr>Terminator<wbr>Suffix</a></span>
+        <span class="property-type"><a href="#segmentterminatorsuffix">Input[Segment<wbr>Terminator<wbr>Suffix]</a></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19976,7 +20004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#characterset_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19984,7 +20012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentseparator_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19992,7 +20020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataelementseparator_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Element<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20000,7 +20028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replacecharacter_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20008,7 +20036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replaceseparatorsinpayload_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Separators<wbr>In<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20016,7 +20044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20024,7 +20052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segmentterminatorsuffix_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20036,7 +20064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#character_set_python" style="color: inherit; text-decoration: inherit;">character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The X12 character set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20044,7 +20072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_separator_python" style="color: inherit; text-decoration: inherit;">component_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The component separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20052,7 +20080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_element_separator_python" style="color: inherit; text-decoration: inherit;">data_<wbr>element_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data element separator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20060,7 +20088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_character_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The replacement character.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20068,7 +20096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replace_separators_in_payload_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>separators_<wbr>in_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to replace separators in payload.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20076,7 +20104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The segment terminator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20084,7 +20112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#segment_terminator_suffix_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The segment terminator suffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20122,7 +20150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#messagefiltertype">Message<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#messagefiltertype">pulumi.<wbr>Input<Message<wbr>Filter<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20134,7 +20162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#messagefiltertype">Message<wbr>Filter<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#messagefiltertype">Input[Message<wbr>Filter<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20172,7 +20200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefiltertype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20184,7 +20212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message filter type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20222,7 +20250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20234,7 +20262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20272,7 +20300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20284,7 +20312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20354,7 +20382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettings">X12Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12protocolsettings">pulumi.<wbr>Input<X12Protocol<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20362,7 +20390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20370,7 +20398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity</a></span>
+        <span class="property-type"><a href="#businessidentity">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20382,7 +20410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettings">X12Protocol<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12protocolsettings">Input[X12Protocol<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20390,7 +20418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20398,7 +20426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentity">Input[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20468,7 +20496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocolsettings_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">pulumi.<wbr>Input<X12Protocol<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20476,7 +20504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiverbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20484,7 +20512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderbusinessidentity_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">pulumi.<wbr>Input<Business<wbr>Identity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20496,7 +20524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">Input[X12Protocol<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20504,7 +20532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Input[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20512,7 +20540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Input[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20630,7 +20658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#convertimplieddecimal_nodejs" style="color: inherit; text-decoration: inherit;">convert<wbr>Implied<wbr>Decimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20638,7 +20666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createemptyxmltagsfortrailingseparators_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20646,7 +20674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masksecurityinfo_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Security<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20654,7 +20682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserveinterchange_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20662,7 +20690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendinterchangeonerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Interchange<wbr>On<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20670,7 +20698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedotasdecimalseparator_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20682,7 +20710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#convert_implied_decimal_python" style="color: inherit; text-decoration: inherit;">convert_<wbr>implied_<wbr>decimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20690,7 +20718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_empty_xml_tags_for_trailing_separators_python" style="color: inherit; text-decoration: inherit;">create_<wbr>empty_<wbr>xml_<wbr>tags_<wbr>for_<wbr>trailing_<wbr>separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20698,7 +20726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mask_security_info_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>security_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20706,7 +20734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserve_interchange_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20714,7 +20742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_interchange_on_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>interchange_<wbr>on_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20722,7 +20750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_dot_as_decimal_separator_python" style="color: inherit; text-decoration: inherit;">use_<wbr>dot_<wbr>as_<wbr>decimal_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20840,7 +20868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#convertimplieddecimal_nodejs" style="color: inherit; text-decoration: inherit;">convert<wbr>Implied<wbr>Decimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20848,7 +20876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createemptyxmltagsfortrailingseparators_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Empty<wbr>Xml<wbr>Tags<wbr>For<wbr>Trailing<wbr>Separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20856,7 +20884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#masksecurityinfo_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Security<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20864,7 +20892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserveinterchange_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20872,7 +20900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendinterchangeonerror_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Interchange<wbr>On<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20880,7 +20908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedotasdecimalseparator_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Dot<wbr>As<wbr>Decimal<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20892,7 +20920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#convert_implied_decimal_python" style="color: inherit; text-decoration: inherit;">convert_<wbr>implied_<wbr>decimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to convert numerical type to implied decimal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20900,7 +20928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_empty_xml_tags_for_trailing_separators_python" style="color: inherit; text-decoration: inherit;">create_<wbr>empty_<wbr>xml_<wbr>tags_<wbr>for_<wbr>trailing_<wbr>separators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to create empty xml tags for trailing separators.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20908,7 +20936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mask_security_info_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>security_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to mask security information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20916,7 +20944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserve_interchange_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>interchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to preserve interchange.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20924,7 +20952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_interchange_on_error_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>interchange_<wbr>on_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to suspend interchange on error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20932,7 +20960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_dot_as_decimal_separator_python" style="color: inherit; text-decoration: inherit;">use_<wbr>dot_<wbr>as_<wbr>decimal_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to use dot as decimal separator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21146,7 +21174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettings">X12Acknowledgement<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettings">pulumi.<wbr>Input<X12Acknowledgement<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21154,7 +21182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettings">X12Envelope<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12envelopesettings">pulumi.<wbr>Input<X12Envelope<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21162,7 +21190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettings">X12Framing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12framingsettings">pulumi.<wbr>Input<X12Framing<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21170,7 +21198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilter">X12Message<wbr>Filter</a></span>
+        <span class="property-type"><a href="#x12messagefilter">pulumi.<wbr>Input<X12Message<wbr>Filter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21178,7 +21206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettings">X12Processing<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12processingsettings">pulumi.<wbr>Input<X12Processing<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21186,7 +21214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareference">X12Schema<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#x12schemareference">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Schema<wbr>Reference<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21194,7 +21222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettings">X12Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12securitysettings">pulumi.<wbr>Input<X12Security<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21202,7 +21230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettings">X12Validation<wbr>Settings</a></span>
+        <span class="property-type"><a href="#x12validationsettings">pulumi.<wbr>Input<X12Validation<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21210,7 +21238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverride">X12Envelope<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverride">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Envelope<wbr>Override<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21218,7 +21246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifier">X12Message<wbr>Identifier[]</a></span>
+        <span class="property-type"><a href="#x12messageidentifier">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Message<wbr>Identifier<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21226,7 +21254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverride">X12Validation<wbr>Override[]</a></span>
+        <span class="property-type"><a href="#x12validationoverride">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Validation<wbr>Override<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21234,7 +21262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12delimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">x12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverrides">X12Delimiter<wbr>Overrides[]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverrides">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Delimiter<wbr>Overrides<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21246,7 +21274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettings">X12Acknowledgement<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettings">Input[X12Acknowledgement<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21254,7 +21282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettings">X12Envelope<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12envelopesettings">Input[X12Envelope<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21262,7 +21290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettings">X12Framing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12framingsettings">Input[X12Framing<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21270,7 +21298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilter">X12Message<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12messagefilter">Input[X12Message<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21278,7 +21306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettings">X12Processing<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12processingsettings">Input[X12Processing<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21286,7 +21314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareference">Sequence[X12Schema<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12schemareference">Input[X12Schema<wbr>Reference<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21294,7 +21322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettings">X12Security<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12securitysettings">Input[X12Security<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21302,7 +21330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettings">X12Validation<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12validationsettings">Input[X12Validation<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21310,7 +21338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverride">Sequence[X12Envelope<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverride">Input[X12Envelope<wbr>Override<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21318,7 +21346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifier">Sequence[X12Message<wbr>Identifier<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12messageidentifier">Input[X12Message<wbr>Identifier<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21326,7 +21354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverride">Sequence[X12Validation<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12validationoverride">Input[X12Validation<wbr>Override<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21334,7 +21362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">x12_<wbr>delimiter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverrides">Sequence[X12Delimiter<wbr>Overrides<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverrides">Input[X12Delimiter<wbr>Overrides<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21548,7 +21576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgementsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">pulumi.<wbr>Input<X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21556,7 +21584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopesettings_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">pulumi.<wbr>Input<X12Envelope<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21564,7 +21592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framingsettings_nodejs" style="color: inherit; text-decoration: inherit;">framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">pulumi.<wbr>Input<X12Framing<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21572,7 +21600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilter_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">pulumi.<wbr>Input<X12Message<wbr>Filter<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21580,7 +21608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processingsettings_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">pulumi.<wbr>Input<X12Processing<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21588,7 +21616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemareferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">X12Schema<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Schema<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21596,7 +21624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">pulumi.<wbr>Input<X12Security<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21604,7 +21632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationsettings_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">pulumi.<wbr>Input<X12Validation<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21612,7 +21640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelopeoverrides_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">X12Envelope<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Envelope<wbr>Override<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21620,7 +21648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagefilterlist_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">X12Message<wbr>Identifier<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Message<wbr>Identifier<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21628,7 +21656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoverrides_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">X12Validation<wbr>Override<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Validation<wbr>Override<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21636,7 +21664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12delimiteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">x12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">X12Delimiter<wbr>Overrides<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21648,7 +21676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Input[X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21656,7 +21684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">Input[X12Envelope<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21664,7 +21692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">Input[X12Framing<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21672,7 +21700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">Input[X12Message<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21680,7 +21708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">Input[X12Processing<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21688,7 +21716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">Sequence[X12Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">Input[X12Schema<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21696,7 +21724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">Input[X12Security<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21704,7 +21732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">Input[X12Validation<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21712,7 +21740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">Sequence[X12Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">Input[X12Envelope<wbr>Override<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21720,7 +21748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">Sequence[X12Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">Input[X12Message<wbr>Identifier<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21728,7 +21756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">Sequence[X12Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">Input[X12Validation<wbr>Override<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21736,7 +21764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x12_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">x12_<wbr>delimiter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">Sequence[X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">Input[X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21822,7 +21850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21830,7 +21858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21838,7 +21866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21846,7 +21874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21858,7 +21886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21866,7 +21894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21874,7 +21902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21882,7 +21910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21968,7 +21996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21976,7 +22004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21984,7 +22012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21992,7 +22020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#senderapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22004,7 +22032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22012,7 +22040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22020,7 +22048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22028,7 +22056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sender_application_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sender application id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22114,7 +22142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22122,7 +22150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityqualifier_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22130,7 +22158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationvalue_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22138,7 +22166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordvalue_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22150,7 +22178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_qualifier_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22158,7 +22186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_qualifier_python" style="color: inherit; text-decoration: inherit;">security_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22166,7 +22194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_value_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22174,7 +22202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_value_python" style="color: inherit; text-decoration: inherit;">password_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22260,7 +22288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22268,7 +22296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityqualifier_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22276,7 +22304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationvalue_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22284,7 +22312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordvalue_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22296,7 +22324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_qualifier_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization qualifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22304,7 +22332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_qualifier_python" style="color: inherit; text-decoration: inherit;">security_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security qualifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22312,7 +22340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_value_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22320,7 +22348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_value_python" style="color: inherit; text-decoration: inherit;">password_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22492,7 +22520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22500,7 +22528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22508,7 +22536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#trailingseparatorpolicy">pulumi.<wbr>Input<Trailing<wbr>Separator<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22516,7 +22544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22524,7 +22552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22532,7 +22560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22540,7 +22568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22552,7 +22580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22560,7 +22588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22568,7 +22596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#trailingseparatorpolicy">Input[Trailing<wbr>Separator<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22576,7 +22604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22584,7 +22612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22592,7 +22620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22600,7 +22628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22734,7 +22762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22742,7 +22770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messageid_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22750,7 +22778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22758,7 +22786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22766,7 +22794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22774,7 +22802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22782,7 +22810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22794,7 +22822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22802,7 +22830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The message id on which the validation settings has to be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22810,7 +22838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22818,7 +22846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22826,7 +22854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character Set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22834,7 +22862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22842,7 +22870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23024,7 +23052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23032,7 +23060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicategroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23040,7 +23068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicateinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23048,7 +23076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicatetransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23056,7 +23084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumbervaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23064,7 +23092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#trailingseparatorpolicy">pulumi.<wbr>Input<Trailing<wbr>Separator<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23072,7 +23100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23080,7 +23108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23088,7 +23116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23096,7 +23124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23108,7 +23136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23116,7 +23144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_group_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23124,7 +23152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23132,7 +23160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23140,7 +23168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23148,7 +23176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#trailingseparatorpolicy">Trailing<wbr>Separator<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#trailingseparatorpolicy">Input[Trailing<wbr>Separator<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23156,7 +23184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23164,7 +23192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23172,7 +23200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23180,7 +23208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23362,7 +23390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23370,7 +23398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicategroupcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Group<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23378,7 +23406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicateinterchangecontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Interchange<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23386,7 +23414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#checkduplicatetransactionsetcontrolnumber_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate<wbr>Transaction<wbr>Set<wbr>Control<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23394,7 +23422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchangecontrolnumbervaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">interchange<wbr>Control<wbr>Number<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23402,7 +23430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailingseparatorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trailing<wbr>Separator<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23410,7 +23438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trimleadingandtrailingspacesandzeroes_nodejs" style="color: inherit; text-decoration: inherit;">trim<wbr>Leading<wbr>And<wbr>Trailing<wbr>Spaces<wbr>And<wbr>Zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23418,7 +23446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecharacterset_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Character<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23426,7 +23454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validateeditypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>EDITypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23434,7 +23462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatexsdtypes_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>XSDTypes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23446,7 +23474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to allow leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23454,7 +23482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_group_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>group_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate group control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23462,7 +23490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_interchange_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>interchange_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23470,7 +23498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#check_duplicate_transaction_set_control_number_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate_<wbr>transaction_<wbr>set_<wbr>control_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to check for duplicate transaction set control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23478,7 +23506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interchange_control_number_validity_days_python" style="color: inherit; text-decoration: inherit;">interchange_<wbr>control_<wbr>number_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The validity period of interchange control number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23486,7 +23514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trailing_separator_policy_python" style="color: inherit; text-decoration: inherit;">trailing_<wbr>separator_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The trailing separator policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23494,7 +23522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trim_leading_and_trailing_spaces_and_zeroes_python" style="color: inherit; text-decoration: inherit;">trim_<wbr>leading_<wbr>and_<wbr>trailing_<wbr>spaces_<wbr>and_<wbr>zeroes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to trim leading and trailing spaces and zeroes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23502,7 +23530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_character_set_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>character_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to validate character set in the message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23510,7 +23538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_edi_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>edi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate EDI types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23518,7 +23546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_xsd_types_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>xsd_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd></dl>
 {{% /choosable %}}

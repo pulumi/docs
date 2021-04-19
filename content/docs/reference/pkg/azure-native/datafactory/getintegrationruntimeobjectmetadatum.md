@@ -22,17 +22,21 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntimeObjectMetadatum<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeObjectMetadatumArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeObjectMetadatumResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntimeObjectMetadatum<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeObjectMetadatumArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeObjectMetadatumResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_runtime_object_metadatum(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationRuntimeObjectMetadatumResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_runtime_object_metadatum(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                             <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                             <span class="nx">metadata_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationRuntimeObjectMetadatumResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeObjectMetadatum<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIntegrationRuntimeObjectMetadatumArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIntegrationRuntimeObjectMetadatumResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeObjectMetadatum<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIntegrationRuntimeObjectMetadatumArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIntegrationRuntimeObjectMetadatumResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetIntegrationRuntimeObjectMetadatum` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationRuntimeObjectMetadatum </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeObjectMetadatumResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeObjectMetadatumArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeObjectMetadatumResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeObjectMetadatumArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -480,7 +484,7 @@ The following output properties are available:
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ssisvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Variable<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Variable in environment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -612,7 +616,7 @@ The following output properties are available:
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisvariableresponse">Sequence[Ssis<wbr>Variable<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ssisvariableresponse">Sequence[Ssis<wbr>Variable<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Variable in environment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -776,7 +780,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ssisparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters in package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +960,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisparameterresponse">Sequence[Ssis<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ssisparameterresponse">Sequence[Ssis<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Parameters in package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1404,7 @@ The following output properties are available:
 <a href="#environmentrefs_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisenvironmentreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Environment<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ssisenvironmentreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Environment<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Environment reference in project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1436,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ssisparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ssis<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters in project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1584,7 @@ The following output properties are available:
 <a href="#environment_refs_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisenvironmentreferenceresponse">Sequence[Ssis<wbr>Environment<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ssisenvironmentreferenceresponse">Sequence[Ssis<wbr>Environment<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Environment reference in project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1616,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisparameterresponse">Sequence[Ssis<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ssisparameterresponse">Sequence[Ssis<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Parameters in project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

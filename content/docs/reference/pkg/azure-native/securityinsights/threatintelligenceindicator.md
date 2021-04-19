@@ -46,7 +46,7 @@ class MyStack : Stack
             Labels = {},
             Modified = "",
             Name = "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
-            OperationalInsightsResourceProvider = "Microsoft.OperationalIinsights",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             Pattern = "[url:value = 'https://www.contoso.com']",
             PatternType = "url",
             ResourceGroupName = "myRg",
@@ -82,7 +82,7 @@ package main
 
 import (
 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -99,7 +99,7 @@ func main() {
 			Labels:                              []interface{}{},
 			Modified:                            pulumi.String(""),
 			Name:                                pulumi.String("d9cd6f0b-96b9-3984-17cd-a779d1e15a93"),
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalIinsights"),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
 			Pattern:                             pulumi.String("[url:value = 'https://www.contoso.com']"),
 			PatternType:                         pulumi.String("url"),
 			ResourceGroupName:                   pulumi.String("myRg"),
@@ -147,7 +147,7 @@ threat_intelligence_indicator = azure_native.securityinsights.ThreatIntelligence
     labels=[],
     modified="",
     name="d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
-    operational_insights_resource_provider="Microsoft.OperationalIinsights",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
     pattern="[url:value = 'https://www.contoso.com']",
     pattern_type="url",
     resource_group_name="myRg",
@@ -184,7 +184,7 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
     labels: [],
     modified: "",
     name: "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
-    operationalInsightsResourceProvider: "Microsoft.OperationalIinsights",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     pattern: "[url:value = 'https://www.contoso.com']",
     patternType: "url",
     resourceGroupName: "myRg",
@@ -216,19 +216,59 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defanged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceExternalReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceGranularMarkingModelArgs]]</span> = None<span class="p">, </span><span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceKillChainPhaseArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ThreatIntelligenceResourceKind]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_marking_refs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parsed_pattern</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThreatIntelligenceParsedPatternArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pattern_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                <span class="nx">confidence</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">created_by_ref</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">defanged</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                                <span class="nx">external_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">external_last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">external_references</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ThreatIntelligenceExternalReferenceArgs]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">granular_markings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ThreatIntelligenceGranularMarkingModelArgs]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">indicator_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">kill_chain_phases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ThreatIntelligenceKillChainPhaseArgs]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ThreatIntelligenceResourceKind]]]</span> = None<span class="p">,</span>
+                                <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">language</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">last_updated_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">object_marking_refs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">parsed_pattern</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ThreatIntelligenceParsedPatternArgs]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">pattern_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">pattern_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">revoked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">threat_intelligence_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">threat_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                <span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">,</span>
+                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ThreatIntelligenceIndicator</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ThreatIntelligenceIndicator</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ThreatIntelligenceIndicator</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -263,22 +303,32 @@ const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatInte
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ThreatIntelligenceIndicatorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -918,7 +968,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#threatintelligenceresourcekind">Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#threatintelligenceresourcekind">pulumi.<wbr>Input<Threat<wbr>Intelligence<wbr>Resource<wbr>Kind></a></span>
     </dt>
     <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -926,7 +976,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -934,7 +984,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -942,7 +992,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +1000,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#confidence_nodejs" style="color: inherit; text-decoration: inherit;">confidence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +1008,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Created by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +1016,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#createdbyref_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +1024,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#defanged_nodejs" style="color: inherit; text-decoration: inherit;">defanged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1032,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1040,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +1048,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1064,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1072,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#externallastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Last<wbr>Updated<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1080,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#externalreferences_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceexternalreference">Threat<wbr>Intelligence<wbr>External<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceexternalreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1088,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#granularmarkings_nodejs" style="color: inherit; text-decoration: inherit;">granular<wbr>Markings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model[]</a></span>
+        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">pulumi.<wbr>Input<pulumi.<wbr>Input<Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1096,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#indicatortypes_nodejs" style="color: inherit; text-decoration: inherit;">indicator<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1104,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#killchainphases_nodejs" style="color: inherit; text-decoration: inherit;">kill<wbr>Chain<wbr>Phases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencekillchainphase">Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase[]</a></span>
+        <span class="property-type"><a href="#threatintelligencekillchainphase">pulumi.<wbr>Input<pulumi.<wbr>Input<Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1112,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1120,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1128,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#lastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1136,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#modified_nodejs" style="color: inherit; text-decoration: inherit;">modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Modified by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1144,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1152,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#objectmarkingrefs_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Marking<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1160,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#parsedpattern_nodejs" style="color: inherit; text-decoration: inherit;">parsed<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpattern">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">pulumi.<wbr>Input<pulumi.<wbr>Input<Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1168,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1176,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#patterntype_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1184,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#patternversion_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1192,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#revoked_nodejs" style="color: inherit; text-decoration: inherit;">revoked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1200,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1208,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#threatintelligencetags_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Intelligence<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1216,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#threattypes_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Threat types{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1224,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1232,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Valid until{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1194,7 +1244,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#threatintelligenceresourcekind">Threat<wbr>Intelligence<wbr>Resource<wbr>Kind</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#threatintelligenceresourcekind">Input[Threat<wbr>Intelligence<wbr>Resource<wbr>Kind]</a></span>
     </dt>
     <dd>{{% md %}}The kind of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1202,7 +1252,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1210,7 +1260,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1218,7 +1268,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1276,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#confidence_python" style="color: inherit; text-decoration: inherit;">confidence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Confidence of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1234,7 +1284,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Created by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,7 +1292,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#created_by_ref_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Created by reference of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1250,7 +1300,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#defanged_python" style="color: inherit; text-decoration: inherit;">defanged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is threat intelligence entity defanged{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1308,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,7 +1316,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1324,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1340,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}External ID of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1348,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#external_last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">external_<wbr>last_<wbr>updated_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}External last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1356,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#external_references_python" style="color: inherit; text-decoration: inherit;">external_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceexternalreference">Sequence[Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#threatintelligenceexternalreference">Input[Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1314,7 +1364,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#granular_markings_python" style="color: inherit; text-decoration: inherit;">granular_<wbr>markings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Sequence[Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args]</a></span>
+        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">Input[Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1372,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#indicator_types_python" style="color: inherit; text-decoration: inherit;">indicator_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Indicator types of threat intelligence entities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1330,7 +1380,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#kill_chain_phases_python" style="color: inherit; text-decoration: inherit;">kill_<wbr>chain_<wbr>phases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencekillchainphase">Sequence[Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args]</a></span>
+        <span class="property-type"><a href="#threatintelligencekillchainphase">Input[Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1388,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Labels  of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1396,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Language of threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1404,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated time in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1362,7 +1412,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#modified_python" style="color: inherit; text-decoration: inherit;">modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Modified by{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1420,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Threat intelligence indicator name field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1378,7 +1428,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#object_marking_refs_python" style="color: inherit; text-decoration: inherit;">object_<wbr>marking_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Threat intelligence entity object marking references{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1386,7 +1436,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#parsed_pattern_python" style="color: inherit; text-decoration: inherit;">parsed_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpattern">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">Input[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1444,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pattern of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1452,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#pattern_type_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pattern type of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1460,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#pattern_version_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pattern version of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1418,7 +1468,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#revoked_python" style="color: inherit; text-decoration: inherit;">revoked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Is threat intelligence entity revoked{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1476,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Source of a threat intelligence entity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1484,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#threat_intelligence_tags_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>intelligence_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1492,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#threat_types_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Threat types{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1450,7 +1500,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1458,7 +1508,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Valid until{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}External reference description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}External reference ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hashes_nodejs" style="color: inherit; text-decoration: inherit;">hashes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}External reference hashes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}External reference source name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}External reference URL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}External reference description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}External reference ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hashes_python" style="color: inherit; text-decoration: inherit;">hashes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}External reference hashes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}External reference source name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}External reference URL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1803,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Language granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#markingref_nodejs" style="color: inherit; text-decoration: inherit;">marking<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1831,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Language granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marking_ref_python" style="color: inherit; text-decoration: inherit;">marking_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}marking reference granular marking model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}granular marking model selectors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1901,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#killchainname_nodejs" style="color: inherit; text-decoration: inherit;">kill<wbr>Chain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kill chainName name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phasename_nodejs" style="color: inherit; text-decoration: inherit;">phase<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Phase name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1921,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kill_chain_name_python" style="color: inherit; text-decoration: inherit;">kill_<wbr>chain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kill chainName name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phase_name_python" style="color: inherit; text-decoration: inherit;">phase_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Phase name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1983,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patterntypekey_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pattern type key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patterntypevalues_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">pulumi.<wbr>Input<pulumi.<wbr>Input<Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_type_key_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pattern type key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_type_values_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Input[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2065,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2085,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of parsed pattern{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the value{{% /md %}}</dd></dl>
 {{% /choosable %}}

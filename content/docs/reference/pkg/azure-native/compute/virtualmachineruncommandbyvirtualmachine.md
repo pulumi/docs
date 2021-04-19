@@ -79,7 +79,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -206,19 +206,39 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">async_execution</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_blob_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_blob_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RunCommandInputParameterArgs]]</span> = None<span class="p">, </span><span class="nx">protected_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RunCommandInputParameterArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_as_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineRunCommandScriptSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                             <span class="nx">async_execution</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                             <span class="nx">error_blob_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">output_blob_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RunCommandInputParameterArgs]]]]</span> = None<span class="p">,</span>
+                                             <span class="nx">protected_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RunCommandInputParameterArgs]]]]</span> = None<span class="p">,</span>
+                                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">run_as_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">run_as_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">run_command_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                             <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineRunCommandScriptSourceArgs]]</span> = None<span class="p">,</span>
+                                             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                             <span class="nx">timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                             <span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">,</span>
+                                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineRunCommandByVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineRunCommandByVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineRunCommandByVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -253,22 +273,32 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineRunCommandByVirtualMachineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -588,7 +618,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -596,7 +626,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#vmname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -604,7 +634,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#asyncexecution_nodejs" style="color: inherit; text-decoration: inherit;">async<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -612,7 +642,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#errorbloburi_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Blob<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -620,7 +650,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +658,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#outputbloburi_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Blob<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +666,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">Run<wbr>Command<wbr>Input<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +674,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#protectedparameters_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">Run<wbr>Command<wbr>Input<wbr>Parameter[]</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +682,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#runaspassword_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +690,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +698,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#runcommandname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +706,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +714,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +722,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -704,7 +734,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -712,7 +742,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#vm_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +750,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#async_execution_python" style="color: inherit; text-decoration: inherit;">async_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +758,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#error_blob_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>blob_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +766,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +774,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#output_blob_uri_python" style="color: inherit; text-decoration: inherit;">output_<wbr>blob_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +782,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">Sequence[Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">Input[Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +790,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#protected_parameters_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">Sequence[Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">Input[Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +798,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#run_as_password_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +806,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +814,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#run_command_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +822,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Input[Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +830,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +838,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1103,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1147,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1241,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1261,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1323,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1335,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Script end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Script error stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionmessage_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executionstate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Script execution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Script output stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Script start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Script end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Script error stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_message_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#execution_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Script execution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Script output stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Script start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Input[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1687,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandid_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1703,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1715,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_id_python" style="color: inherit; text-decoration: inherit;">command_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1723,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1731,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1801,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandid_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_id_python" style="color: inherit; text-decoration: inherit;">command_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}

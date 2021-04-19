@@ -89,7 +89,7 @@ package main
 
 import (
 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -232,19 +232,39 @@ const iotSecuritySolution = new azure_native.security.IotSecuritySolution("iotSe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_workspaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[AdditionalWorkspacesPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, DataSource]]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ExportData]]]</span> = None<span class="p">, </span><span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recommendations_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecommendationConfigurationPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecuritySolutionStatus]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unmasked_ip_logging_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, UnmaskedIpLoggingStatus]]</span> = None<span class="p">, </span><span class="nx">user_defined_resources</span><span class="p">:</span> <span class="nx">Optional[UserDefinedResourcesPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">workspace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">additional_workspaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AdditionalWorkspacesPropertiesArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">disabled_data_sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, DataSource]]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">export</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, ExportData]]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">recommendations_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RecommendationConfigurationPropertiesArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SecuritySolutionStatus]]]</span> = None<span class="p">,</span>
+                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">unmasked_ip_logging_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, UnmaskedIpLoggingStatus]]]</span> = None<span class="p">,</span>
+                        <span class="nx">user_defined_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserDefinedResourcesPropertiesArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">workspace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSecuritySolution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSecuritySolution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IotSecuritySolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,22 +299,32 @@ const iotSecuritySolution = new azure_native.security.IotSecuritySolution("iotSe
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IotSecuritySolutionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -614,7 +644,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource display name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +652,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#iothubs_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -630,7 +660,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +668,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#additionalworkspaces_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalworkspacesproperties">Additional<wbr>Workspaces<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#additionalworkspacesproperties">pulumi.<wbr>Input<pulumi.<wbr>Input<Additional<wbr>Workspaces<wbr>Properties<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of additional workspaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +676,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disableddatasources_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Data<wbr>Source[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Data<wbr>Source>[]></span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +684,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Export<wbr>Data[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Export<wbr>Data>[]></span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +692,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +700,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#recommendationsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationproperties">Recommendation<wbr>Configuration<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationproperties">pulumi.<wbr>Input<pulumi.<wbr>Input<Recommendation<wbr>Configuration<wbr>Properties<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +708,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#solutionname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the IoT Security solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +716,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#securitysolutionstatus">Security<wbr>Solution<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#securitysolutionstatus">pulumi.<wbr>Input<Security<wbr>Solution<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +724,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +732,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmaskediploggingstatus_nodejs" style="color: inherit; text-decoration: inherit;">unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#unmaskediploggingstatus">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#unmaskediploggingstatus">pulumi.<wbr>Input<Unmasked<wbr>Ip<wbr>Logging<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -710,7 +740,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#userdefinedresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties</a></span>
+        <span class="property-type"><a href="#userdefinedresourcesproperties">pulumi.<wbr>Input<User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +748,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#workspace_nodejs" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workspace resource ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -730,7 +760,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource display name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -738,7 +768,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -746,7 +776,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +784,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#additional_workspaces_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalworkspacesproperties">Sequence[Additional<wbr>Workspaces<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#additionalworkspacesproperties">Input[Additional<wbr>Workspaces<wbr>Properties<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of additional workspaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +792,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Data<wbr>Source]]</span>
+        <span class="property-type">Input[Union[str, Data<wbr>Source]]]]</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +800,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Export<wbr>Data]]</span>
+        <span class="property-type">Input[Union[str, Export<wbr>Data]]]]</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +808,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +816,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#recommendations_configuration_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationproperties">Sequence[Recommendation<wbr>Configuration<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationproperties">Input[Recommendation<wbr>Configuration<wbr>Properties<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +824,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#solution_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Security solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +832,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#securitysolutionstatus">Security<wbr>Solution<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#securitysolutionstatus">Input[Security<wbr>Solution<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +840,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +848,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#unmasked_ip_logging_status_python" style="color: inherit; text-decoration: inherit;">unmasked_<wbr>ip_<wbr>logging_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#unmaskediploggingstatus">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#unmaskediploggingstatus">Input[Unmasked<wbr>Ip<wbr>Logging<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +856,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#user_defined_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#userdefinedresourcesproperties">Input[User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +864,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#workspace_python" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workspace resource ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1145,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatypes_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Additional<wbr>Workspace<wbr>Data<wbr>Type[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Additional<wbr>Workspace<wbr>Data<wbr>Type>[]></span>
     </dt>
     <dd>{{% md %}}List of data types sent to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#additionalworkspacetype">Additional<wbr>Workspace<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#additionalworkspacetype">pulumi.<wbr>Input<Additional<wbr>Workspace<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Workspace type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_nodejs" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workspace resource id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1173,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_types_python" style="color: inherit; text-decoration: inherit;">data_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Additional<wbr>Workspace<wbr>Data<wbr>Type]]</span>
+        <span class="property-type">Input[Union[str, Additional<wbr>Workspace<wbr>Data<wbr>Type]]]]</span>
     </dt>
     <dd>{{% md %}}List of data types sent to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#additionalworkspacetype">Additional<wbr>Workspace<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#additionalworkspacetype">Input[Additional<wbr>Workspace<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Workspace type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_python" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workspace resource id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatypes_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of data types sent to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workspace type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_nodejs" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workspace resource id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_types_python" style="color: inherit; text-decoration: inherit;">data_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of data types sent to workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workspace type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_python" style="color: inherit; text-decoration: inherit;">workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workspace resource id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1427,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationtype_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recommendationtype">Recommendation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#recommendationtype">pulumi.<wbr>Input<Recommendation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1435,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recommendationconfigstatus">Recommendation<wbr>Config<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#recommendationconfigstatus">pulumi.<wbr>Input<Recommendation<wbr>Config<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#recommendationtype">Recommendation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#recommendationtype">Input[Recommendation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1455,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#recommendationconfigstatus">Recommendation<wbr>Config<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#recommendationconfigstatus">Input[Recommendation<wbr>Config<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1525,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1533,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationtype_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1541,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1561,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1569,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1827,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1847,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1967,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1975,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querysubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1987,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1995,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2049,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2057,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querysubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2069,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2077,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd></dl>
 {{% /choosable %}}

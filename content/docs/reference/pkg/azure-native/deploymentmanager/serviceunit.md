@@ -69,7 +69,7 @@ import (
 	"fmt"
 
 	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -205,7 +205,7 @@ package main
 
 import (
 	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -305,19 +305,34 @@ const serviceUnit = new azure_native.deploymentmanager.ServiceUnit("serviceUnit"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ServiceUnitArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[DeploymentMode]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_topology_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_unit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceUnitArtifactsArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentMode]]</span> = None<span class="p">,</span>
+                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">service_topology_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">service_unit_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">target_resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceUnit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceUnit</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceUnit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceUnit</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceUnit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceUnitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -352,22 +367,32 @@ const serviceUnit = new azure_native.deploymentmanager.ServiceUnit("serviceUnit"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceUnitArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -607,7 +632,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentmode">Deployment<wbr>Mode</a></span>
+        <span class="property-type"><a href="#deploymentmode">pulumi.<wbr>Input<Deployment<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -615,7 +640,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -623,7 +648,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -631,7 +656,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#servicetopologyname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Topology<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -639,7 +664,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targetresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +672,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifacts">Service<wbr>Unit<wbr>Artifacts</a></span>
+        <span class="property-type"><a href="#serviceunitartifacts">pulumi.<wbr>Input<Service<wbr>Unit<wbr>Artifacts<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +680,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +688,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#serviceunitname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Unit<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -671,7 +696,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -683,7 +708,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentmode">Deployment<wbr>Mode</a></span>
+        <span class="property-type"><a href="#deploymentmode">Input[Deployment<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Describes the type of ARM deployment to be performed on the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -691,7 +716,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -699,7 +724,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -707,7 +732,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#service_topology_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>topology_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service topology .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -715,7 +740,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#target_resource_group_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -723,7 +748,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifacts">Service<wbr>Unit<wbr>Artifacts<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceunitartifacts">Input[Service<wbr>Unit<wbr>Artifacts<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +756,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +764,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#service_unit_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>unit_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the service unit resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +772,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parametersartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parametersuri_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templateartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templateuri_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1024,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_uri_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_uri_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parametersartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parametersuri_nodejs" style="color: inherit; text-decoration: inherit;">parameters<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templateartifactsourcerelativepath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Artifact<wbr>Source<wbr>Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templateuri_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1170,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the ARM parameters file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_uri_python" style="color: inherit; text-decoration: inherit;">parameters_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM parameters file with the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_artifact_source_relative_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>artifact_<wbr>source_<wbr>relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the ARM template file relative to the artifact source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_uri_python" style="color: inherit; text-decoration: inherit;">template_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd></dl>
 {{% /choosable %}}

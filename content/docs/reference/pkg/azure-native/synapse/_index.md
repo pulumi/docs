@@ -12,9 +12,12 @@ Explore the resources and functions of the azure-native.synapse module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="bigdatapool" title="BigDataPool"><span class="symbol resource"></span>BigDataPool</a></li>
+    <li><a href="dataconnection" title="DataConnection"><span class="symbol resource"></span>DataConnection</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="integrationruntime" title="IntegrationRuntime"><span class="symbol resource"></span>IntegrationRuntime</a></li>
     <li><a href="ipfirewallrule" title="IpFirewallRule"><span class="symbol resource"></span>IpFirewallRule</a></li>
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
+    <li><a href="kustopool" title="KustoPool"><span class="symbol resource"></span>KustoPool</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="privatelinkhub" title="PrivateLinkHub"><span class="symbol resource"></span>PrivateLinkHub</a></li>
     <li><a href="sqlpool" title="SqlPool"><span class="symbol resource"></span>SqlPool</a></li>
@@ -33,6 +36,8 @@ Explore the resources and functions of the azure-native.synapse module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbigdatapool" title="GetBigDataPool"><span class="symbol function"></span>GetBigDataPool</a></li>
+    <li><a href="getdataconnection" title="GetDataConnection"><span class="symbol function"></span>GetDataConnection</a></li>
+    <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getintegrationruntime" title="GetIntegrationRuntime"><span class="symbol function"></span>GetIntegrationRuntime</a></li>
     <li><a href="getintegrationruntimeconnectioninfo" title="GetIntegrationRuntimeConnectionInfo"><span class="symbol function"></span>GetIntegrationRuntimeConnectionInfo</a></li>
     <li><a href="getintegrationruntimeobjectmetadatum" title="GetIntegrationRuntimeObjectMetadatum"><span class="symbol function"></span>GetIntegrationRuntimeObjectMetadatum</a></li>
@@ -52,6 +57,7 @@ Explore the resources and functions of the azure-native.synapse module.
     <li><a href="getworkspaceaadadmin" title="GetWorkspaceAadAdmin"><span class="symbol function"></span>GetWorkspaceAadAdmin</a></li>
     <li><a href="getworkspacemanagedsqlservervulnerabilityassessment" title="GetWorkspaceManagedSqlServerVulnerabilityAssessment"><span class="symbol function"></span>GetWorkspaceManagedSqlServerVulnerabilityAssessment</a></li>
     <li><a href="getworkspacesqlaadadmin" title="GetWorkspaceSqlAadAdmin"><span class="symbol function"></span>GetWorkspaceSqlAadAdmin</a></li>
+    <li><a href="getkustopool" title="GetkustoPool"><span class="symbol function"></span>GetkustoPool</a></li>
     <li><a href="listintegrationruntimeauthkey" title="ListIntegrationRuntimeAuthKey"><span class="symbol function"></span>ListIntegrationRuntimeAuthKey</a></li>
 </ul>
 
@@ -62,6 +68,6 @@ Explore the resources and functions of the azure-native.synapse module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.0.0</dd>
 </dl>
 

@@ -73,7 +73,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -184,19 +184,35 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">applies_to_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ConnectivityGroupItemArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connectivity_topology</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectivityTopology]]</span> = None<span class="p">, </span><span class="nx">delete_existing_peering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">applies_to_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ConnectivityGroupItemArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">configuration_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">connectivity_topology</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ConnectivityTopology]]]</span> = None<span class="p">,</span>
+                              <span class="nx">delete_existing_peering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">hub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">is_global</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">network_manager_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectivityConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectivityConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectivityConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectivityConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectivityConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectivityConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -231,22 +247,32 @@ const connectivityConfiguration = new azure_native.network.ConnectivityConfigura
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConnectivityConfigurationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -502,7 +528,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#connectivitytopology_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Topology</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectivitytopology">Connectivity<wbr>Topology</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#connectivitytopology">pulumi.<wbr>Input<Connectivity<wbr>Topology></a></span>
     </dt>
     <dd>{{% md %}}Connectivity topology type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +536,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#networkmanagername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Manager<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -518,7 +544,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +552,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#appliestogroups_nodejs" style="color: inherit; text-decoration: inherit;">applies<wbr>To<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitygroupitem">Connectivity<wbr>Group<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#connectivitygroupitem">pulumi.<wbr>Input<pulumi.<wbr>Input<Connectivity<wbr>Group<wbr>Item<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Groups for configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +560,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#configurationname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network manager connectivity configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +568,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#deleteexistingpeering_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Existing<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +576,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the connectivity configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +584,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +592,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#hubid_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +600,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -586,7 +612,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#connectivity_topology_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>topology</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#connectivitytopology">Connectivity<wbr>Topology</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#connectivitytopology">Input[Connectivity<wbr>Topology]</a></span>
     </dt>
     <dd>{{% md %}}Connectivity topology type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -594,7 +620,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#network_manager_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>manager_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network manager.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -602,7 +628,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +636,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#applies_to_groups_python" style="color: inherit; text-decoration: inherit;">applies_<wbr>to_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitygroupitem">Sequence[Connectivity<wbr>Group<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectivitygroupitem">Input[Connectivity<wbr>Group<wbr>Item<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Groups for configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +644,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#configuration_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network manager connectivity configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +652,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#delete_existing_peering_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>existing_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag if need to remove current existing peerings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +660,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the connectivity configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +668,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +676,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#hub_id_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hub vnet Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +684,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag if global mesh is supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#groupconnectivity">Group<wbr>Connectivity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#groupconnectivity">pulumi.<wbr>Input<Group<wbr>Connectivity></a></span>
     </dt>
     <dd>{{% md %}}Group connectivity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkgroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Network group Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1005,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_connectivity_python" style="color: inherit; text-decoration: inherit;">group_<wbr>connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#groupconnectivity">Group<wbr>Connectivity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#groupconnectivity">Input[Group<wbr>Connectivity]</a></span>
     </dt>
     <dd>{{% md %}}Group connectivity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Network group Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_hub_gateway_python" style="color: inherit; text-decoration: inherit;">use_<wbr>hub_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupconnectivity_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Group connectivity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobal_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkgroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Network group Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usehubgateway_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Hub<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_connectivity_python" style="color: inherit; text-decoration: inherit;">group_<wbr>connectivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Group connectivity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_global_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag if global is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Network group Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_hub_gateway_python" style="color: inherit; text-decoration: inherit;">use_<wbr>hub_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag if need to use hub gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1345,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

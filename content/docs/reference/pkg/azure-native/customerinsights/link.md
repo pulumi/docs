@@ -86,7 +86,7 @@ package main
 
 import (
 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -220,19 +220,38 @@ const link = new azure_native.customerinsights.Link("link", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Link</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Link</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[TypePropertiesMappingArgs]]</span> = None<span class="p">, </span><span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[InstanceOperationType]</span> = None<span class="p">, </span><span class="nx">participant_property_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[ParticipantPropertyReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">reference_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityType]</span> = None<span class="p">, </span><span class="nx">source_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityType]</span> = None<span class="p">, </span><span class="nx">target_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">link_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TypePropertiesMappingArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">operation_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceOperationType]]</span> = None<span class="p">,</span>
+         <span class="nx">participant_property_references</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ParticipantPropertyReferenceArgs]]]]</span> = None<span class="p">,</span>
+         <span class="nx">reference_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">source_entity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntityType]]</span> = None<span class="p">,</span>
+         <span class="nx">source_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">target_entity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntityType]]</span> = None<span class="p">,</span>
+         <span class="nx">target_entity_type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Link</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Link</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Link</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Link</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Link</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -267,22 +286,32 @@ const link = new azure_native.customerinsights.Link("link", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">LinkArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +615,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -594,7 +623,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#participantpropertyreferences_nodejs" style="color: inherit; text-decoration: inherit;">participant<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreference">Participant<wbr>Property<wbr>Reference[]</a></span>
+        <span class="property-type"><a href="#participantpropertyreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Participant<wbr>Property<wbr>Reference<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -602,7 +631,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -610,7 +639,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sourceentitytype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytype">Entity<wbr>Type</a></span>
+        <span class="property-type"><a href="#entitytype">pulumi.<wbr>Input<Entity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -618,7 +647,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sourceentitytypename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Entity<wbr>Type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the source Entity Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -626,7 +655,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#targetentitytype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytype">Entity<wbr>Type</a></span>
+        <span class="property-type"><a href="#entitytype">pulumi.<wbr>Input<Entity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -634,7 +663,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#targetentitytypename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Entity<wbr>Type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the target Entity Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +671,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +679,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized display name for the Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +687,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#linkname_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +695,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmapping">Type<wbr>Properties<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#typepropertiesmapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Type<wbr>Properties<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +703,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceoperationtype">Instance<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#instanceoperationtype">pulumi.<wbr>Input<Instance<wbr>Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +711,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#referenceonly_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -694,7 +723,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -702,7 +731,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#participant_property_references_python" style="color: inherit; text-decoration: inherit;">participant_<wbr>property_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreference">Sequence[Participant<wbr>Property<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#participantpropertyreference">Input[Participant<wbr>Property<wbr>Reference<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -710,7 +739,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -718,7 +747,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#source_entity_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytype">Entity<wbr>Type</a></span>
+        <span class="property-type"><a href="#entitytype">Input[Entity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of source entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -726,7 +755,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#source_entity_type_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>entity_<wbr>type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the source Entity Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -734,7 +763,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#target_entity_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytype">Entity<wbr>Type</a></span>
+        <span class="property-type"><a href="#entitytype">Input[Entity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of target entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -742,7 +771,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#target_entity_type_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>entity_<wbr>type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the target Entity Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +779,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +787,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +795,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#link_name_python" style="color: inherit; text-decoration: inherit;">link_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +803,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmapping">Sequence[Type<wbr>Properties<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#typepropertiesmapping">Input[Type<wbr>Properties<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +811,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceoperationtype">Instance<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#instanceoperationtype">Input[Instance<wbr>Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +819,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#reference_only_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source property that maps to the target property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1131,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target property that maps to the source property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source property that maps to the target property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target property that maps to the source property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source property that maps to the target property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1213,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target property that maps to the source property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source property that maps to the target property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1233,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target property that maps to the source property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} Property name on the source Entity Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1311,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Property name on the target Entity Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
+        <span class="property-type"><a href="#linktypes">pulumi.<wbr>Input<Link<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} Property name on the source Entity Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Property name on the target Entity Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
+        <span class="property-type"><a href="#linktypes">Input[Link<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepropertyname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} Property name on the source Entity Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1425,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetpropertyname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Property name on the target Entity Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_property_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} Property name on the source Entity Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1453,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_property_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Property name on the target Entity Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_type_python" style="color: inherit; text-decoration: inherit;">link_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}

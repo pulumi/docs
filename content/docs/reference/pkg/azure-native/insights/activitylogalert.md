@@ -94,7 +94,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -317,7 +317,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -557,7 +557,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -715,19 +715,34 @@ const activityLogAlert = new azure_native.insights.ActivityLogAlert("activityLog
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[ActionListArgs]</span> = None<span class="p">, </span><span class="nx">activity_log_alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[AlertRuleAllOfConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ActionListArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">activity_log_alert_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertRuleAllOfConditionArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActivityLogAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActivityLogAlert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActivityLogAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActivityLogAlert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActivityLogAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ActivityLogAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -762,22 +777,32 @@ const activityLogAlert = new azure_native.insights.ActivityLogAlert("activityLog
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ActivityLogAlertArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1017,7 +1042,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionlist">Action<wbr>List</a></span>
+        <span class="property-type"><a href="#actionlist">pulumi.<wbr>Input<Action<wbr>List<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1025,7 +1050,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleallofcondition">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition</a></span>
+        <span class="property-type"><a href="#alertruleallofcondition">pulumi.<wbr>Input<Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1033,7 +1058,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1041,7 +1066,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1074,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#activitylogalertname_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Log<wbr>Alert<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1082,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1090,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1098,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1106,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1118,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionlist">Action<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#actionlist">Input[Action<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1101,7 +1126,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleallofcondition">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertruleallofcondition">Input[Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1109,7 +1134,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1117,7 +1142,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1150,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#activity_log_alert_name_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>log_<wbr>alert_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log Alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1158,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of this Activity Log Alert rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1166,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1174,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1182,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1340,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1360,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1422,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1442,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Action Group. This cannot be null or empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1450,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1488,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">Action<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#actiongroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1500,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">Sequence[Action<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroup">Input[Action<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1538,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#actiongroupresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Action<wbr>Group<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1550,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupresponse">Sequence[Action<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupresponse">Input[Action<wbr>Group<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1588,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafcondition">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafcondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1600,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafcondition">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafcondition">Input[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1650,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Input[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1738,7 +1763,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafcondition">Alert<wbr>Rule<wbr>Leaf<wbr>Condition[]</a></span>
+        <span class="property-type"><a href="#alertruleleafcondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1771,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#containsany_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1779,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1787,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -1775,7 +1800,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafcondition">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleleafcondition">Input[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1808,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#contains_any_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1816,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1824,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -1888,7 +1913,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafconditionresponse">Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#alertruleleafconditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1896,7 +1921,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#containsany_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1929,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1937,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -1925,7 +1950,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleleafconditionresponse">Input[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1958,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#contains_any_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1966,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1974,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -2022,7 +2047,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#containsany_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2055,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2063,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -2051,7 +2076,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#contains_any_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2059,7 +2084,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2067,7 +2092,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -2140,7 +2165,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#containsany_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2148,7 +2173,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_nodejs" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2156,7 +2181,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>
@@ -2169,7 +2194,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#contains_any_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>any</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2202,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#equals_python" style="color: inherit; text-decoration: inherit;">equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2210,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Activity Log event's field that this condition will examine.
 The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.{{% /md %}}</dd></dl>

@@ -57,7 +57,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -157,7 +157,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -233,19 +233,32 @@ const encryptionScope = new azure_native.storage.EncryptionScope("encryptionScop
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_scope_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault_properties</span><span class="p">:</span> <span class="nx">Optional[EncryptionScopeKeyVaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">require_infrastructure_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[str, EncryptionScopeSource]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, EncryptionScopeState]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">encryption_scope_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">key_vault_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionScopeKeyVaultPropertiesArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">require_infrastructure_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EncryptionScopeSource]]]</span> = None<span class="p">,</span>
+                    <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EncryptionScopeState]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEncryptionScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EncryptionScope</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEncryptionScope</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EncryptionScope</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EncryptionScope</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EncryptionScopeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -280,22 +293,32 @@ const encryptionScope = new azure_native.storage.EncryptionScope("encryptionScop
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EncryptionScopeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -503,7 +526,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -511,7 +534,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +542,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#encryptionscopename_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Scope<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +550,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionscopekeyvaultproperties">Encryption<wbr>Scope<wbr>Key<wbr>Vault<wbr>Properties</a></span>
+        <span class="property-type"><a href="#encryptionscopekeyvaultproperties">pulumi.<wbr>Input<Encryption<wbr>Scope<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +558,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#requireinfrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +566,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionscopesource">Encryption<wbr>Scope<wbr>Source</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encryptionscopesource">pulumi.<wbr>Input<Encryption<wbr>Scope<wbr>Source></a></span>
     </dt>
     <dd>{{% md %}}The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +574,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionscopestate">Encryption<wbr>Scope<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encryptionscopestate">pulumi.<wbr>Input<Encryption<wbr>Scope<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -563,7 +586,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -571,7 +594,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +602,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#encryption_scope_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>scope_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +610,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionscopekeyvaultproperties">Encryption<wbr>Scope<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionscopekeyvaultproperties">Input[Encryption<wbr>Scope<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +618,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +626,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encryptionscopesource">Encryption<wbr>Scope<wbr>Source</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encryptionscopesource">Input[Encryption<wbr>Scope<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +634,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encryptionscopestate">Encryption<wbr>Scope<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encryptionscopestate">Input[Encryption<wbr>Scope<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -842,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -854,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -924,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentversionedkeyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Versioned<wbr>Key<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object identifier of the current versioned Key Vault Key in use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -932,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastkeyrotationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Key<wbr>Rotation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of last rotation of the Key Vault Key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -952,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_versioned_key_identifier_python" style="color: inherit; text-decoration: inherit;">current_<wbr>versioned_<wbr>key_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object identifier of the current versioned Key Vault Key in use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -960,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_key_rotation_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>key_<wbr>rotation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of last rotation of the Key Vault Key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}

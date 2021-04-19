@@ -302,19 +302,34 @@ const budget = new azure_native.consumption.Budget("budget", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">budget_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[Union[str, CategoryType]]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[BudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, NotificationArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_grain</span><span class="p">:</span> <span class="nx">Optional[Union[str, TimeGrainType]]</span> = None<span class="p">, </span><span class="nx">time_period</span><span class="p">:</span> <span class="nx">Optional[BudgetTimePeriodArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+           <span class="nx">budget_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CategoryType]]]</span> = None<span class="p">,</span>
+           <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetFilterArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[NotificationArgs]]]]</span> = None<span class="p">,</span>
+           <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">time_grain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, TimeGrainType]]]</span> = None<span class="p">,</span>
+           <span class="nx">time_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetTimePeriodArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -349,22 +364,32 @@ const budget = new azure_native.consumption.Budget("budget", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BudgetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -604,7 +629,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -612,7 +637,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#categorytype">Category<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#categorytype">pulumi.<wbr>Input<Category<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -620,7 +645,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -628,7 +653,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timegrain_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#timegraintype">Time<wbr>Grain<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#timegraintype">pulumi.<wbr>Input<Time<wbr>Grain<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -636,7 +661,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiod">Budget<wbr>Time<wbr>Period</a></span>
+        <span class="property-type"><a href="#budgettimeperiod">pulumi.<wbr>Input<Budget<wbr>Time<wbr>Period<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +669,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#budgetname_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Budget Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +677,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +685,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter</a></span>
+        <span class="property-type"><a href="#budgetfilter">pulumi.<wbr>Input<Budget<wbr>Filter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +693,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Notification}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Notification<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -680,7 +705,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The total amount of cost to track with the budget{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -688,7 +713,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#categorytype">Category<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#categorytype">Input[Category<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The category of the budget, whether the budget tracks cost or usage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -696,7 +721,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scope associated with budget operations. This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, '/providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -704,7 +729,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#timegraintype">Time<wbr>Grain<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#timegraintype">Input[Time<wbr>Grain<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -712,7 +737,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiod">Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgettimeperiod">Input[Budget<wbr>Time<wbr>Period<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +745,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#budget_name_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Budget Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +753,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +761,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilter">Input[Budget<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +769,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Notification<wbr>Args]</span>
+        <span class="property-type">Input[Notification<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#budgetoperatortype">Budget<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#budgetoperatortype">pulumi.<wbr>Input<Budget<wbr>Operator<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1023,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#budgetoperatortype">Budget<wbr>Operator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#budgetoperatortype">Input[Budget<wbr>Operator<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1051,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1129,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1137,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1149,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1157,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1165,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">pulumi.<wbr>Input<pulumi.<wbr>Input<Budget<wbr>Filter<wbr>Properties<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">pulumi.<wbr>Input<Budget<wbr>Filter<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Input[Budget<wbr>Filter<wbr>Properties<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Input[Budget<wbr>Filter<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1365,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1385,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1467,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">pulumi.<wbr>Input<Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">pulumi.<wbr>Input<Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Input[Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Input[Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Input[Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1697,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1779,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start date for the budget.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end date for the budget. If not provided, we default this to 10 years from the start date.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1985,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1993,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2005,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The total amount of cost which is being tracked by the budget.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2013,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2067,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2075,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unit of measure for the budget amount.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2245,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactemails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2253,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2261,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operatortype">Operator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operatortype">pulumi.<wbr>Input<Operator<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2269,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactroles_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#culturecode">Culture<wbr>Code</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#culturecode">pulumi.<wbr>Input<Culture<wbr>Code></a></span>
     </dt>
     <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#thresholdtype">Threshold<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#thresholdtype">pulumi.<wbr>Input<Threshold<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2313,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_emails_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2321,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2329,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#operatortype">Operator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operatortype">Input[Operator<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2337,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2345,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#culturecode">Culture<wbr>Code</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#culturecode">Input[Culture<wbr>Code]</a></span>
     </dt>
     <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#thresholdtype">Threshold<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#thresholdtype">Input[Threshold<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactemails_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2527,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2551,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contactroles_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2567,7 +2592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locale_nodejs" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2587,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_emails_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2595,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The notification is enabled or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2603,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The comparison operator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2611,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Threshold value associated with a notification. Notification is sent when the cost exceeded the threshold. It is always percent and has to be between 0 and 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Action groups to send the budget notification to when the threshold is exceeded. Must be provided as a fully qualified Azure resource id. Only supported at Subscription or Resource Group scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2627,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contact_roles_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Contact roles to send the budget notification to when the threshold is exceeded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2635,7 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locale_python" style="color: inherit; text-decoration: inherit;">locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Language in which the recipient will receive the notification{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of threshold{{% /md %}}</dd></dl>
 {{% /choosable %}}

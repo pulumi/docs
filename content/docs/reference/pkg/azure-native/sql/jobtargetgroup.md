@@ -91,7 +91,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -279,7 +279,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -358,19 +358,30 @@ const jobTargetGroup = new azure_native.sql.JobTargetGroup("jobTargetGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobTargetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">job_agent_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[JobTargetArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">target_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTargetGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTargetGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobTargetGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobTargetGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobTargetGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobTargetGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -405,22 +416,32 @@ const jobTargetGroup = new azure_native.sql.JobTargetGroup("jobTargetGroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobTargetGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -596,7 +617,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#jobagentname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Agent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -604,7 +625,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtarget">Job<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#jobtarget">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Target<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Members of the target group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -612,7 +633,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -620,7 +641,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +649,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#targetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the target group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -640,7 +661,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#job_agent_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>agent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the job agent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -648,7 +669,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtarget">Sequence[Job<wbr>Target<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobtarget">Input[Job<wbr>Target<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Members of the target group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -656,7 +677,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -664,7 +685,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +693,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#target_group_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the target group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jobtargettype">Job<wbr>Target<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#jobtargettype">pulumi.<wbr>Input<Job<wbr>Target<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticpoolname_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target elastic pool name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershiptype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtargetgroupmembershiptype">Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobtargetgroupmembershiptype">pulumi.<wbr>Input<Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshcredential_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shardmapname_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Map<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target shard map.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -995,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#jobtargettype">Job<wbr>Target<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#jobtargettype">Input[Job<wbr>Target<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_pool_name_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target elastic pool name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtargetgroupmembershiptype">Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobtargetgroupmembershiptype">Input[Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_credential_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_map_name_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>map_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target shard map.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticpoolname_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target elastic pool name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershiptype_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshcredential_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1251,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shardmapname_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Map<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target shard map.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1263,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_pool_name_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target elastic pool name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membership_type_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_credential_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_map_name_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>map_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target shard map.{{% /md %}}</dd></dl>
 {{% /choosable %}}

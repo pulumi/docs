@@ -67,7 +67,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -164,19 +164,32 @@ const virtualApplianceSite = new azure_native.network.VirtualApplianceSite("virt
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">o365_policy</span><span class="p">:</span> <span class="nx">Optional[Office365PolicyPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">network_virtual_appliance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">o365_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Office365PolicyPropertiesArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualApplianceSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualApplianceSite</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualApplianceSite</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualApplianceSite</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualApplianceSite</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualApplianceSiteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +224,32 @@ const virtualApplianceSite = new azure_native.network.VirtualApplianceSite("virt
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VirtualApplianceSiteArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,7 +457,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#networkvirtualappliancename_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Virtual<wbr>Appliance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Network Virtual Appliance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -442,7 +465,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +473,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address Prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +481,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +489,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the virtual appliance site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +497,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#o365policy_nodejs" style="color: inherit; text-decoration: inherit;">o365Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policyproperties">Office365Policy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#office365policyproperties">pulumi.<wbr>Input<Office365Policy<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +505,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -494,7 +517,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#network_virtual_appliance_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>virtual_<wbr>appliance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Network Virtual Appliance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +525,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +533,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address Prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +541,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +549,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the virtual appliance site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +557,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#o365_policy_python" style="color: inherit; text-decoration: inherit;">o365_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policyproperties">Office365Policy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#office365policyproperties">Input[Office365Policy<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +565,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 allow category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 default category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optimize_nodejs" style="color: inherit; text-decoration: inherit;">optimize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 optimize category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 allow category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 default category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optimize_python" style="color: inherit; text-decoration: inherit;">optimize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 optimize category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 allow category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 default category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optimize_nodejs" style="color: inherit; text-decoration: inherit;">optimize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 optimize category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -915,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 allow category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -923,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 default category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optimize_python" style="color: inherit; text-decoration: inherit;">optimize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to control breakout of o365 optimize category.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -969,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">pulumi.<wbr>Input<Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -981,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">Input[Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1019,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">pulumi.<wbr>Input<Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1031,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Input[Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}

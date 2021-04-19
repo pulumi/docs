@@ -77,7 +77,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -194,19 +194,32 @@ const availabilityGroupListener = new azure_native.sqlvirtualmachine.Availabilit
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_group_listener_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_default_availability_group_if_not_exist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">availability_group_listener_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">availability_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">create_default_availability_group_if_not_exist</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                              <span class="nx">load_balancer_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAvailabilityGroupListener</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AvailabilityGroupListener</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAvailabilityGroupListener</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AvailabilityGroupListener</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AvailabilityGroupListener</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AvailabilityGroupListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -241,22 +254,32 @@ const availabilityGroupListener = new azure_native.sqlvirtualmachine.Availabilit
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AvailabilityGroupListenerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,7 +487,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -472,7 +495,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#sqlvirtualmachinegroupname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +503,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#availabilitygrouplistenername_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Group<wbr>Listener<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +511,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#availabilitygroupname_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the availability group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +519,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#createdefaultavailabilitygroupifnotexist_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Default<wbr>Availability<wbr>Group<wbr>If<wbr>Not<wbr>Exist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Create a default availability group if it does not exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +527,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">Load<wbr>Balancer<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +535,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Listener port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -524,7 +547,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -532,7 +555,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#sql_virtual_machine_group_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +563,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#availability_group_listener_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>group_<wbr>listener_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -548,7 +571,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#availability_group_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the availability group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +579,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#create_default_availability_group_if_not_exist_python" style="color: inherit; text-decoration: inherit;">create_<wbr>default_<wbr>availability_<wbr>group_<wbr>if_<wbr>not_<wbr>exist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Create a default availability group if it does not exist.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +587,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">Input[Load<wbr>Balancer<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +595,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Listener port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerresourceid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress</a></span>
+        <span class="property-type"><a href="#privateipaddress">pulumi.<wbr>Input<Private<wbr>IPAddress<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeport_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Probe port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressresourceid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlvirtualmachineinstances_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -879,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_resource_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -887,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddress">Input[Private<wbr>IPAddress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_port_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Probe port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_resource_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -911,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_virtual_machine_instances_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1013,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerresourceid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">pulumi.<wbr>Input<Private<wbr>IPAddress<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeport_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Probe port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressresourceid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlvirtualmachineinstances_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1057,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_resource_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1065,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Input[Private<wbr>IPAddress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_port_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Probe port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_resource_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_virtual_machine_instances_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private IP address bound to the availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet used to include private IP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private IP address bound to the availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet used to include private IP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private IP address bound to the availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet used to include private IP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private IP address bound to the availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet used to include private IP.{{% /md %}}</dd></dl>
 {{% /choosable %}}

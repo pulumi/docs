@@ -123,19 +123,29 @@ const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreatePolicyInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreatePolicyInputPropertiesArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,22 +180,32 @@ const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("r
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicationPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,7 +365,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -353,7 +373,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +381,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Replication policy name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +389,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createpolicyinputproperties">Create<wbr>Policy<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createpolicyinputproperties">pulumi.<wbr>Input<Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Policy creation properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -381,7 +401,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -389,7 +409,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +417,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Replication policy name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -405,7 +425,7 @@ The ReplicationPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createpolicyinputproperties">Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createpolicyinputproperties">Input[Create<wbr>Policy<wbr>Input<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy creation properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -652,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#setmultivmsyncstatus">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#setmultivmsyncstatus">pulumi.<wbr>Input<Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -688,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#setmultivmsyncstatus">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#setmultivmsyncstatus">Input[Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -858,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -928,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input</a> | <a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input</a> | <a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input</a> | <a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input</a> | <a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input</a> | <a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input</a> | <a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input</a> | <a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input</a></span>
+        <span class="property-type"><a href="#a2apolicycreationinput">pulumi.<wbr>Input<A2APolicy<wbr>Creation<wbr>Input<wbr>Args></a> | <a href="#hypervreplicaazurepolicyinput">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args></a> | <a href="#hypervreplicabluepolicyinput">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args></a> | <a href="#hypervreplicapolicyinput">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args></a> | <a href="#inmageazurev2policyinput">pulumi.<wbr>Input<In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args></a> | <a href="#inmagepolicyinput">pulumi.<wbr>Input<In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args></a> | <a href="#inmagercmpolicycreationinput">pulumi.<wbr>Input<In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args></a> | <a href="#vmwarecbtpolicycreationinput">pulumi.<wbr>Input<VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -940,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicycreationinput">A2APolicy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazurepolicyinput">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicabluepolicyinput">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#hypervreplicapolicyinput">Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2policyinput">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args</a> | <a href="#inmagepolicyinput">In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args</a> | <a href="#inmagercmpolicycreationinput">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtpolicycreationinput">VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2apolicycreationinput">Input[A2APolicy<wbr>Creation<wbr>Input<wbr>Args]</a> | <a href="#hypervreplicaazurepolicyinput">Input[Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Input<wbr>Args]</a> | <a href="#hypervreplicabluepolicyinput">Input[Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Input<wbr>Args]</a> | <a href="#hypervreplicapolicyinput">Input[Hyper<wbr>VReplica<wbr>Policy<wbr>Input<wbr>Args]</a> | <a href="#inmageazurev2policyinput">Input[In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Input<wbr>Args]</a> | <a href="#inmagepolicyinput">Input[In<wbr>Mage<wbr>Policy<wbr>Input<wbr>Args]</a> | <a href="#inmagercmpolicycreationinput">Input[In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args]</a> | <a href="#vmwarecbtpolicycreationinput">Input[VMware<wbr>Cbt<wbr>Policy<wbr>Creation<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderSettings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1058,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activestorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistorydurationinhours_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationinterval_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The replication interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1110,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_storage_account_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The active storage account Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether encryption is enabled for virtual machines in this cloud.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_duration_in_hours_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>duration_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_interval_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The replication interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1252,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1260,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryduration_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationinterval_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of storage accounts to which the VMs in the primary cloud can replicate to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1296,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_duration_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration (in hours) to which point the recovery history needs to be maintained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_interval_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of storage accounts to which the VMs in the primary cloud can replicate to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1510,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1518,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1526,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1558,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1574,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicadeletionoption_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1594,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1864,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1888,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1896,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1920,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1928,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicadeletionoption_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1936,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1944,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1956,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1964,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1972,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1988,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1996,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2012,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2020,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2028,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2036,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2234,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2242,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2250,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicadeletion_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2306,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2326,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2358,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2374,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_deletion_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2398,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the replication interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2406,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2588,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2612,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2620,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2628,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicadeletionoption_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2672,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2720,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2728,7 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2736,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_deletion_option_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2926,7 +2946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Authentication<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2934,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationconsistentsnapshotfrequencyinhours_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Consistent<wbr>Snapshot<wbr>Frequency<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2942,7 +2962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2950,7 +2970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationmethod_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2958,7 +2978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationexportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Export<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2966,7 +2986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinereplicationimportpath_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Replication<wbr>Import<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2974,7 +2994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onlinereplicationstarttime_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Replication<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2982,7 +3002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypoints_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2990,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicadeletion_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2998,7 +3018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationport_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3010,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_authentication_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>authentication_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3018,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_consistent_snapshot_frequency_in_hours_python" style="color: inherit; text-decoration: inherit;">application_<wbr>consistent_<wbr>snapshot_<wbr>frequency_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the application consistent frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3026,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether compression has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3034,7 +3054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_method_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether IR is online.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3042,7 +3062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_export_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>export_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR export path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3050,7 +3070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_replication_import_path_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>replication_<wbr>import_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the offline IR import path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3058,7 +3078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#online_replication_start_time_python" style="color: inherit; text-decoration: inherit;">online_<wbr>replication_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating the online IR start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3066,7 +3086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_points_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>points</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the number of recovery points.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3074,7 +3094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_deletion_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the VM has to be auto deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3082,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_port_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}A value indicating the recovery HTTPS port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3184,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3192,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3200,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3208,7 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3216,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3228,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3236,7 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3244,7 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3252,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3260,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3362,7 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#setmultivmsyncstatus">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#setmultivmsyncstatus">pulumi.<wbr>Input<Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3370,7 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3378,7 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3386,7 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3394,7 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3406,7 +3426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#setmultivmsyncstatus">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#setmultivmsyncstatus">Input[Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3414,7 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3422,7 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3430,7 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3438,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3524,7 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,7 +3552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3560,7 +3580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3568,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3576,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3584,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3670,7 +3690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3678,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3686,7 +3706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3694,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3706,7 +3726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3714,7 +3734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3722,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3730,7 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3816,7 +3836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#setmultivmsyncstatus">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#setmultivmsyncstatus">pulumi.<wbr>Input<Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3832,7 +3852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3840,7 +3860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3852,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#setmultivmsyncstatus">Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#setmultivmsyncstatus">Input[Set<wbr>Multi<wbr>Vm<wbr>Sync<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3860,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3868,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3876,7 +3896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3962,7 +3982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3970,7 +3990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3978,7 +3998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablemultivmsync_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3986,7 +4006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3998,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4006,7 +4026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4014,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_multi_vm_sync_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multi_<wbr>vm_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4022,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4108,7 +4128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4116,7 +4136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4124,7 +4144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablemultivmsync_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multi<wbr>Vm<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4132,7 +4152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4144,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4152,7 +4172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4160,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_multi_vm_sync_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multi_<wbr>vm_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4168,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4222,7 +4242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4230,7 +4250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">pulumi.<wbr>Input<A2APolicy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#hypervreplicaazurepolicydetailsresponse">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#hypervreplicabasepolicydetailsresponse">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#hypervreplicabluepolicydetailsresponse">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#hypervreplicapolicydetailsresponse">pulumi.<wbr>Input<Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#inmageazurev2policydetailsresponse">pulumi.<wbr>Input<In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#inmagebasepolicydetailsresponse">pulumi.<wbr>Input<In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#inmagepolicydetailsresponse">pulumi.<wbr>Input<In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#inmagercmpolicydetailsresponse">pulumi.<wbr>Input<In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#rcmazuremigrationpolicydetailsresponse">pulumi.<wbr>Input<Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#vmwarecbtpolicydetailsresponse">pulumi.<wbr>Input<Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4242,7 +4262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The FriendlyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4250,7 +4270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2apolicydetailsresponse">A2APolicy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicapolicydetailsresponse">Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2policydetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagebasepolicydetailsresponse">In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmpolicydetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2apolicydetailsresponse">Input[A2APolicy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#hypervreplicaazurepolicydetailsresponse">Input[Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#hypervreplicabasepolicydetailsresponse">Input[Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#hypervreplicabluepolicydetailsresponse">Input[Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#hypervreplicapolicydetailsresponse">Input[Hyper<wbr>VReplica<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#inmageazurev2policydetailsresponse">Input[In<wbr>Mage<wbr>Azure<wbr>V2Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#inmagebasepolicydetailsresponse">Input[In<wbr>Mage<wbr>Base<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#inmagepolicydetailsresponse">Input[In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#inmagercmpolicydetailsresponse">Input[In<wbr>Mage<wbr>Rcm<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#rcmazuremigrationpolicydetailsresponse">Input[Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#vmwarecbtpolicydetailsresponse">Input[Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationChannelSetting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4352,7 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4360,7 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4368,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multivmsyncstatus_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Vm<wbr>Sync<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4376,7 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistory_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4384,7 +4404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointthresholdinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Threshold<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4396,7 +4416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4404,7 +4424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4412,7 +4432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multi_vm_sync_status_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>vm_<wbr>sync_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating whether multi-VM sync has to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4420,7 +4440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4428,7 +4448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_threshold_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>threshold_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The recovery point threshold in minutes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4524,7 +4544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4532,7 +4552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4540,7 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4552,7 +4572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4560,7 +4580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency (in minutes).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4568,7 +4588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4638,7 +4658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4646,7 +4666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crashconsistentfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Consistent<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4654,7 +4674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointhistoryinminutes_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>History<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4666,7 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The app consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4674,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crash_consistent_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>consistent_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The crash consistent snapshot frequency in minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4682,7 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_history_in_minutes_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>history_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The duration in minutes until which the recovery points need to be stored.{{% /md %}}</dd></dl>
 {{% /choosable %}}

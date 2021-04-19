@@ -188,7 +188,7 @@ import (
 	"fmt"
 
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -503,19 +503,34 @@ const dataCollectionRule = new azure_native.insights.DataCollectionRule("dataCol
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_collection_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataFlowArgs]]</span> = None<span class="p">, </span><span class="nx">data_sources</span><span class="p">:</span> <span class="nx">Optional[DataCollectionRuleDataSourcesArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[DataCollectionRuleDestinationsArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, KnownDataCollectionRuleResourceKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">data_collection_rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">data_flows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DataFlowArgs]]]]</span> = None<span class="p">,</span>
+                       <span class="nx">data_sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataCollectionRuleDataSourcesArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataCollectionRuleDestinationsArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, KnownDataCollectionRuleResourceKind]]]</span> = None<span class="p">,</span>
+                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataCollectionRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataCollectionRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataCollectionRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataCollectionRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataCollectionRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DataCollectionRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -550,22 +565,32 @@ const dataCollectionRule = new azure_native.insights.DataCollectionRule("dataCol
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DataCollectionRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -807,7 +832,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +840,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#datacollectionrulename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the data collection rule. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +848,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#dataflows_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflow">Data<wbr>Flow[]</a></span>
+        <span class="property-type"><a href="#dataflow">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Flow<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +856,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#datasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledatasources">Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#datacollectionruledatasources">pulumi.<wbr>Input<Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The specification of data sources. 
 This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.{{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +865,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the data collection rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +873,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledestinations">Data<wbr>Collection<wbr>Rule<wbr>Destinations</a></span>
+        <span class="property-type"><a href="#datacollectionruledestinations">pulumi.<wbr>Input<Data<wbr>Collection<wbr>Rule<wbr>Destinations<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +881,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#knowndatacollectionruleresourcekind">Known<wbr>Data<wbr>Collection<wbr>Rule<wbr>Resource<wbr>Kind</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#knowndatacollectionruleresourcekind">pulumi.<wbr>Input<Known<wbr>Data<wbr>Collection<wbr>Rule<wbr>Resource<wbr>Kind></a></span>
     </dt>
     <dd>{{% md %}}The kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +889,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +897,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -884,7 +909,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +917,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#data_collection_rule_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the data collection rule. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +925,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#data_flows_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflow">Sequence[Data<wbr>Flow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataflow">Input[Data<wbr>Flow<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +933,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#data_sources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledatasources">Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacollectionruledatasources">Input[Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The specification of data sources. 
 This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.{{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +942,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the data collection rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +950,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledestinations">Data<wbr>Collection<wbr>Rule<wbr>Destinations<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacollectionruledestinations">Input[Data<wbr>Collection<wbr>Rule<wbr>Destinations<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +958,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#knowndatacollectionruleresourcekind">Known<wbr>Data<wbr>Collection<wbr>Rule<wbr>Resource<wbr>Kind</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#knowndatacollectionruleresourcekind">Input[Known<wbr>Data<wbr>Collection<wbr>Rule<wbr>Resource<wbr>Kind]</a></span>
     </dt>
     <dd>{{% md %}}The kind of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +966,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +974,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1260,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasource">Extension<wbr>Data<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#extensiondatasource">pulumi.<wbr>Input<pulumi.<wbr>Input<Extension<wbr>Data<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasource">Perf<wbr>Counter<wbr>Data<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasource">pulumi.<wbr>Input<pulumi.<wbr>Input<Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_nodejs" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasource">Syslog<wbr>Data<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#syslogdatasource">pulumi.<wbr>Input<pulumi.<wbr>Input<Syslog<wbr>Data<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasource">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasource">pulumi.<wbr>Input<pulumi.<wbr>Input<Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1296,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasource">Sequence[Extension<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extensiondatasource">Input[Extension<wbr>Data<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_counters_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasource">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasource">Input[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_python" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasource">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syslogdatasource">Input[Syslog<wbr>Data<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_event_logs_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasource">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasource">Input[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1374,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
+        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">pulumi.<wbr>Input<Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestination">Log<wbr>Analytics<wbr>Destination[]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestination">pulumi.<wbr>Input<pulumi.<wbr>Input<Log<wbr>Analytics<wbr>Destination<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1394,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_metrics_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Input[Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestination">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestination">Input[Log<wbr>Analytics<wbr>Destination<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1488,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">Extension<wbr>Data<wbr>Source<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_nodejs" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">Syslog<wbr>Data<wbr>Source<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1524,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">Sequence[Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">Input[Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1532,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_counters_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">Input[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_python" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">Input[Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_event_logs_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Input[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1602,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">pulumi.<wbr>Input<Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">Log<wbr>Analytics<wbr>Destination<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1622,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_metrics_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Input[Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">Input[Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1684,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Data<wbr>Flow<wbr>Streams[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Data<wbr>Flow<wbr>Streams>[]></span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1704,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Data<wbr>Flow<wbr>Streams]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Data<wbr>Flow<wbr>Streams]]]]</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1766,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1786,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destinations for this data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1794,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of streams for this data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1834,7 +1859,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd></dl>
@@ -1847,7 +1872,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd></dl>
@@ -1888,7 +1913,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd></dl>
@@ -1901,7 +1926,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd></dl>
@@ -2008,7 +2033,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#extensionname_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2049,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#inputdatasources_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2032,7 +2057,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2066,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -2054,7 +2079,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#extension_name_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2095,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#input_data_sources_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2078,7 +2103,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2112,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Extension<wbr>Data<wbr>Source<wbr>Streams]]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -2194,7 +2219,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#extensionname_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2210,7 +2235,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#inputdatasources_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2218,7 +2243,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2227,7 +2252,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -2240,7 +2265,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#extension_name_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the VM extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2281,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#input_data_sources_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of data sources this extension needs data from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2289,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2298,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -2662,7 +2687,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2696,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the Log Analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2683,7 +2708,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2692,7 +2717,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Log Analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2764,7 +2789,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Customer ID of the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2797,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2781,7 +2806,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the Log Analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2793,7 +2818,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Customer ID of the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2801,7 +2826,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the destination. 
 This name should be unique across all destinations (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2835,7 @@ This name should be unique across all destinations (regardless of type) within t
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Log Analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2904,7 +2929,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#counterspecifiers_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Specifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
@@ -2914,7 +2939,7 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2923,7 +2948,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#samplingfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2956,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -2944,7 +2969,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#counter_specifiers_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>specifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
@@ -2954,7 +2979,7 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -2963,7 +2988,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#sampling_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2971,7 +2996,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Streams]]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3066,7 +3091,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#counterspecifiers_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Specifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
@@ -3076,7 +3101,7 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +3110,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#samplingfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3093,7 +3118,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3106,7 +3131,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#counter_specifiers_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>specifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of specifier names of the performance counters you want to collect.
 Use a wildcard (*) to collect a counter for all instances.
@@ -3116,7 +3141,7 @@ To get a list of performance counters on Windows, run the command 'typeperf'.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3125,7 +3150,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#sampling_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds between consecutive counter measurements (samples).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3158,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3224,7 +3249,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_nodejs" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names>[]></span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3232,7 +3257,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels>[]></span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3265,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3274,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3262,7 +3287,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facility_names_python" style="color: inherit; text-decoration: inherit;">facility_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Facility<wbr>Names]]]]</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3295,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#log_levels_python" style="color: inherit; text-decoration: inherit;">log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Log<wbr>Levels]]]]</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3278,7 +3303,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3287,7 +3312,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Syslog<wbr>Data<wbr>Source<wbr>Streams]]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3378,7 +3403,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facilitynames_nodejs" style="color: inherit; text-decoration: inherit;">facility<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3386,7 +3411,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#loglevels_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3394,7 +3419,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3403,7 +3428,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3416,7 +3441,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#facility_names_python" style="color: inherit; text-decoration: inherit;">facility_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of facility names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3424,7 +3449,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#log_levels_python" style="color: inherit; text-decoration: inherit;">log_<wbr>levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The log levels to collect.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3432,7 +3457,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3441,7 +3466,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd></dl>
@@ -3516,7 +3541,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3525,7 +3550,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
@@ -3534,7 +3559,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#xpathqueries_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Path<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Windows Event Log queries in XPATH format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3546,7 +3571,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3555,7 +3580,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams]]</span>
+        <span class="property-type">Input[Union[str, Known<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Streams]]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
@@ -3564,7 +3589,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#x_path_queries_python" style="color: inherit; text-decoration: inherit;">x_<wbr>path_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Windows Event Log queries in XPATH format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3638,7 +3663,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3647,7 +3672,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_nodejs" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
@@ -3656,7 +3681,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#xpathqueries_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Path<wbr>Queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of Windows Event Log queries in XPATH format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3668,7 +3693,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A friendly name for the data source. 
 This name should be unique across all data sources (regardless of type) within the data collection rule.{{% /md %}}</dd><dt class="property-optional"
@@ -3677,7 +3702,7 @@ This name should be unique across all data sources (regardless of type) within t
 <a href="#streams_python" style="color: inherit; text-decoration: inherit;">streams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of streams that this data source will be sent to.
 A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.{{% /md %}}</dd><dt class="property-optional"
@@ -3686,7 +3711,7 @@ A stream indicates what schema will be used for this data and usually what table
 <a href="#x_path_queries_python" style="color: inherit; text-decoration: inherit;">x_<wbr>path_<wbr>queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of Windows Event Log queries in XPATH format.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -72,7 +72,7 @@ package main
 
 import (
 	automanage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automanage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -178,19 +178,30 @@ const configurationProfilePreference = new azure_native.automanage.Configuration
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_profile_preference_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConfigurationProfilePreferencePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                   <span class="nx">configuration_profile_preference_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConfigurationProfilePreferencePropertiesArgs]]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfilePreference</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfilePreference</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfilePreference</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfilePreference</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -225,22 +236,32 @@ const configurationProfilePreference = new azure_native.automanage.Configuration
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfilePreferenceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -416,7 +437,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -424,7 +445,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#configurationprofilepreferencename_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile preference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,7 +453,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -440,7 +461,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceproperties">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -448,7 +469,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -460,7 +481,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +489,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#configuration_profile_preference_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>preference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile preference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -476,7 +497,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -484,7 +505,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Input[Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -492,7 +513,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -739,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerealtimeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>Time<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#enablerealtimeprotection">Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#enablerealtimeprotection">pulumi.<wbr>Input<Enable<wbr>Real<wbr>Time<wbr>Protection></a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runscheduledscan_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Scheduled<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#runscheduledscan">Run<wbr>Scheduled<wbr>Scan</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#runscheduledscan">pulumi.<wbr>Input<Run<wbr>Scheduled<wbr>Scan></a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scanday_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Time<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -779,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantype_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scantype">Scan<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#scantype">pulumi.<wbr>Input<Scan<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -791,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_real_time_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>time_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#enablerealtimeprotection">Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#enablerealtimeprotection">Input[Enable<wbr>Real<wbr>Time<wbr>Protection]</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_scheduled_scan_python" style="color: inherit; text-decoration: inherit;">run_<wbr>scheduled_<wbr>scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#runscheduledscan">Run<wbr>Scheduled<wbr>Scan</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#runscheduledscan">Input[Run<wbr>Scheduled<wbr>Scan]</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_day_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_type_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#scantype">Scan<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#scantype">Input[Scan<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerealtimeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>Time<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runscheduledscan_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Scheduled<wbr>Scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scanday_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Time<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scantype_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_real_time_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>time_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1017,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_scheduled_scan_python" style="color: inherit; text-decoration: inherit;">run_<wbr>scheduled_<wbr>scan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_day_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>time_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scan_type_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Input[Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Input[Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Input[Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Input[Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1335,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1437,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}

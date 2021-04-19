@@ -64,7 +64,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -162,7 +162,7 @@ class MyStack : Stack
     {
         var syncMember = new AzureNative.Sql.SyncMember("syncMember", new AzureNative.Sql.SyncMemberArgs
         {
-            DatabaseName = "syncgroupcrud-7421",
+            DatabaseName = "syncgroupcrud-4328",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
             ServerName = "syncgroupcrud-8475",
@@ -191,13 +191,13 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
 			ServerName:                        pulumi.String("syncgroupcrud-8475"),
@@ -229,7 +229,7 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 sync_member = azure_native.sql.SyncMember("syncMember",
-    database_name="syncgroupcrud-7421",
+    database_name="syncgroupcrud-4328",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
     server_name="syncgroupcrud-8475",
@@ -254,7 +254,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const syncMember = new azure_native.sql.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-7421",
+    databaseName: "syncgroupcrud-4328",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
     serverName: "syncgroupcrud-8475",
@@ -285,19 +285,38 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SyncMemberDbType]]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_server_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_agent_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_direction</span><span class="p">:</span> <span class="nx">Optional[Union[str, SyncDirection]]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_member_azure_database_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_member_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_private_link_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SyncMemberDbType]]]</span> = None<span class="p">,</span>
+               <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">sql_server_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">sync_agent_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">sync_direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SyncDirection]]]</span> = None<span class="p">,</span>
+               <span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">sync_member_azure_database_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">sync_member_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">use_private_link_connection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncMember</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncMember</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -332,22 +351,32 @@ const syncMember = new azure_native.sql.SyncMember("syncMember", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -651,7 +680,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +688,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -667,7 +696,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -675,7 +704,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +712,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#syncmemberdbtype">pulumi.<wbr>Input<Sync<wbr>Member<wbr>Db<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +720,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +728,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sqlserverdatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -707,7 +736,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncagentid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Agent<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +744,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncdirection_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#syncdirection">Sync<wbr>Direction</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#syncdirection">pulumi.<wbr>Input<Sync<wbr>Direction></a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -723,7 +752,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncmemberazuredatabaseresourceid_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Member<wbr>Azure<wbr>Database<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +760,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#syncmembername_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Member<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +768,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#useprivatelinkconnection_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Link<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +776,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -759,7 +788,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Database name of the member database in the sync member.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +796,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -775,7 +804,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Server name of the member database in the sync member{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -783,7 +812,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the sync group on which the sync member is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +820,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#syncmemberdbtype">Sync<wbr>Member<wbr>Db<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#syncmemberdbtype">Input[Sync<wbr>Member<wbr>Db<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Database type of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +828,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password of the member database in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +836,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sql_server_database_id_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server database id of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +844,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sync_agent_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>agent_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync agent in the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +852,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sync_direction_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#syncdirection">Sync<wbr>Direction</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#syncdirection">Input[Sync<wbr>Direction]</a></span>
     </dt>
     <dd>{{% md %}}Sync direction of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +860,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sync_member_azure_database_resource_id_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>member_<wbr>azure_<wbr>database_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the sync member logical database, for sync members in Azure.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +868,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sync_member_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>member_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the sync member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +876,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#use_private_link_connection_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>link_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +884,7 @@ The SyncMember resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User name of the member database in the sync member.{{% /md %}}</dd></dl>
 {{% /choosable %}}

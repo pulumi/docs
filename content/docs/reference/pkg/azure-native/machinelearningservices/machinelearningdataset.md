@@ -75,7 +75,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -190,19 +190,33 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatasetType]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestParametersArgs]</span> = None<span class="p">, </span><span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestRegistrationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[DatasetCreateRequestTimeSeriesArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">dataset_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DatasetType]]]</span> = None<span class="p">,</span>
+                           <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatasetCreateRequestParametersArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">registration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatasetCreateRequestRegistrationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">time_series</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatasetCreateRequestTimeSeriesArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDataset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDataset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDataset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDataset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MachineLearningDatasetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,22 +251,32 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatasetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,7 +500,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#datasettype_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasettype">Dataset<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasettype">pulumi.<wbr>Input<Dataset<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -484,7 +508,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestparameters">pulumi.<wbr>Input<Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -492,7 +516,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestregistration">pulumi.<wbr>Input<Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -500,7 +524,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -508,7 +532,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +540,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#datasetname_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Dataset name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +548,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#skipvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -532,7 +556,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series</a></span>
+        <span class="property-type"><a href="#datasetcreaterequesttimeseries">pulumi.<wbr>Input<Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -544,7 +568,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#dataset_type_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasettype">Dataset<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasettype">Input[Dataset<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -552,7 +576,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestparameters">Input[Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -560,7 +584,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestregistration">Input[Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -568,7 +592,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -576,7 +600,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +608,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#dataset_name_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Dataset name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +616,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#skip_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +624,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Input[Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -963,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1105,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#header">Header</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#header">pulumi.<wbr>Input<Header></a></span>
     </dt>
     <dd>{{% md %}}Header type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includepath_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionformat_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">pulumi.<wbr>Input<Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">pulumi.<wbr>Input<Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourcetype">Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sourcetype">pulumi.<wbr>Input<Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Data source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1165,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#header">Header</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#header">Input[Header]</a></span>
     </dt>
     <dd>{{% md %}}Header type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_path_python" style="color: inherit; text-decoration: inherit;">include_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_format_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">Input[Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">Input[Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sourcetype">Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sourcetype">Input[Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Data source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1267,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">pulumi.<wbr>Input<Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Http URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">Input[Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Http URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1349,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Quey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1369,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Quey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1491,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1545,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#coarsegraintimestamp_nodejs" style="color: inherit; text-decoration: inherit;">coarse<wbr>Grain<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#finegraintimestamp_nodejs" style="color: inherit; text-decoration: inherit;">fine<wbr>Grain<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1565,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#coarse_grain_timestamp_python" style="color: inherit; text-decoration: inherit;">coarse_<wbr>grain_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fine_grain_timestamp_python" style="color: inherit; text-decoration: inherit;">fine_<wbr>grain_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasettype_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dataset Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1811,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultcompute_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1835,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isvisible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Visible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1843,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">pulumi.<wbr>Input<Dataset<wbr>State<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">pulumi.<wbr>Input<Dataset<wbr>Response<wbr>Latest<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1887,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1895,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1903,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_type_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dataset Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_compute_python" style="color: inherit; text-decoration: inherit;">default_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1935,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_visible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>visible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1943,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1959,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Input[Dataset<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Input[Dataset<wbr>Response<wbr>Latest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2141,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefilepath_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2149,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data store Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2157,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2165,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionformat_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2173,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionformatignoreerror_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format<wbr>Ignore<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2181,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2189,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatapath_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">pulumi.<wbr>Input<Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2217,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_path_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2225,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data store Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2233,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2241,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_format_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2249,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_format_ignore_error_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format_<wbr>ignore_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2257,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2265,7 +2289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2273,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Additional Properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2281,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_path_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Input[Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2591,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflow_nodejs" style="color: inherit; text-decoration: inherit;">dataflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dataflow Json{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2623,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2639,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2647,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2655,7 +2679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionformatinpath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format<wbr>In<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2663,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#saveddatasetid_nodejs" style="color: inherit; text-decoration: inherit;">saved<wbr>Dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2671,7 +2695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2679,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#telemetryinfo_nodejs" style="color: inherit; text-decoration: inherit;">telemetry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2687,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedescriptiontagsfromdefinition_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Description<wbr>Tags<wbr>From<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2695,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2703,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#userinforesponse">pulumi.<wbr>Input<User<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">pulumi.<wbr>Input<Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2719,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetdefinitionstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Definition<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">pulumi.<wbr>Input<Dataset<wbr>State<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2727,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2739,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2747,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflow_python" style="color: inherit; text-decoration: inherit;">dataflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dataflow Json{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2755,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2763,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2771,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2779,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2787,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2795,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2803,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_format_in_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format_<wbr>in_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2811,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#saved_dataset_id_python" style="color: inherit; text-decoration: inherit;">saved_<wbr>dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2819,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2827,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#telemetry_info_python" style="color: inherit; text-decoration: inherit;">telemetry_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2835,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_description_tags_from_definition_python" style="color: inherit; text-decoration: inherit;">use_<wbr>description_<wbr>tags_<wbr>from_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Input[User<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Input[Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_definition_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>definition_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Input[Dataset<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2961,7 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querytimeout_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2969,7 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlquery_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL query{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2977,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstoredprocedurename_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Stored<wbr>Procedure<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2985,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltablename_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL table name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2997,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3005,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_query_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL query{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3013,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_stored_procedure_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>stored_<wbr>procedure_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3021,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_table_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL table name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3091,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3099,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecatedby_nodejs" style="color: inherit; text-decoration: inherit;">deprecated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">pulumi.<wbr>Input<Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3107,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3119,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecated_by_python" style="color: inherit; text-decoration: inherit;">deprecated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Input[Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3135,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3189,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definitionversion_nodejs" style="color: inherit; text-decoration: inherit;">definition<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Definition Version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3209,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3217,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_version_python" style="color: inherit; text-decoration: inherit;">definition_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Definition Version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3363,7 +3387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3371,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3379,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3399,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3407,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3415,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3477,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3485,7 +3509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3497,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3505,7 +3529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3605,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3613,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3621,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3633,7 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3641,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3649,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3783,7 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraltsecid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Alt<wbr>Sec<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useridp_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Idp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3799,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useriss_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Iss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3807,7 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3815,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userobjectid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3823,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userpuid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pu<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3831,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usertenantid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3843,7 +3867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_alt_sec_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>alt_<wbr>sec_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_idp_python" style="color: inherit; text-decoration: inherit;">user_<wbr>idp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_iss_python" style="color: inherit; text-decoration: inherit;">user_<wbr>iss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_object_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3883,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_pu_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pu_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_tenant_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -22,17 +22,20 @@ API Version: 2020-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFirewallPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFirewallPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFirewallPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFirewallPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFirewallPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall_policy(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFirewallPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall_policy(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFirewallPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFirewallPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFirewallPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFirewallPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFirewallPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFirewallPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFirewallPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFirewallPolicy` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFirewallPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetFirewallPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFirewallPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFirewallPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFirewallPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1052,7 +1055,7 @@ The following output properties are available:
 <a href="#loganalyticsresources_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1136,7 +1139,7 @@ The following output properties are available:
 <a href="#log_analytics_resources_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1439,7 @@ The following output properties are available:
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1444,7 +1447,7 @@ The following output properties are available:
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1496,7 +1499,7 @@ The following output properties are available:
 <a href="#bypass_traffic_settings_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>traffic_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1507,7 @@ The following output properties are available:
 <a href="#signature_overrides_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1520,7 +1523,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1583,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1688,7 +1691,7 @@ The following output properties are available:
 <a href="#defaultworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1699,7 @@ The following output properties are available:
 <a href="#workspaces_csharp" style="color: inherit; text-decoration: inherit;">Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1751,7 @@ The following output properties are available:
 <a href="#default_workspace_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1759,7 @@ The following output properties are available:
 <a href="#workspaces_python" style="color: inherit; text-decoration: inherit;">workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,7 +1783,7 @@ The following output properties are available:
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1840,7 +1843,7 @@ The following output properties are available:
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2044,7 +2047,7 @@ The following output properties are available:
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2080,7 +2083,7 @@ The following output properties are available:
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2120,7 +2123,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2228,7 +2231,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

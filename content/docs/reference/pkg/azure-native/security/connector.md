@@ -491,19 +491,28 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_details</span><span class="p">:</span> <span class="nx">Optional[Union[AwAssumeRoleAuthenticationDetailsPropertiesArgs, AwsCredsAuthenticationDetailsPropertiesArgs, GcpCredentialsDetailsPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_compute_settings</span><span class="p">:</span> <span class="nx">Optional[HybridComputeSettingsPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">authentication_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AwAssumeRoleAuthenticationDetailsPropertiesArgs, AwsCredsAuthenticationDetailsPropertiesArgs, GcpCredentialsDetailsPropertiesArgs]]]</span> = None<span class="p">,</span>
+              <span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">hybrid_compute_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HybridComputeSettingsPropertiesArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ConnectorArgs]</a></span> = None<span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connector</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connector</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -538,22 +547,32 @@ Am0ShoXTF6QYIbsaUiUGoa/NlHcw9V/lj4AqBRbxbaYMD+hz2J/od9cb268eJKY8
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConnectorArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -697,7 +716,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authenticationdetails_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties</a> | <a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties</a> | <a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties</a></span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">pulumi.<wbr>Input<Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args></a> | <a href="#awscredsauthenticationdetailsproperties">pulumi.<wbr>Input<Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args></a> | <a href="#gcpcredentialsdetailsproperties">pulumi.<wbr>Input<Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +724,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +732,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hybridcomputesettings_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Compute<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hybridcomputesettingsproperties">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties</a></span>
+        <span class="property-type"><a href="#hybridcomputesettingsproperties">pulumi.<wbr>Input<Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -725,7 +744,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authentication_details_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#awscredsauthenticationdetailsproperties">Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args</a> | <a href="#gcpcredentialsdetailsproperties">Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#awassumeroleauthenticationdetailsproperties">Input[Aw<wbr>Assume<wbr>Role<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args]</a> | <a href="#awscredsauthenticationdetailsproperties">Input[Aws<wbr>Creds<wbr>Authentication<wbr>Details<wbr>Properties<wbr>Args]</a> | <a href="#gcpcredentialsdetailsproperties">Input[Gcp<wbr>Credentials<wbr>Details<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for authentication management, these settings are relevant only for the cloud connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +752,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the cloud account connector{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +760,7 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hybrid_compute_settings_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>compute_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hybridcomputesettingsproperties">Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hybridcomputesettingsproperties">Input[Hybrid<wbr>Compute<wbr>Settings<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -950,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsassumerolearn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Assume<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -958,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsexternalid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>External<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -970,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_assume_role_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>assume_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -978,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_external_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1080,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1088,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1096,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsassumerolearn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Assume<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1104,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsexternalid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>External<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1112,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grantedpermissions_nodejs" style="color: inherit; text-decoration: inherit;">granted<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1124,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1132,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_provisioning_state_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1140,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_assume_role_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>assume_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Assumed role ID is an identifier that you can use to create temporary security credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1148,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_external_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique identifier that is required when you assume a role in another account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1156,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granted_permissions_python" style="color: inherit; text-decoration: inherit;">granted_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1210,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1218,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awssecretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1230,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_access_key_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1238,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_secret_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1340,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1348,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1356,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsaccesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1364,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awssecretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1372,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grantedpermissions_nodejs" style="color: inherit; text-decoration: inherit;">granted<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1392,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_provisioning_state_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1400,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_access_key_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1408,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aws_secret_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Secret key element of the AWS credential object (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1416,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granted_permissions_python" style="color: inherit; text-decoration: inherit;">granted_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1614,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authproviderx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1622,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authuri_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1630,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1638,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1646,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>X509Cert<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1654,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1662,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1670,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatekeyid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1678,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1686,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuri_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1694,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1706,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_provider_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>provider_<wbr>x509_<wbr>cert_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1714,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_uri_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1722,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1730,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1738,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">client_<wbr>x509_<wbr>cert_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1746,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1754,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1762,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_key_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1770,7 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1778,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_uri_python" style="color: inherit; text-decoration: inherit;">token_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1786,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2016,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authproviderx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Provider<wbr>X509Cert<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2024,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authuri_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2032,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2040,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2048,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2056,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientx509certurl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>X509Cert<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2064,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grantedpermissions_nodejs" style="color: inherit; text-decoration: inherit;">granted<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2072,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2080,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2088,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatekeyid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2096,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2104,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuri_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2112,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2124,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_provider_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>provider_<wbr>x509_<wbr>cert_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth provider x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2132,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_uri_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auth URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2140,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_provisioning_state_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the multi-cloud connector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2148,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client email field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2156,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2164,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_x509_cert_url_python" style="color: inherit; text-decoration: inherit;">client_<wbr>x509_<wbr>cert_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client x509 certificate URL field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2172,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#granted_permissions_python" style="color: inherit; text-decoration: inherit;">granted_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The permissions detected in the cloud account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2180,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization ID of the GCP cloud account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2188,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private key field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2196,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_key_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Private key ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2204,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Project ID field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2212,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_uri_python" style="color: inherit; text-decoration: inherit;">token_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token URI field of the API key (write only){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2220,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type field of the API key (write only){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2322,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#autoprovision">Auto<wbr>Provision</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#autoprovision">pulumi.<wbr>Input<Auto<wbr>Provision></a></span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2330,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxyserver_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverproperties">Proxy<wbr>Server<wbr>Properties</a></span>
+        <span class="property-type"><a href="#proxyserverproperties">pulumi.<wbr>Input<Proxy<wbr>Server<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2338,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2346,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">pulumi.<wbr>Input<Service<wbr>Principal<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2366,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#autoprovision">Auto<wbr>Provision</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#autoprovision">Input[Auto<wbr>Provision]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2374,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxy_server_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverproperties">Proxy<wbr>Server<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#proxyserverproperties">Input[Proxy<wbr>Server<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2398,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Input[Service<wbr>Principal<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2516,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2524,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hybridcomputeprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Compute<wbr>Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2532,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxyserver_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverpropertiesresponse">Proxy<wbr>Server<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#proxyserverpropertiesresponse">pulumi.<wbr>Input<Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2548,7 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2556,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">pulumi.<wbr>Input<Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2568,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether or not to automatically install Azure Arc (hybrid compute) agents on machines{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2576,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hybrid_compute_provisioning_state_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>compute_<wbr>provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the service principal and its secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2584,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proxy_server_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyserverpropertiesresponse">Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#proxyserverpropertiesresponse">Input[Proxy<wbr>Server<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2592,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where the metadata of machines will be stored{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2600,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where Arc (Hybrid Compute) connectors are connected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2608,7 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Input[Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object to access resources that are secured by an Azure AD tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2662,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2670,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2682,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2690,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2744,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2752,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2764,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy server IP{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Proxy server port{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2826,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2834,7 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2846,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2854,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2908,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2916,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2928,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Application ID of service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -11,13 +11,17 @@ Explore the resources and functions of the azure-native.sql module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="backupshorttermretentionpolicy" title="BackupShortTermRetentionPolicy"><span class="symbol resource"></span>BackupShortTermRetentionPolicy</a></li>
     <li><a href="datamaskingpolicy" title="DataMaskingPolicy"><span class="symbol resource"></span>DataMaskingPolicy</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="databaseblobauditingpolicy" title="DatabaseBlobAuditingPolicy"><span class="symbol resource"></span>DatabaseBlobAuditingPolicy</a></li>
     <li><a href="databasesecurityalertpolicy" title="DatabaseSecurityAlertPolicy"><span class="symbol resource"></span>DatabaseSecurityAlertPolicy</a></li>
     <li><a href="databasevulnerabilityassessment" title="DatabaseVulnerabilityAssessment"><span class="symbol resource"></span>DatabaseVulnerabilityAssessment</a></li>
     <li><a href="databasevulnerabilityassessmentrulebaseline" title="DatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol resource"></span>DatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="disasterrecoveryconfiguration" title="DisasterRecoveryConfiguration"><span class="symbol resource"></span>DisasterRecoveryConfiguration</a></li>
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
+    <li><a href="extendeddatabaseblobauditingpolicy" title="ExtendedDatabaseBlobAuditingPolicy"><span class="symbol resource"></span>ExtendedDatabaseBlobAuditingPolicy</a></li>
+    <li><a href="extendedserverblobauditingpolicy" title="ExtendedServerBlobAuditingPolicy"><span class="symbol resource"></span>ExtendedServerBlobAuditingPolicy</a></li>
     <li><a href="failovergroup" title="FailoverGroup"><span class="symbol resource"></span>FailoverGroup</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
     <li><a href="geobackuppolicy" title="GeoBackupPolicy"><span class="symbol resource"></span>GeoBackupPolicy</a></li>
@@ -28,6 +32,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="jobcredential" title="JobCredential"><span class="symbol resource"></span>JobCredential</a></li>
     <li><a href="jobstep" title="JobStep"><span class="symbol resource"></span>JobStep</a></li>
     <li><a href="jobtargetgroup" title="JobTargetGroup"><span class="symbol resource"></span>JobTargetGroup</a></li>
+    <li><a href="longtermretentionpolicy" title="LongTermRetentionPolicy"><span class="symbol resource"></span>LongTermRetentionPolicy</a></li>
     <li><a href="manageddatabase" title="ManagedDatabase"><span class="symbol resource"></span>ManagedDatabase</a></li>
     <li><a href="manageddatabasesensitivitylabel" title="ManagedDatabaseSensitivityLabel"><span class="symbol resource"></span>ManagedDatabaseSensitivityLabel</a></li>
     <li><a href="manageddatabasevulnerabilityassessment" title="ManagedDatabaseVulnerabilityAssessment"><span class="symbol resource"></span>ManagedDatabaseVulnerabilityAssessment</a></li>
@@ -43,9 +48,11 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
     <li><a href="serverazureadadministrator" title="ServerAzureADAdministrator"><span class="symbol resource"></span>ServerAzureADAdministrator</a></li>
     <li><a href="serverazureadonlyauthentication" title="ServerAzureADOnlyAuthentication"><span class="symbol resource"></span>ServerAzureADOnlyAuthentication</a></li>
+    <li><a href="serverblobauditingpolicy" title="ServerBlobAuditingPolicy"><span class="symbol resource"></span>ServerBlobAuditingPolicy</a></li>
     <li><a href="servercommunicationlink" title="ServerCommunicationLink"><span class="symbol resource"></span>ServerCommunicationLink</a></li>
     <li><a href="serverdnsalias" title="ServerDnsAlias"><span class="symbol resource"></span>ServerDnsAlias</a></li>
     <li><a href="serverkey" title="ServerKey"><span class="symbol resource"></span>ServerKey</a></li>
+    <li><a href="serversecurityalertpolicy" title="ServerSecurityAlertPolicy"><span class="symbol resource"></span>ServerSecurityAlertPolicy</a></li>
     <li><a href="servertrustgroup" title="ServerTrustGroup"><span class="symbol resource"></span>ServerTrustGroup</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
     <li><a href="syncagent" title="SyncAgent"><span class="symbol resource"></span>SyncAgent</a></li>
@@ -59,13 +66,17 @@ Explore the resources and functions of the azure-native.sql module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbackupshorttermretentionpolicy" title="GetBackupShortTermRetentionPolicy"><span class="symbol function"></span>GetBackupShortTermRetentionPolicy</a></li>
     <li><a href="getdatamaskingpolicy" title="GetDataMaskingPolicy"><span class="symbol function"></span>GetDataMaskingPolicy</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getdatabaseblobauditingpolicy" title="GetDatabaseBlobAuditingPolicy"><span class="symbol function"></span>GetDatabaseBlobAuditingPolicy</a></li>
     <li><a href="getdatabasesecurityalertpolicy" title="GetDatabaseSecurityAlertPolicy"><span class="symbol function"></span>GetDatabaseSecurityAlertPolicy</a></li>
     <li><a href="getdatabasevulnerabilityassessment" title="GetDatabaseVulnerabilityAssessment"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessment</a></li>
     <li><a href="getdatabasevulnerabilityassessmentrulebaseline" title="GetDatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="getdisasterrecoveryconfiguration" title="GetDisasterRecoveryConfiguration"><span class="symbol function"></span>GetDisasterRecoveryConfiguration</a></li>
     <li><a href="getelasticpool" title="GetElasticPool"><span class="symbol function"></span>GetElasticPool</a></li>
+    <li><a href="getextendeddatabaseblobauditingpolicy" title="GetExtendedDatabaseBlobAuditingPolicy"><span class="symbol function"></span>GetExtendedDatabaseBlobAuditingPolicy</a></li>
+    <li><a href="getextendedserverblobauditingpolicy" title="GetExtendedServerBlobAuditingPolicy"><span class="symbol function"></span>GetExtendedServerBlobAuditingPolicy</a></li>
     <li><a href="getfailovergroup" title="GetFailoverGroup"><span class="symbol function"></span>GetFailoverGroup</a></li>
     <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
     <li><a href="getgeobackuppolicy" title="GetGeoBackupPolicy"><span class="symbol function"></span>GetGeoBackupPolicy</a></li>
@@ -76,6 +87,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="getjobcredential" title="GetJobCredential"><span class="symbol function"></span>GetJobCredential</a></li>
     <li><a href="getjobstep" title="GetJobStep"><span class="symbol function"></span>GetJobStep</a></li>
     <li><a href="getjobtargetgroup" title="GetJobTargetGroup"><span class="symbol function"></span>GetJobTargetGroup</a></li>
+    <li><a href="getlongtermretentionpolicy" title="GetLongTermRetentionPolicy"><span class="symbol function"></span>GetLongTermRetentionPolicy</a></li>
     <li><a href="getmanageddatabase" title="GetManagedDatabase"><span class="symbol function"></span>GetManagedDatabase</a></li>
     <li><a href="getmanageddatabasesensitivitylabel" title="GetManagedDatabaseSensitivityLabel"><span class="symbol function"></span>GetManagedDatabaseSensitivityLabel</a></li>
     <li><a href="getmanageddatabasevulnerabilityassessment" title="GetManagedDatabaseVulnerabilityAssessment"><span class="symbol function"></span>GetManagedDatabaseVulnerabilityAssessment</a></li>
@@ -91,9 +103,11 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
     <li><a href="getserverazureadadministrator" title="GetServerAzureADAdministrator"><span class="symbol function"></span>GetServerAzureADAdministrator</a></li>
     <li><a href="getserverazureadonlyauthentication" title="GetServerAzureADOnlyAuthentication"><span class="symbol function"></span>GetServerAzureADOnlyAuthentication</a></li>
+    <li><a href="getserverblobauditingpolicy" title="GetServerBlobAuditingPolicy"><span class="symbol function"></span>GetServerBlobAuditingPolicy</a></li>
     <li><a href="getservercommunicationlink" title="GetServerCommunicationLink"><span class="symbol function"></span>GetServerCommunicationLink</a></li>
     <li><a href="getserverdnsalias" title="GetServerDnsAlias"><span class="symbol function"></span>GetServerDnsAlias</a></li>
     <li><a href="getserverkey" title="GetServerKey"><span class="symbol function"></span>GetServerKey</a></li>
+    <li><a href="getserversecurityalertpolicy" title="GetServerSecurityAlertPolicy"><span class="symbol function"></span>GetServerSecurityAlertPolicy</a></li>
     <li><a href="getservertrustgroup" title="GetServerTrustGroup"><span class="symbol function"></span>GetServerTrustGroup</a></li>
     <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="symbol function"></span>GetServerVulnerabilityAssessment</a></li>
     <li><a href="getsyncagent" title="GetSyncAgent"><span class="symbol function"></span>GetSyncAgent</a></li>
@@ -112,6 +126,6 @@ Explore the resources and functions of the azure-native.sql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.0.0</dd>
 </dl>
 

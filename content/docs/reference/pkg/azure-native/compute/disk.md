@@ -64,7 +64,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -190,7 +190,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -315,7 +315,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -432,7 +432,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -551,7 +551,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -671,7 +671,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -796,7 +796,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -920,7 +920,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1058,7 +1058,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1183,7 +1183,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1304,7 +1304,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1432,7 +1432,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1553,7 +1553,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1650,19 +1650,50 @@ const disk = new azure_native.compute.Disk("disk", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bursting_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[DiskSecurityProfileArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[DiskSkuArgs]</span> = None<span class="p">, </span><span class="nx">supports_hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">bursting_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreationDataArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_iops_read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_m_bps_read_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_m_bps_read_write</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionSettingsCollectionArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExtendedLocationArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, HyperVGeneration]]]</span> = None<span class="p">,</span>
+         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">max_shares</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+         <span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, NetworkAccessPolicy]]]</span> = None<span class="p">,</span>
+         <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OperatingSystemTypes]]</span> = None<span class="p">,</span>
+         <span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PurchasePlanArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DiskSecurityProfileArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DiskSkuArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">supports_hibernation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+         <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Disk</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDisk</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Disk</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Disk</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DiskArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1697,22 +1728,32 @@ const disk = new azure_native.compute.Disk("disk", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DiskArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2208,7 +2249,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#creationdata_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Creation<wbr>Data</a></span>
+        <span class="property-type"><a href="#creationdata">pulumi.<wbr>Input<Creation<wbr>Data<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2216,7 +2257,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2265,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#burstingenabled_nodejs" style="color: inherit; text-decoration: inherit;">bursting<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2273,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskaccessid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Access<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2281,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskiopsreadonly_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>IOPSRead<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2248,7 +2289,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskiopsreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>IOPSRead<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2297,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskmbpsreadonly_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>MBps<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2305,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskmbpsreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>MBps<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2313,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2280,7 +2321,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2288,7 +2329,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption</a></span>
+        <span class="property-type"><a href="#encryption">pulumi.<wbr>Input<Encryption<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2296,7 +2337,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryptionsettingscollection_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">pulumi.<wbr>Input<Encryption<wbr>Settings<wbr>Collection<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2345,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">pulumi.<wbr>Input<Extended<wbr>Location<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,7 +2353,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hypervgeneration">Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hypervgeneration">pulumi.<wbr>Input<Hyper<wbr>VGeneration></a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2361,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2369,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#maxshares_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2377,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#networkaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkaccesspolicy">Network<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networkaccesspolicy">pulumi.<wbr>Input<Network<wbr>Access<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2385,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">pulumi.<wbr>Input<Operating<wbr>System<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2393,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#purchaseplan">pulumi.<wbr>Input<Purchase<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2401,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksecurityprofile">Disk<wbr>Security<wbr>Profile</a></span>
+        <span class="property-type"><a href="#disksecurityprofile">pulumi.<wbr>Input<Disk<wbr>Security<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2409,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksku">Disk<wbr>Sku</a></span>
+        <span class="property-type"><a href="#disksku">pulumi.<wbr>Input<Disk<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2376,7 +2417,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#supportshibernation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Hibernation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2425,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2392,7 +2433,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2441,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The Logical zone list for Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2412,7 +2453,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#creation_data_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Creation<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#creationdata">Input[Creation<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2420,7 +2461,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2469,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#bursting_enabled_python" style="color: inherit; text-decoration: inherit;">bursting_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2477,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_access_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>access_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM id of the DiskAccess resource for using private endpoints on disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2444,7 +2485,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_iops_read_only_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2452,7 +2493,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_iops_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>iops_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2460,7 +2501,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_m_bps_read_only_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2468,7 +2509,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_m_bps_read_write_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>m_<wbr>bps_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2476,7 +2517,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the managed disk that is being created. The name can't be changed after the disk is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2484,7 +2525,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2533,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Input[Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2541,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryption_settings_collection_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">Input[Encryption<wbr>Settings<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2549,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Input[Extended<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2516,7 +2557,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hypervgeneration">Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hypervgeneration">Input[Hyper<wbr>VGeneration]</a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2524,7 +2565,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2532,7 +2573,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#max_shares_python" style="color: inherit; text-decoration: inherit;">max_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2581,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#network_access_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#networkaccesspolicy">Network<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networkaccesspolicy">Input[Network<wbr>Access<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Policy for accessing the disk via network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2548,7 +2589,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Input[Operating<wbr>System<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2556,7 +2597,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#purchaseplan">Input[Purchase<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2605,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksecurityprofile">Disk<wbr>Security<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#disksecurityprofile">Input[Disk<wbr>Security<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the security related information for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2613,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksku">Disk<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#disksku">Input[Disk<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2580,7 +2621,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#supports_hibernation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>hibernation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates the OS on a disk supports hibernation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2629,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2637,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2645,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The Logical zone list for Disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3171,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskcreateoption">Disk<wbr>Create<wbr>Option</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#diskcreateoption">pulumi.<wbr>Input<Disk<wbr>Create<wbr>Option></a></span>
     </dt>
     <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
+        <span class="property-type"><a href="#imagediskreference">pulumi.<wbr>Input<Image<wbr>Disk<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
+        <span class="property-type"><a href="#imagediskreference">pulumi.<wbr>Input<Image<wbr>Disk<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicalsectorsize_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Sector<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3211,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3227,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3239,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#diskcreateoption">Disk<wbr>Create<wbr>Option</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#diskcreateoption">Input[Disk<wbr>Create<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3247,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Input[Image<wbr>Disk<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3255,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Input[Image<wbr>Disk<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3271,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3279,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3287,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3295,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3461,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3469,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuniqueid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Unique<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3477,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">pulumi.<wbr>Input<Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3485,7 +3526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">pulumi.<wbr>Input<Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3493,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicalsectorsize_nodejs" style="color: inherit; text-decoration: inherit;">logical<wbr>Sector<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3501,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3509,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3525,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3537,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This enumerates the possible sources of a disk's creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3545,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_unique_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>unique_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If this field is set, this is the unique id identifying the source of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3553,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Input[Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3561,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Input[Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +3610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logical_sector_size_python" style="color: inherit; text-decoration: inherit;">logical_<wbr>sector_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3577,7 +3618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If createOption is Copy, this is the ARM id of the source snapshot or disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If createOption is Import, this is the URI of a blob to be imported into a managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3685,7 +3726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#disksecuritytypes">Disk<wbr>Security<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#disksecuritytypes">pulumi.<wbr>Input<Disk<wbr>Security<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3697,7 +3738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#disksecuritytypes">Disk<wbr>Security<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#disksecuritytypes">Input[Disk<wbr>Security<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3735,7 +3776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3747,7 +3788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the VM. Applicable for OS disks only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3807,7 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskstorageaccounttypes">Disk<wbr>Storage<wbr>Account<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#diskstorageaccounttypes">pulumi.<wbr>Input<Disk<wbr>Storage<wbr>Account<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3819,7 +3860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#diskstorageaccounttypes">Disk<wbr>Storage<wbr>Account<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#diskstorageaccounttypes">Input[Disk<wbr>Storage<wbr>Account<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3873,7 +3914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sku tier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3881,7 +3922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3893,7 +3934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sku tier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3901,7 +3942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sku name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3997,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4005,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptiontype">Encryption<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encryptiontype">pulumi.<wbr>Input<Encryption<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4017,7 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4025,7 +4066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encryptiontype">Encryption<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encryptiontype">Input[Encryption<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4079,7 +4120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4087,7 +4128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4099,7 +4140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ResourceId of the disk encryption set to use for enabling encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4107,7 +4148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4177,7 +4218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4185,7 +4226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">Encryption<wbr>Settings<wbr>Element[]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">pulumi.<wbr>Input<pulumi.<wbr>Input<Encryption<wbr>Settings<wbr>Element<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4193,7 +4234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettingsversion_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4205,7 +4246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4213,7 +4254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">Input[Encryption<wbr>Settings<wbr>Element<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4221,7 +4262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_version_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4291,7 +4332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4299,7 +4340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4307,7 +4348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettingsversion_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4319,7 +4360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4327,7 +4368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Input[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4335,7 +4376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_version_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4389,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4397,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4409,7 +4450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Input[Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4417,7 +4458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Input[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4471,7 +4512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4479,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4491,7 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Input[Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4499,7 +4540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Input[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4583,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4591,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#extendedlocationtypes">pulumi.<wbr>Input<Extended<wbr>Location<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4603,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4611,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#extendedlocationtypes">Input[Extended<wbr>Location<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4665,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4673,7 +4714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4685,7 +4726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4693,7 +4734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4795,7 +4836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4803,7 +4844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4815,7 +4856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4823,7 +4864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4877,7 +4918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4885,7 +4926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4897,7 +4938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A relative uri containing either a Platform Image Repository or user image reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4905,7 +4946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4959,7 +5000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4967,7 +5008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#sourcevault">pulumi.<wbr>Input<Source<wbr>Vault<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4979,7 +5020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4987,7 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Input[Source<wbr>Vault<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5041,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5049,7 +5090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">pulumi.<wbr>Input<Source<wbr>Vault<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5061,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5069,7 +5110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Input[Source<wbr>Vault<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5123,7 +5164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5131,7 +5172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#sourcevault">pulumi.<wbr>Input<Source<wbr>Vault<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5143,7 +5184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5151,7 +5192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Input[Source<wbr>Vault<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5205,7 +5246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5213,7 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">pulumi.<wbr>Input<Source<wbr>Vault<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5225,7 +5266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5233,7 +5274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Input[Source<wbr>Vault<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5327,7 +5368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targettier_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5339,7 +5380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_tier_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target performance tier of the disk if a tier change operation is in progress.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5425,7 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5433,7 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5441,7 +5482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5449,7 +5490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5461,7 +5502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5469,7 +5510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5477,7 +5518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5485,7 +5526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5571,7 +5612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5579,7 +5620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5587,7 +5628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5595,7 +5636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5607,7 +5648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5615,7 +5656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5623,7 +5664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5631,7 +5672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5669,7 +5710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuri_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A relative URI containing the ID of the VM that has the disk attached.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5681,7 +5722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uri_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the ID of the VM that has the disk attached.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5719,7 +5760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5731,7 +5772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5769,7 +5810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5781,7 +5822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}

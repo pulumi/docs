@@ -75,7 +75,7 @@ package main
 
 import (
 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -193,19 +193,31 @@ const app = new azure_native.appplatform.App("app", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AppResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedIdentityPropertiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AppResourcePropertiesArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,22 +252,32 @@ const app = new azure_native.appplatform.App("app", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AppArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -447,7 +469,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -455,7 +477,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +485,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -471,7 +493,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityproperties">Managed<wbr>Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#managedidentityproperties">pulumi.<wbr>Input<Managed<wbr>Identity<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +501,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +509,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourceproperties">App<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#appresourceproperties">pulumi.<wbr>Input<App<wbr>Resource<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -499,7 +521,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -507,7 +529,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +537,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +545,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityproperties">Managed<wbr>Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentityproperties">Input[Managed<wbr>Identity<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -531,7 +553,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The GEO location of the application, always the same with its parent resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +561,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourceproperties">App<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#appresourceproperties">Input[App<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -786,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedeploymentname_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Deployment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpsonly_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk</a></span>
+        <span class="property-type"><a href="#persistentdisk">pulumi.<wbr>Input<Persistent<wbr>Disk<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk</a></span>
+        <span class="property-type"><a href="#temporarydisk">pulumi.<wbr>Input<Temporary<wbr>Disk<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_deployment_name_python" style="color: inherit; text-decoration: inherit;">active_<wbr>deployment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_only_python" style="color: inherit; text-decoration: inherit;">https_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdisk">Input[Persistent<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydisk">Input[Temporary<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1044,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1052,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1060,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedeploymentname_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Deployment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpsonly_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">pulumi.<wbr>Input<Persistent<wbr>Disk<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">pulumi.<wbr>Input<Temporary<wbr>Disk<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1120,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1128,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the App{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1136,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_deployment_name_python" style="color: inherit; text-decoration: inherit;">active_<wbr>deployment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the active deployment of the App{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1152,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified dns Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1160,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_only_python" style="color: inherit; text-decoration: inherit;">https_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicate if only https is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1168,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Input[Persistent<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the App exposes public endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Input[Temporary<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedidentitytype">pulumi.<wbr>Input<Managed<wbr>Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1282,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedidentitytype">Input[Managed<wbr>Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1368,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1396,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Principal Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenant Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the managed identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1500,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1520,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedingb_nodejs" style="color: inherit; text-decoration: inherit;">used<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1626,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_in_gb_python" style="color: inherit; text-decoration: inherit;">used_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the used persistent disk in GB{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mount path of the persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1696,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1716,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1724,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1778,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1786,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1798,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mount path of the temporary disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of the temporary disk in GB{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -94,7 +94,7 @@ package main
 
 import (
 	hanaonazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hanaonazure"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -253,19 +253,39 @@ const hanaInstance = new azure_native.hanaonazure.HanaInstance("hanaInstance", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hana_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_profile</span><span class="p">:</span> <span class="nx">Optional[HardwareProfileArgs]</span> = None<span class="p">, </span><span class="nx">hw_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[OSProfileArgs]</span> = None<span class="p">, </span><span class="nx">partner_node_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, HanaInstancePowerStateEnum]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, HanaProvisioningStatesEnum]]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[StorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">hana_instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">hardware_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HardwareProfileArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">hw_revision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkProfileArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OSProfileArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">partner_node_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, HanaInstancePowerStateEnum]]]</span> = None<span class="p">,</span>
+                 <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, HanaProvisioningStatesEnum]]]</span> = None<span class="p">,</span>
+                 <span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StorageProfileArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHanaInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HanaInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHanaInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HanaInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HanaInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -300,22 +320,32 @@ const hanaInstance = new azure_native.hanaonazure.HanaInstance("hanaInstance", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">HanaInstanceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -635,7 +665,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +673,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hanainstanceid_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +681,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hanainstancename_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the SAP HANA on Azure instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +689,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile</a></span>
+        <span class="property-type"><a href="#hardwareprofile">pulumi.<wbr>Input<Hardware<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +697,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hwrevision_nodejs" style="color: inherit; text-decoration: inherit;">hw<wbr>Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +705,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +713,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkprofile">pulumi.<wbr>Input<Network<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the network settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +721,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">OSProfile</a></span>
+        <span class="property-type"><a href="#osprofile">pulumi.<wbr>Input<OSProfile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +729,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partnernodeid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Node<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of another HanaInstance that will share a network with this HanaInstance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -707,7 +737,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanainstancepowerstateenum">Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hanainstancepowerstateenum">pulumi.<wbr>Input<Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Resource power state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +745,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanaprovisioningstatesenum">Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hanaprovisioningstatesenum">pulumi.<wbr>Input<Hana<wbr>Provisioning<wbr>States<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -723,7 +753,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#proximityplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +761,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +769,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -751,7 +781,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +789,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hana_instance_id_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +797,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hana_instance_name_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the SAP HANA on Azure instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +805,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofile">Input[Hardware<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +813,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hw_revision_python" style="color: inherit; text-decoration: inherit;">hw_<wbr>revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +821,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +829,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Input[Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +837,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">OSProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Input[OSProfile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +845,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partner_node_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>node_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of another HanaInstance that will share a network with this HanaInstance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +853,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hanainstancepowerstateenum">Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hanainstancepowerstateenum">Input[Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Resource power state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +861,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hanaprovisioningstatesenum">Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hanaprovisioningstatesenum">Input[Hana<wbr>Provisioning<wbr>States<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +869,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#proximity_placement_group_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +877,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Input[Storage<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +885,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1038,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the size of an empty data disk in gigabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The disk name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1058,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the size of an empty data disk in gigabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The disk name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the size of an empty data disk in gigabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1152,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The disk name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1164,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the size of an empty data disk in gigabytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The disk name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1538,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hanainstancesize_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanainstancesizenamesenum">Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hanainstancesizenamesenum">pulumi.<wbr>Input<Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1546,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwaretype_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hanahardwaretypenamesenum">Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hanahardwaretypenamesenum">pulumi.<wbr>Input<Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1558,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hana_instance_size_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hanainstancesizenamesenum">Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hanainstancesizenamesenum">Input[Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardware_type_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hanahardwaretypenamesenum">Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hanahardwaretypenamesenum">Input[Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1620,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hanainstancesize_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwaretype_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hana_instance_size_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1648,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardware_type_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1686,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address of the network interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1698,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the IP address of the network interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1736,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address of the network interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the IP address of the network interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1802,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuitid_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#ipaddress">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1822,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_id_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1830,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaddress">Input[Ip<wbr>Address<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1884,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuitid_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1892,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1904,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_id_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Input[Ip<wbr>Address<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1998,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2034,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2042,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2050,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_public_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2144,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2180,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2196,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_public_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2204,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2258,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">Disk[]</a></span>
+        <span class="property-type"><a href="#disk">pulumi.<wbr>Input<pulumi.<wbr>Input<Disk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2278,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_ip_address_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2286,7 +2316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">Sequence[Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#disk">Input[Disk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2340,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#diskresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Disk<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2360,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfs_ip_address_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskresponse">Input[Disk<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}

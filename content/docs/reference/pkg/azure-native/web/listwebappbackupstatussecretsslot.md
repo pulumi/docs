@@ -22,17 +22,27 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listWebAppBackupStatusSecretsSlot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListWebAppBackupStatusSecretsSlotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListWebAppBackupStatusSecretsSlotResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listWebAppBackupStatusSecretsSlot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListWebAppBackupStatusSecretsSlotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListWebAppBackupStatusSecretsSlotResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_web_app_backup_status_secrets_slot(</span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule</span><span class="p">:</span> <span class="nx">Optional[BackupScheduleArgs]</span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListWebAppBackupStatusSecretsSlotResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_web_app_backup_status_secrets_slot(</span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">backup_schedule</span><span class="p">:</span> <span class="nx">Optional[BackupSchedule]</span> = None<span class="p">,</span>
+                                            <span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseBackupSetting]]</span> = None<span class="p">,</span>
+                                            <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                                            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">storage_account_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListWebAppBackupStatusSecretsSlotResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListWebAppBackupStatusSecretsSlot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListWebAppBackupStatusSecretsSlotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListWebAppBackupStatusSecretsSlotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListWebAppBackupStatusSecretsSlot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListWebAppBackupStatusSecretsSlotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListWebAppBackupStatusSecretsSlotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListWebAppBackupStatusSecretsSlot` in the Go SDK.
 
@@ -41,7 +51,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListWebAppBackupStatusSecretsSlot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListWebAppBackupStatusSecretsSlotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListWebAppBackupStatusSecretsSlotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListWebAppBackupStatusSecretsSlotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListWebAppBackupStatusSecretsSlotArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -105,7 +115,7 @@ The following arguments are supported:
 <a href="#backupschedule_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -113,7 +123,7 @@ The following arguments are supported:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databasebackupsetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -357,7 +367,7 @@ The following arguments are supported:
 <a href="#backup_schedule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +375,7 @@ The following arguments are supported:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databasebackupsetting">Sequence[Database<wbr>Backup<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

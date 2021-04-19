@@ -107,7 +107,7 @@ package main
 
 import (
 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -284,19 +284,31 @@ const jitNetworkAccessPolicy = new azure_native.security.JitNetworkAccessPolicy(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asc_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jit_network_access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requests</span><span class="p">:</span> <span class="nx">Optional[Sequence[JitNetworkAccessRequestArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machines</span><span class="p">:</span> <span class="nx">Optional[Sequence[JitNetworkAccessPolicyVirtualMachineArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">asc_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">jit_network_access_policy_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">requests</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[JitNetworkAccessRequestArgs]]]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">virtual_machines</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[JitNetworkAccessPolicyVirtualMachineArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JitNetworkAccessPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JitNetworkAccessPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JitNetworkAccessPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -331,22 +343,32 @@ const jitNetworkAccessPolicy = new azure_native.security.JitNetworkAccessPolicy(
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JitNetworkAccessPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -538,7 +560,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#asclocation_nodejs" style="color: inherit; text-decoration: inherit;">asc<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -546,7 +568,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -554,7 +576,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachine">Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachine">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +584,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#jitnetworkaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +592,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +600,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequest">Jit<wbr>Network<wbr>Access<wbr>Request[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequest">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -590,7 +612,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#asc_location_python" style="color: inherit; text-decoration: inherit;">asc_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -598,7 +620,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -606,7 +628,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachine">Sequence[Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachine">Input[Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +636,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#jit_network_access_policy_name_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>network_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of a Just-in-Time access configuration policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +644,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +652,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequest">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequest">Input[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -901,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportrule">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportrule">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportrule">Input[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1023,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Input[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public IP address of the Azure Firewall that is linked to this policy, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrequestaccessduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Access<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1161,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1169,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protocol">Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protocol">pulumi.<wbr>Input<Protocol></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1197,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_request_access_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>access_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1205,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1213,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protocol">Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protocol">Input[Protocol]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrequestaccessduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Request<wbr>Access<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1347,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1355,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_request_access_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>request_<wbr>access_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1383,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1391,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1399,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestor_nodejs" style="color: inherit; text-decoration: inherit;">requestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1501,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1509,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#justification_nodejs" style="color: inherit; text-decoration: inherit;">justification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1529,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestor_python" style="color: inherit; text-decoration: inherit;">requestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1537,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1545,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Input[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#justification_python" style="color: inherit; text-decoration: inherit;">justification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1687,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1695,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1703,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#status">Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#status">pulumi.<wbr>Input<Status></a></span>
     </dt>
     <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1711,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#statusreason">Status<wbr>Reason</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#statusreason">pulumi.<wbr>Input<Status<wbr>Reason></a></span>
     </dt>
     <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1727,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1735,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mappedport_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1747,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_utc_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1755,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1763,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#status">Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#status">Input[Status]</a></span>
     </dt>
     <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#statusreason">Status<wbr>Reason</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#statusreason">Input[Status<wbr>Reason]</a></span>
     </dt>
     <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapped_port_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1937,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1945,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1953,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedsourceaddressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Source<wbr>Address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mappedport_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_utc_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date & time at which the request ends in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1997,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2005,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the port{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2013,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of why the `status` has its value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefix_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_source_address_prefixes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>source_<wbr>address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Mutually exclusive with the "allowedSourceAddressPrefix" parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapped_port_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port which is mapped to this port's `number` in the Azure Firewall, if applicable{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestor_nodejs" style="color: inherit; text-decoration: inherit;">requestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#justification_nodejs" style="color: inherit; text-decoration: inherit;">justification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2159,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestor_python" style="color: inherit; text-decoration: inherit;">requestor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity of the person who made the request{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2167,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start time of the request in UTC{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2175,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Input[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#justification_python" style="color: inherit; text-decoration: inherit;">justification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The justification for making the initiate request{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2245,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestport">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestport">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2257,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2265,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestport">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestport">Input[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2319,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2327,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2339,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the virtual machine that is linked to this policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2347,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Input[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}

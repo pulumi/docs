@@ -76,7 +76,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -235,7 +235,7 @@ import (
 	"fmt"
 
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -367,7 +367,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -504,7 +504,7 @@ import (
 	"fmt"
 
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -622,19 +622,45 @@ const endpoint = new azure_native.network.Endpoint("endpoint", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesCustomHeadersArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_monitor_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, EndpointMonitorStatus]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[Union[str, EndpointStatus]]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_mapping</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints_i_pv4</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_child_endpoints_i_pv6</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointPropertiesSubnetsArgs]]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">custom_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointPropertiesCustomHeadersArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">endpoint_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">endpoint_monitor_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EndpointMonitorStatus]]]</span> = None<span class="p">,</span>
+             <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EndpointStatus]]]</span> = None<span class="p">,</span>
+             <span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">geo_mapping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+             <span class="nx">min_child_endpoints_i_pv4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+             <span class="nx">min_child_endpoints_i_pv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+             <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointPropertiesSubnetsArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -669,22 +695,32 @@ const endpoint = new azure_native.network.Endpoint("endpoint", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1100,7 +1136,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the Traffic Manager endpoint to be created or updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1108,7 +1144,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1116,7 +1152,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager endpoint to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1160,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1168,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1176,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#endpointmonitorstatus">pulumi.<wbr>Input<Endpoint<wbr>Monitor<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1184,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1192,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#endpointstatus">pulumi.<wbr>Input<Endpoint<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1200,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geomapping_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1208,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1216,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1224,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#minchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1232,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#minchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints<wbr>IPv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1240,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1248,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1256,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Subnets<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1264,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1272,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1244,7 +1280,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1252,7 +1288,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1264,7 +1300,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the Traffic Manager endpoint to be created or updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1272,7 +1308,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1280,7 +1316,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group containing the Traffic Manager endpoint to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1324,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Input[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1296,7 +1332,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1340,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#endpointmonitorstatus">Endpoint<wbr>Monitor<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#endpointmonitorstatus">Input[Endpoint<wbr>Monitor<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1348,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1356,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#endpointstatus">Endpoint<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#endpointstatus">Input[Endpoint<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1364,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geo_mapping_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1336,7 +1372,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1344,7 +1380,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1352,7 +1388,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#min_child_endpoints_i_pv4_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1360,7 +1396,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#min_child_endpoints_i_pv6_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints_<wbr>i_<wbr>pv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1404,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1412,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1420,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Input[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1392,7 +1428,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1436,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1408,7 +1444,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1416,7 +1452,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1659,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1667,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1679,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Header value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1871,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1899,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}First address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last address in the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Block size (number of leading bits in the subnet mask).{{% /md %}}</dd></dl>
 {{% /choosable %}}

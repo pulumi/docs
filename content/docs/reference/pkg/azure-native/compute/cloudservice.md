@@ -116,7 +116,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -388,7 +388,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -652,7 +652,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -949,7 +949,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1159,19 +1159,30 @@ const cloudService = new azure_native.compute.CloudService("cloudService", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CloudServicePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">cloud_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CloudServicePropertiesArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1206,22 +1217,32 @@ const cloudService = new azure_native.compute.CloudService("cloudService", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CloudServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1397,7 +1418,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1426,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cloudservicename_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1434,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1442,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties</a></span>
+        <span class="property-type"><a href="#cloudserviceproperties">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1450,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1462,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1470,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cloud_service_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1478,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1486,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceproperties">Input[Cloud<wbr>Service<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1494,7 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extension">Extension[]</a></span>
+        <span class="property-type"><a href="#extension">pulumi.<wbr>Input<pulumi.<wbr>Input<Extension<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extension">Sequence[Extension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extension">Input[Extension<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresponse">Extension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#extensionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Extension<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1702,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresponse">Sequence[Extension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extensionresponse">Input[Extension<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1876,7 +1897,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1884,7 +1905,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
@@ -1896,7 +1917,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1925,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protectedsettingsfromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreference">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1933,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1920,7 +1941,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#rolesappliedto_nodejs" style="color: inherit; text-decoration: inherit;">roles<wbr>Applied<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1928,7 +1949,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1936,7 +1957,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1944,7 +1965,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1956,7 +1977,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1964,7 +1985,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
@@ -1976,7 +1997,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,7 +2005,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protected_settings_from_key_vault_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings_<wbr>from_<wbr>key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreference">Input[Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +2013,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +2021,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#roles_applied_to_python" style="color: inherit; text-decoration: inherit;">roles_<wbr>applied_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +2029,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +2037,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2045,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2214,7 +2235,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2222,7 +2243,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2230,7 +2251,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
@@ -2242,7 +2263,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2250,7 +2271,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protectedsettingsfromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,7 +2279,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2287,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#rolesappliedto_nodejs" style="color: inherit; text-decoration: inherit;">roles<wbr>Applied<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2295,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2303,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2311,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2302,7 +2323,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2331,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2318,7 +2339,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
@@ -2330,7 +2351,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2338,7 +2359,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#protected_settings_from_key_vault_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings_<wbr>from_<wbr>key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Input[Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2346,7 +2367,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,7 +2375,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#roles_applied_to_python" style="color: inherit; text-decoration: inherit;">roles_<wbr>applied_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2362,7 +2383,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2370,7 +2391,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2378,7 +2399,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2432,7 +2453,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">Load<wbr>Balancer<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2440,7 +2461,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2452,7 +2473,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">Input[Load<wbr>Balancer<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2460,7 +2481,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#swappable_cloud_service_python" style="color: inherit; text-decoration: inherit;">swappable_<wbr>cloud_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2514,7 +2535,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2522,7 +2543,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2534,7 +2555,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationresponse">Input[Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2542,7 +2563,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#swappable_cloud_service_python" style="color: inherit; text-decoration: inherit;">swappable_<wbr>cloud_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2580,7 +2601,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroup">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2592,7 +2613,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroup">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroup">Input[Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2630,7 +2651,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2642,7 +2663,7 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd><d
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Input[Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2836,7 +2857,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#allowmodeloverride_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Model<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
 The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
@@ -2845,7 +2866,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2874,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configurationurl_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -2862,7 +2883,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofile">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +2891,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofile">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2878,7 +2899,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofile">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2886,7 +2907,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -2895,7 +2916,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#roleprofile_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofile">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2903,7 +2924,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#startcloudservice_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2933,7 @@ If false, the service model is still deployed, but the code is not run immediate
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#cloudserviceupgrademode">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#cloudserviceupgrademode">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Upgrade<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
@@ -2926,7 +2947,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#allow_model_override_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>model_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
 The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
@@ -2935,7 +2956,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2943,7 +2964,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configuration_url_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -2952,7 +2973,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofile">Input[Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2960,7 +2981,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofile">Input[Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2968,7 +2989,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofile">Input[Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2976,7 +2997,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -2985,7 +3006,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#role_profile_python" style="color: inherit; text-decoration: inherit;">role_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofile">Input[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2993,7 +3014,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#start_cloud_service_python" style="color: inherit; text-decoration: inherit;">start_<wbr>cloud_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd><dt class="property-optional"
@@ -3002,7 +3023,7 @@ If false, the service model is still deployed, but the code is not run immediate
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#cloudserviceupgrademode">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#cloudserviceupgrademode">Input[Cloud<wbr>Service<wbr>Upgrade<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
@@ -3230,7 +3251,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3238,7 +3259,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3246,7 +3267,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#allowmodeloverride_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Model<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
 The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
@@ -3255,7 +3276,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3284,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configurationurl_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -3272,7 +3293,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3301,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3288,7 +3309,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofileresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3296,7 +3317,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -3305,7 +3326,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#roleprofile_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3334,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#startcloudservice_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Cloud<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd><dt class="property-optional"
@@ -3322,7 +3343,7 @@ If false, the service model is still deployed, but the code is not run immediate
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
@@ -3336,7 +3357,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3344,7 +3365,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3352,7 +3373,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#allow_model_override_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>model_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
 The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
@@ -3361,7 +3382,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3390,7 @@ The default value is `false`.{{% /md %}}</dd><dt class="property-optional"
 <a href="#configuration_url_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -3378,7 +3399,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Input[Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3386,7 +3407,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Input[Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3394,7 +3415,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceosprofileresponse">Input[Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3402,7 +3423,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><dt class="property-optional"
@@ -3411,7 +3432,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#role_profile_python" style="color: inherit; text-decoration: inherit;">role_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileresponse">Input[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3419,7 +3440,7 @@ This is a write-only property and is not returned in GET calls.{{% /md %}}</dd><
 <a href="#start_cloud_service_python" style="color: inherit; text-decoration: inherit;">start_<wbr>cloud_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd><dt class="property-optional"
@@ -3428,7 +3449,7 @@ If false, the service model is still deployed, but the code is not run immediate
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
@@ -3468,7 +3489,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileproperties">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties[]</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileproperties">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3480,7 +3501,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofileproperties">Sequence[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofileproperties">Input[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3534,7 +3555,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3542,7 +3563,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku</a></span>
+        <span class="property-type"><a href="#cloudservicerolesku">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3554,7 +3575,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3562,7 +3583,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudservicerolesku">Input[Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3616,7 +3637,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3624,7 +3645,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceroleskuresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3636,7 +3657,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3665,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceroleskuresponse">Input[Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3682,7 +3703,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3694,7 +3715,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Sequence[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Input[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3764,7 +3785,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3772,7 +3793,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3780,7 +3801,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3792,7 +3813,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3800,7 +3821,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3808,7 +3829,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3878,7 +3899,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3886,7 +3907,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3894,7 +3915,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3906,7 +3927,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3914,7 +3935,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3922,7 +3943,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4006,7 +4027,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4014,7 +4035,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4026,7 +4047,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4034,7 +4055,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4088,7 +4109,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4096,7 +4117,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4108,7 +4129,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4116,7 +4137,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4154,7 +4175,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4166,7 +4187,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4204,7 +4225,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4216,7 +4237,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4270,7 +4291,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4278,7 +4299,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificate">Cloud<wbr>Service<wbr>Vault<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4290,7 +4311,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4298,7 +4319,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificate">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificate">Input[Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4352,7 +4373,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4360,7 +4381,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4372,7 +4393,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4380,7 +4401,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Input[Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4434,7 +4455,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4442,7 +4463,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionproperties">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4454,7 +4475,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4462,7 +4483,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionproperties">Input[Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4516,7 +4537,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4524,7 +4545,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">pulumi.<wbr>Input<Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4536,7 +4557,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4544,7 +4565,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Input[Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4614,7 +4635,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4622,7 +4643,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationproperties">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4630,7 +4651,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4642,7 +4663,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4650,7 +4671,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationproperties">Input[Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4658,7 +4679,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4696,7 +4717,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration[]</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4708,7 +4729,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Sequence[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Input[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4746,7 +4767,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4758,7 +4779,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Input[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4828,7 +4849,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4836,7 +4857,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4844,7 +4865,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4856,7 +4877,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Load balancer{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4864,7 +4885,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Input[Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the load balancer configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4872,7 +4893,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4926,7 +4947,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4934,7 +4955,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4946,7 +4967,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4954,7 +4975,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Input[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5024,7 +5045,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5032,7 +5053,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5040,7 +5061,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5052,7 +5073,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5060,7 +5081,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5068,7 +5089,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5138,7 +5159,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5146,7 +5167,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5154,7 +5175,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5166,7 +5187,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The virtual network private IP address of the IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5174,7 +5195,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public ip address resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5182,7 +5203,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the virtual network subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5236,7 +5257,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5244,7 +5265,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5256,7 +5277,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5264,7 +5285,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Input[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of load balancer frontend ip configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5302,7 +5323,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5314,7 +5335,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5352,7 +5373,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5364,7 +5385,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}

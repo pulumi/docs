@@ -70,7 +70,7 @@ package main
 
 import (
 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -173,19 +173,39 @@ const customImage = new azure_native.devtestlab.CustomImage("customImage", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_image_plan</span><span class="p">:</span> <span class="nx">Optional[CustomImagePropertiesFromPlanArgs]</span> = None<span class="p">, </span><span class="nx">data_disk_storage_info</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataDiskStorageTypeInfoArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_plan_authorized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vhd</span><span class="p">:</span> <span class="nx">Optional[CustomImagePropertiesCustomArgs]</span> = None<span class="p">, </span><span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[CustomImagePropertiesFromVmArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">custom_image_plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomImagePropertiesFromPlanArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">data_disk_storage_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DataDiskStorageTypeInfoArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">is_plan_authorized</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">managed_image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">managed_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">vhd</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomImagePropertiesCustomArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">vm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomImagePropertiesFromVmArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCustomImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomImage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCustomImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomImage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CustomImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CustomImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -220,22 +240,32 @@ const customImage = new azure_native.devtestlab.CustomImage("customImage", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CustomImageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -555,7 +585,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -563,7 +593,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +601,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +609,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customimageplan_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Image<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplan">pulumi.<wbr>Input<Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +617,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datadiskstorageinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Storage<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinfo">Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +625,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +633,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#isplanauthorized_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Plan<wbr>Authorized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +641,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +649,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managedimageid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +657,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managedsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +665,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +673,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +681,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustom">pulumi.<wbr>Input<Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +689,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvm">pulumi.<wbr>Input<Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -671,7 +701,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -679,7 +709,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -687,7 +717,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The author of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -695,7 +725,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#custom_image_plan_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>image_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplan">Input[Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +733,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#data_disk_storage_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>storage_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinfo">Sequence[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinfo">Input[Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +741,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -719,7 +749,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#is_plan_authorized_python" style="color: inherit; text-decoration: inherit;">is_<wbr>plan_<wbr>authorized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +757,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +765,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managed_image_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Managed Image Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +773,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managed_snapshot_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Managed Snapshot Id backing the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +781,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the custom image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +789,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +797,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustom">Input[Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +805,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvm">Input[Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1068,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#customimageostype">Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#customimageostype">pulumi.<wbr>Input<Custom<wbr>Image<wbr>Os<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysprep_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Prep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1096,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#customimageostype">Custom<wbr>Image<wbr>Os<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#customimageostype">Input[Custom<wbr>Image<wbr>Os<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_prep_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>prep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1182,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysprep_nodejs" style="color: inherit; text-decoration: inherit;">sys<wbr>Prep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1210,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The OS type of the custom image (i.e. Windows, Linux){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1218,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sys_prep_python" style="color: inherit; text-decoration: inherit;">sys_<wbr>prep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether sysprep has been run on the VHD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1296,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1324,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1340,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1410,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1418,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1438,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the plan, equivalent to name of the plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The offer for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher for the plan from the marketplace image the custom image is derived from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1524,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info</a></span>
+        <span class="property-type"><a href="#linuxosinfo">pulumi.<wbr>Input<Linux<wbr>Os<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1532,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info</a></span>
+        <span class="property-type"><a href="#windowsosinfo">pulumi.<wbr>Input<Windows<wbr>Os<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1552,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinfo">Input[Linux<wbr>Os<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1568,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinfo">Input[Windows<wbr>Os<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">pulumi.<wbr>Input<Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">pulumi.<wbr>Input<Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1666,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Input[Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source vm identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Input[Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1736,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storagetype">pulumi.<wbr>Input<Storage<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1756,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#storagetype">Storage<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storagetype">Input[Storage<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1818,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1838,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Disk Lun{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1846,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Disk Storage Type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1884,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosstate_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#linuxosstate">Linux<wbr>Os<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#linuxosstate">pulumi.<wbr>Input<Linux<wbr>Os<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1896,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_state_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#linuxosstate">Linux<wbr>Os<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#linuxosstate">Input[Linux<wbr>Os<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1934,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosstate_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1946,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_state_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2044,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosstate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#windowsosstate">Windows<wbr>Os<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#windowsosstate">pulumi.<wbr>Input<Windows<wbr>Os<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2056,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_state_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#windowsosstate">Windows<wbr>Os<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#windowsosstate">Input[Windows<wbr>Os<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2094,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosstate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2106,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_state_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).{{% /md %}}</dd></dl>
 {{% /choosable %}}

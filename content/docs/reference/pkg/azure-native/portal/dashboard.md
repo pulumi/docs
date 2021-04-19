@@ -234,19 +234,31 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dashboard_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardLensArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">dashboard_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">lenses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardLensArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -281,22 +293,32 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -488,7 +510,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +518,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboardname_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +526,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lenses_nodejs" style="color: inherit; text-decoration: inherit;">lenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlens">Dashboard<wbr>Lens[]</a></span>
+        <span class="property-type"><a href="#dashboardlens">pulumi.<wbr>Input<pulumi.<wbr>Input<Dashboard<wbr>Lens<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +534,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +542,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +550,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -540,7 +562,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -548,7 +570,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboard_name_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +578,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lenses_python" style="color: inherit; text-decoration: inherit;">lenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlens">Sequence[Dashboard<wbr>Lens<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardlens">Input[Dashboard<wbr>Lens<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +586,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +594,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +602,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">Dashboard<wbr>Parts[]</a></span>
+        <span class="property-type"><a href="#dashboardparts">pulumi.<wbr>Input<pulumi.<wbr>Input<Dashboard<wbr>Parts<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -795,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -815,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">Sequence[Dashboard<wbr>Parts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardparts">Input[Dashboard<wbr>Parts<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -893,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -901,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Dashboard<wbr>Parts<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">Sequence[Dashboard<wbr>Parts<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">Input[Dashboard<wbr>Parts<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -991,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">pulumi.<wbr>Input<Dashboard<wbr>Parts<wbr>Position<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">Input[Dashboard<wbr>Parts<wbr>Position<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colspan_nodejs" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1129,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowspan_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1137,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1145,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1165,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1173,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1181,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1189,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">pulumi.<wbr>Input<Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1271,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Input[Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1381,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colspan_nodejs" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1389,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowspan_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1397,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1405,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1433,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1441,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1449,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any[]</span>
+        <span class="property-type">pulumi.<wbr>Input<any[]></span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1531,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Any]</span>
+        <span class="property-type">Input[Sequence[Any]]</span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1589,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1643,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any[]</span>
+        <span class="property-type">pulumi.<wbr>Input<any[]></span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Any]</span>
+        <span class="property-type">Input[Sequence[Any]]</span>
     </dt>
     <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1671,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1721,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1759,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1771,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1809,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">pulumi.<wbr>Input<Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1821,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">Input[Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}

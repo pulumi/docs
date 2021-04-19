@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.ProtectedItem re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup items.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 
@@ -225,19 +225,34 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFileshareProtectedItemArgs, AzureIaaSClassicComputeVMProtectedItemArgs, AzureIaaSComputeVMProtectedItemArgs, AzureIaaSVMProtectedItemArgs, AzureSqlProtectedItemArgs, AzureVmWorkloadProtectedItemArgs, AzureVmWorkloadSAPAseDatabaseProtectedItemArgs, AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs, AzureVmWorkloadSQLDatabaseProtectedItemArgs, DPMProtectedItemArgs, GenericProtectedItemArgs, MabFileFolderProtectedItemArgs]]</span> = None<span class="p">, </span><span class="nx">protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AzureFileshareProtectedItemArgs, AzureIaaSClassicComputeVMProtectedItemArgs, AzureIaaSComputeVMProtectedItemArgs, AzureIaaSVMProtectedItemArgs, AzureSqlProtectedItemArgs, AzureVmWorkloadProtectedItemArgs, AzureVmWorkloadSAPAseDatabaseProtectedItemArgs, AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs, AzureVmWorkloadSQLDatabaseProtectedItemArgs, DPMProtectedItemArgs, GenericProtectedItemArgs, MabFileFolderProtectedItemArgs]]]</span> = None<span class="p">,</span>
+                  <span class="nx">protected_item_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectedItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectedItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProtectedItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -272,22 +287,32 @@ const protectedItem = new azure_native.recoveryservices.ProtectedItem("protected
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProtectedItemArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -527,7 +552,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container name associated with the backup item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -535,7 +560,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -543,7 +568,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -551,7 +576,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +584,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +592,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +600,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item</a> | <a href="#azureiaascomputevmprotecteditem">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">pulumi.<wbr>Input<Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#azureiaasclassiccomputevmprotecteditem">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Args></a> | <a href="#azureiaascomputevmprotecteditem">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Args></a> | <a href="#azureiaasvmprotecteditem">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args></a> | <a href="#azuresqlprotecteditem">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#azurevmworkloadprotecteditem">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#dpmprotecteditem">pulumi.<wbr>Input<DPMProtected<wbr>Item<wbr>Args></a> | <a href="#genericprotecteditem">pulumi.<wbr>Input<Generic<wbr>Protected<wbr>Item<wbr>Args></a> | <a href="#mabfilefolderprotecteditem">pulumi.<wbr>Input<Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +608,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#protecteditemname_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Item name to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +616,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -603,7 +628,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container name associated with the backup item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -611,7 +636,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -619,7 +644,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +652,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +660,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +668,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +676,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaascomputevmprotecteditem">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Args</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item<wbr>Args</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Input[Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#azureiaasclassiccomputevmprotecteditem">Input[Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Args]</a> | <a href="#azureiaascomputevmprotecteditem">Input[Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Args]</a> | <a href="#azureiaasvmprotecteditem">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args]</a> | <a href="#azuresqlprotecteditem">Input[Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#azurevmworkloadprotecteditem">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditem">Input[Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditem">Input[Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#azurevmworkloadsqldatabaseprotecteditem">Input[Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#dpmprotecteditem">Input[DPMProtected<wbr>Item<wbr>Args]</a> | <a href="#genericprotecteditem">Input[Generic<wbr>Protected<wbr>Item<wbr>Args]</a> | <a href="#mabfilefolderprotecteditem">Input[Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +684,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#protected_item_name_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Item name to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +692,7 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1138,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1210,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1218,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1234,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1250,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1302,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1318,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1326,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1334,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1342,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1350,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Input[Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1430,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1524,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1532,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1552,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1568,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1670,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1678,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcestatesynctime_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State<wbr>Sync<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1714,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1722,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_state_sync_time_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state_<wbr>sync_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2088,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2120,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2128,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2192,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2200,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2252,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2260,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2268,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2276,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2300,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Input[Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2308,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2316,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2356,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2372,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2380,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2388,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2396,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2404,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2810,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2818,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2826,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2834,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2842,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2850,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2858,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2866,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
+        <span class="property-type"><a href="#extendedproperties">pulumi.<wbr>Input<Extended<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2874,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2882,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatus">Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#healthstatus">pulumi.<wbr>Input<Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2890,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2898,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2906,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2914,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2922,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2930,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2938,7 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2946,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2954,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2962,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2970,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2978,7 +3003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2986,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2994,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3006,7 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3014,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3022,7 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3030,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3038,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3046,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3062,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedproperties">Input[Extended<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3078,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#healthstatus">Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#healthstatus">Input[Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3086,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3094,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3102,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3110,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3118,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3126,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3134,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3142,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3150,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3158,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3166,7 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3174,7 +3199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3182,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3190,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3612,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3620,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3628,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3636,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3660,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3668,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">pulumi.<wbr>Input<Extended<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3676,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3684,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3692,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3700,7 +3725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3708,7 +3733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3716,7 +3741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3732,7 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3740,7 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3748,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3756,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3764,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3772,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3780,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3788,7 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3796,7 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3804,7 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3816,7 +3841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3832,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3840,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3848,7 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3856,7 +3881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3864,7 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3872,7 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Input[Extended<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3888,7 +3913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Input[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3896,7 +3921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3904,7 +3929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3912,7 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3920,7 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3928,7 +3953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3936,7 +3961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3944,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3952,7 +3977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3960,7 +3985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3968,7 +3993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3976,7 +4001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3984,7 +4009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3992,7 +4017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4000,7 +4025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4008,7 +4033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4414,7 +4439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4422,7 +4447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4430,7 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4438,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4446,7 +4471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4454,7 +4479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4462,7 +4487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4470,7 +4495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
+        <span class="property-type"><a href="#extendedproperties">pulumi.<wbr>Input<Extended<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4478,7 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4486,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatus">Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#healthstatus">pulumi.<wbr>Input<Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4494,7 +4519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4502,7 +4527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4510,7 +4535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4518,7 +4543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4526,7 +4551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4534,7 +4559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4542,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4550,7 +4575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4558,7 +4583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4566,7 +4591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4574,7 +4599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4582,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4590,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4598,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4610,7 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4618,7 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4626,7 +4651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4634,7 +4659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4642,7 +4667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4650,7 +4675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4658,7 +4683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4666,7 +4691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedproperties">Input[Extended<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4674,7 +4699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4682,7 +4707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#healthstatus">Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#healthstatus">Input[Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4690,7 +4715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4698,7 +4723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4706,7 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4714,7 +4739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4722,7 +4747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4730,7 +4755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4738,7 +4763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4746,7 +4771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4754,7 +4779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4762,7 +4787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4770,7 +4795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4778,7 +4803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4786,7 +4811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4794,7 +4819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5216,7 +5241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5224,7 +5249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5232,7 +5257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5240,7 +5265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5248,7 +5273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5256,7 +5281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5264,7 +5289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5272,7 +5297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">pulumi.<wbr>Input<Extended<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5280,7 +5305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5288,7 +5313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5296,7 +5321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5304,7 +5329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5312,7 +5337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5320,7 +5345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5328,7 +5353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5336,7 +5361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5344,7 +5369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5352,7 +5377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5360,7 +5385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5368,7 +5393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5376,7 +5401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5384,7 +5409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5392,7 +5417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5400,7 +5425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5408,7 +5433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5420,7 +5445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5428,7 +5453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5436,7 +5461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5444,7 +5469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5452,7 +5477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5460,7 +5485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5468,7 +5493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5476,7 +5501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Input[Extended<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5484,7 +5509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5492,7 +5517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Input[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5500,7 +5525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5508,7 +5533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5516,7 +5541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5524,7 +5549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5532,7 +5557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5540,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5548,7 +5573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5556,7 +5581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5564,7 +5589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5572,7 +5597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5580,7 +5605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5588,7 +5613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5596,7 +5621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5604,7 +5629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5612,7 +5637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5698,7 +5723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5706,7 +5731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5714,7 +5739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5722,7 +5747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5734,7 +5759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5742,7 +5767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5750,7 +5775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5758,7 +5783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6164,7 +6189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6172,7 +6197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6180,7 +6205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6188,7 +6213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6196,7 +6221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6204,7 +6229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6212,7 +6237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6220,7 +6245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
+        <span class="property-type"><a href="#extendedproperties">pulumi.<wbr>Input<Extended<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6228,7 +6253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6236,7 +6261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#healthstatus">Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#healthstatus">pulumi.<wbr>Input<Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6244,7 +6269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6252,7 +6277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6260,7 +6285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6268,7 +6293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6276,7 +6301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6284,7 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6292,7 +6317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6300,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6308,7 +6333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6316,7 +6341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6324,7 +6349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6332,7 +6357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6340,7 +6365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6348,7 +6373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6360,7 +6385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6368,7 +6393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6376,7 +6401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6384,7 +6409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6392,7 +6417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6400,7 +6425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6408,7 +6433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6416,7 +6441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedproperties">Input[Extended<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6424,7 +6449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6432,7 +6457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#healthstatus">Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#healthstatus">Input[Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6440,7 +6465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6448,7 +6473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6456,7 +6481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6464,7 +6489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6472,7 +6497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6480,7 +6505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6488,7 +6513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6496,7 +6521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6504,7 +6529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6512,7 +6537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6520,7 +6545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6528,7 +6553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6536,7 +6561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6544,7 +6569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6614,7 +6639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6622,7 +6647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyinconsistent_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Inconsistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6630,7 +6655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6642,7 +6667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6650,7 +6675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_inconsistent_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>inconsistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6658,7 +6683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6728,7 +6753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6736,7 +6761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyinconsistent_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Inconsistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6744,7 +6769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6756,7 +6781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6764,7 +6789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_inconsistent_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>inconsistent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6772,7 +6797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7194,7 +7219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7202,7 +7227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7210,7 +7235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7218,7 +7243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7226,7 +7251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7234,7 +7259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7242,7 +7267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7250,7 +7275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">pulumi.<wbr>Input<Extended<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7258,7 +7283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7266,7 +7291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7274,7 +7299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7282,7 +7307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7290,7 +7315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7298,7 +7323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7306,7 +7331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7314,7 +7339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7322,7 +7347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7330,7 +7355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7338,7 +7363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7346,7 +7371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7354,7 +7379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7362,7 +7387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7370,7 +7395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7378,7 +7403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7386,7 +7411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7398,7 +7423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7406,7 +7431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7414,7 +7439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7422,7 +7447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7430,7 +7455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7438,7 +7463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7446,7 +7471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Input[Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7454,7 +7479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Input[Extended<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7462,7 +7487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7470,7 +7495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Input[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7478,7 +7503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7486,7 +7511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7494,7 +7519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7502,7 +7527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7510,7 +7535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7518,7 +7543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7526,7 +7551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7534,7 +7559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7542,7 +7567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7550,7 +7575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7558,7 +7583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7566,7 +7591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7574,7 +7599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7582,7 +7607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7590,7 +7615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7868,7 +7893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7876,7 +7901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7884,7 +7909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7892,7 +7917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7900,7 +7925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7908,7 +7933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7916,7 +7941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7924,7 +7949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7932,7 +7957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7940,7 +7965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7948,7 +7973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7956,7 +7981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7964,7 +7989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7972,7 +7997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protecteditemstate">pulumi.<wbr>Input<Protected<wbr>Item<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7980,7 +8005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7988,7 +8013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8000,7 +8025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8008,7 +8033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8016,7 +8041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8024,7 +8049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8032,7 +8057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8040,7 +8065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8048,7 +8073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Input[Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8056,7 +8081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8064,7 +8089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8072,7 +8097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8080,7 +8105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8088,7 +8113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8096,7 +8121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8104,7 +8129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protecteditemstate">Input[Protected<wbr>Item<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8112,7 +8137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8120,7 +8145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8190,7 +8215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8198,7 +8223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8206,7 +8231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8218,7 +8243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8226,7 +8251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8234,7 +8259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8304,7 +8329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8312,7 +8337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8320,7 +8345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8332,7 +8357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8340,7 +8365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8348,7 +8373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8626,7 +8651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8634,7 +8659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8642,7 +8667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8650,7 +8675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8658,7 +8683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8666,7 +8691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8674,7 +8699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8682,7 +8707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8690,7 +8715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8698,7 +8723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8706,7 +8731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8714,7 +8739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8722,7 +8747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8730,7 +8755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8738,7 +8763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8746,7 +8771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8758,7 +8783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8766,7 +8791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8774,7 +8799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8782,7 +8807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8790,7 +8815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8798,7 +8823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8806,7 +8831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Input[Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8814,7 +8839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8822,7 +8847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8830,7 +8855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8838,7 +8863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8846,7 +8871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8854,7 +8879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8862,7 +8887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8870,7 +8895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8878,7 +8903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9300,7 +9325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9308,7 +9333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9316,7 +9341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9324,7 +9349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9332,7 +9357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9340,7 +9365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9348,7 +9373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9356,7 +9381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9364,7 +9389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9372,7 +9397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9380,7 +9405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9388,7 +9413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9396,7 +9421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#lastbackupstatus">pulumi.<wbr>Input<Last<wbr>Backup<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9404,7 +9429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9412,7 +9437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9420,7 +9445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9428,7 +9453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9436,7 +9461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9444,7 +9469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9452,7 +9477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protecteditemhealthstatus">pulumi.<wbr>Input<Protected<wbr>Item<wbr>Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9460,7 +9485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9468,7 +9493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9476,7 +9501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9484,7 +9509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9492,7 +9517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9504,7 +9529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9512,7 +9537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9520,7 +9545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9528,7 +9553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9536,7 +9561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9544,7 +9569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9552,7 +9577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9560,7 +9585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9568,7 +9593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9576,7 +9601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9584,7 +9609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9592,7 +9617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9600,7 +9625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#lastbackupstatus">Input[Last<wbr>Backup<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9608,7 +9633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9616,7 +9641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9624,7 +9649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9632,7 +9657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9640,7 +9665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9648,7 +9673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9656,7 +9681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protecteditemhealthstatus">Input[Protected<wbr>Item<wbr>Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9664,7 +9689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9672,7 +9697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9680,7 +9705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9688,7 +9713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9696,7 +9721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9766,7 +9791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9774,7 +9799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9782,7 +9807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9794,7 +9819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9802,7 +9827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9810,7 +9835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9880,7 +9905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9888,7 +9913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9896,7 +9921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9908,7 +9933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9916,7 +9941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9924,7 +9949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10362,7 +10387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10370,7 +10395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10378,7 +10403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10386,7 +10411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10394,7 +10419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10402,7 +10427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10410,7 +10435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10418,7 +10443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10426,7 +10451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10434,7 +10459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10442,7 +10467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10450,7 +10475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10458,7 +10483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10466,7 +10491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10474,7 +10499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10482,7 +10507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10490,7 +10515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10498,7 +10523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10506,7 +10531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10514,7 +10539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10522,7 +10547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10530,7 +10555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10538,7 +10563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10546,7 +10571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10554,7 +10579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10562,7 +10587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10574,7 +10599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10582,7 +10607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10590,7 +10615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10598,7 +10623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10606,7 +10631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10614,7 +10639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10622,7 +10647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10630,7 +10655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10638,7 +10663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10646,7 +10671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10654,7 +10679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10662,7 +10687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10670,7 +10695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10678,7 +10703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10686,7 +10711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10694,7 +10719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10702,7 +10727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10710,7 +10735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10718,7 +10743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10726,7 +10751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10734,7 +10759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10742,7 +10767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10750,7 +10775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10758,7 +10783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10766,7 +10791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10774,7 +10799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11196,7 +11221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11204,7 +11229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11212,7 +11237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11220,7 +11245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11228,7 +11253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11236,7 +11261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11244,7 +11269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11252,7 +11277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11260,7 +11285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11268,7 +11293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11276,7 +11301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11284,7 +11309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11292,7 +11317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#lastbackupstatus">pulumi.<wbr>Input<Last<wbr>Backup<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11300,7 +11325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11308,7 +11333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11316,7 +11341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11324,7 +11349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11332,7 +11357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11340,7 +11365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11348,7 +11373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protecteditemhealthstatus">pulumi.<wbr>Input<Protected<wbr>Item<wbr>Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11356,7 +11381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11364,7 +11389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11372,7 +11397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11380,7 +11405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11388,7 +11413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11400,7 +11425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11408,7 +11433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11416,7 +11441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11424,7 +11449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11432,7 +11457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11440,7 +11465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11448,7 +11473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11456,7 +11481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11464,7 +11489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11472,7 +11497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11480,7 +11505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11488,7 +11513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11496,7 +11521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#lastbackupstatus">Input[Last<wbr>Backup<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11504,7 +11529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11512,7 +11537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11520,7 +11545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11528,7 +11553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11536,7 +11561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11544,7 +11569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11552,7 +11577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protecteditemhealthstatus">Input[Protected<wbr>Item<wbr>Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11560,7 +11585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11568,7 +11593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11576,7 +11601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11584,7 +11609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11592,7 +11617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12030,7 +12055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12038,7 +12063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12046,7 +12071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12054,7 +12079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12062,7 +12087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12070,7 +12095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12078,7 +12103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12086,7 +12111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12094,7 +12119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12102,7 +12127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12110,7 +12135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12118,7 +12143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12126,7 +12151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12134,7 +12159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12142,7 +12167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12150,7 +12175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12158,7 +12183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12166,7 +12191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12174,7 +12199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12182,7 +12207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12190,7 +12215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12198,7 +12223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12206,7 +12231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12214,7 +12239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12222,7 +12247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12230,7 +12255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12242,7 +12267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12250,7 +12275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12258,7 +12283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12266,7 +12291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12274,7 +12299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12282,7 +12307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12290,7 +12315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12298,7 +12323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12306,7 +12331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12314,7 +12339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12322,7 +12347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12330,7 +12355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12338,7 +12363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12346,7 +12371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12354,7 +12379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12362,7 +12387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12370,7 +12395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12378,7 +12403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12386,7 +12411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12394,7 +12419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12402,7 +12427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12410,7 +12435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12418,7 +12443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12426,7 +12451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12434,7 +12459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12442,7 +12467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12864,7 +12889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12872,7 +12897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12880,7 +12905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12888,7 +12913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12896,7 +12921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12904,7 +12929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12912,7 +12937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12920,7 +12945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12928,7 +12953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12936,7 +12961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12944,7 +12969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12952,7 +12977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12960,7 +12985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#lastbackupstatus">pulumi.<wbr>Input<Last<wbr>Backup<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12968,7 +12993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12976,7 +13001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12984,7 +13009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12992,7 +13017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13000,7 +13025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13008,7 +13033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13016,7 +13041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protecteditemhealthstatus">pulumi.<wbr>Input<Protected<wbr>Item<wbr>Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13024,7 +13049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13032,7 +13057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13040,7 +13065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13048,7 +13073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13056,7 +13081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13068,7 +13093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13076,7 +13101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13084,7 +13109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13092,7 +13117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13100,7 +13125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13108,7 +13133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13116,7 +13141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13124,7 +13149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13132,7 +13157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13140,7 +13165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13148,7 +13173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13156,7 +13181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13164,7 +13189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#lastbackupstatus">Input[Last<wbr>Backup<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13172,7 +13197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13180,7 +13205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13188,7 +13213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13196,7 +13221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13204,7 +13229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13212,7 +13237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13220,7 +13245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protecteditemhealthstatus">Input[Protected<wbr>Item<wbr>Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13228,7 +13253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13236,7 +13261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13244,7 +13269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13252,7 +13277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13260,7 +13285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13698,7 +13723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13706,7 +13731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13714,7 +13739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13722,7 +13747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13730,7 +13755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13738,7 +13763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13746,7 +13771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13754,7 +13779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13762,7 +13787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13770,7 +13795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13778,7 +13803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13786,7 +13811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13794,7 +13819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13802,7 +13827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13810,7 +13835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13818,7 +13843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13826,7 +13851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13834,7 +13859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13842,7 +13867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13850,7 +13875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13858,7 +13883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13866,7 +13891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13874,7 +13899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13882,7 +13907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13890,7 +13915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13898,7 +13923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13910,7 +13935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13918,7 +13943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13926,7 +13951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13934,7 +13959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13942,7 +13967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13950,7 +13975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13958,7 +13983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13966,7 +13991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13974,7 +13999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13982,7 +14007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13990,7 +14015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13998,7 +14023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14006,7 +14031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14014,7 +14039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14022,7 +14047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14030,7 +14055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14038,7 +14063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14046,7 +14071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14054,7 +14079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14062,7 +14087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14070,7 +14095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14078,7 +14103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14086,7 +14111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14094,7 +14119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14102,7 +14127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14110,7 +14135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14532,7 +14557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14540,7 +14565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14548,7 +14573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14556,7 +14581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14564,7 +14589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14572,7 +14597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14580,7 +14605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14588,7 +14613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14596,7 +14621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14604,7 +14629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14612,7 +14637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14620,7 +14645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14628,7 +14653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#lastbackupstatus">pulumi.<wbr>Input<Last<wbr>Backup<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14636,7 +14661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14644,7 +14669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14652,7 +14677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14660,7 +14685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14668,7 +14693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14676,7 +14701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14684,7 +14709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protecteditemhealthstatus">pulumi.<wbr>Input<Protected<wbr>Item<wbr>Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14692,7 +14717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14700,7 +14725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14708,7 +14733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14716,7 +14741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14724,7 +14749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14736,7 +14761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14744,7 +14769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14752,7 +14777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14760,7 +14785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14768,7 +14793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14776,7 +14801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14784,7 +14809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14792,7 +14817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14800,7 +14825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14808,7 +14833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14816,7 +14841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14824,7 +14849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14832,7 +14857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#lastbackupstatus">Input[Last<wbr>Backup<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14840,7 +14865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14848,7 +14873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14856,7 +14881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14864,7 +14889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14872,7 +14897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14880,7 +14905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14888,7 +14913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protecteditemhealthstatus">Input[Protected<wbr>Item<wbr>Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14896,7 +14921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14904,7 +14929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14912,7 +14937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14920,7 +14945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14928,7 +14953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15366,7 +15391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15374,7 +15399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15382,7 +15407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15390,7 +15415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15398,7 +15423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15406,7 +15431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15414,7 +15439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15422,7 +15447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15430,7 +15455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15438,7 +15463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15446,7 +15471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15454,7 +15479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15462,7 +15487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15470,7 +15495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15478,7 +15503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15486,7 +15511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15494,7 +15519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15502,7 +15527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15510,7 +15535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15518,7 +15543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15526,7 +15551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15534,7 +15559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15542,7 +15567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15550,7 +15575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15558,7 +15583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15566,7 +15591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15578,7 +15603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15586,7 +15611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15594,7 +15619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15602,7 +15627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15610,7 +15635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15618,7 +15643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15626,7 +15651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Input[Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15634,7 +15659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15642,7 +15667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15650,7 +15675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15658,7 +15683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15666,7 +15691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15674,7 +15699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15682,7 +15707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15690,7 +15715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15698,7 +15723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15706,7 +15731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15714,7 +15739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15722,7 +15747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15730,7 +15755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15738,7 +15763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15746,7 +15771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15754,7 +15779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15762,7 +15787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15770,7 +15795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15778,7 +15803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16156,7 +16181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupenginename_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Engine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16164,7 +16189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16172,7 +16197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16180,7 +16205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16188,7 +16213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16196,7 +16221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16204,7 +16229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16212,7 +16237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">pulumi.<wbr>Input<DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16220,7 +16245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16228,7 +16253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16236,7 +16261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16244,7 +16269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16252,7 +16277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16260,7 +16285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16268,7 +16293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protecteditemstate">pulumi.<wbr>Input<Protected<wbr>Item<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16276,7 +16301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16284,7 +16309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16296,7 +16321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_engine_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>engine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16304,7 +16329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16312,7 +16337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16320,7 +16345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16328,7 +16353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16336,7 +16361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16344,7 +16369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16352,7 +16377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinfo">Input[DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16360,7 +16385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16368,7 +16393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16376,7 +16401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16384,7 +16409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16392,7 +16417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16400,7 +16425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16408,7 +16433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protecteditemstate">Input[Protected<wbr>Item<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16416,7 +16441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16424,7 +16449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16670,7 +16695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstorageusedinbytes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16678,7 +16703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscollocated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Collocated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16686,7 +16711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ispresentoncloud_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Present<wbr>On<wbr>Cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16694,7 +16719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16702,7 +16727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16710,7 +16735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16718,7 +16743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiselatestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16726,7 +16751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiseoldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16734,7 +16759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiserecoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16742,7 +16767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectableobjectloadpath_nodejs" style="color: inherit; text-decoration: inherit;">protectable<wbr>Object<wbr>Load<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16750,7 +16775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16758,7 +16783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16766,7 +16791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16774,7 +16799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totaldiskstoragesizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16786,7 +16811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_storage_used_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>storage_<wbr>used_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16794,7 +16819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_collocated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>collocated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16802,7 +16827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_present_on_cloud_python" style="color: inherit; text-decoration: inherit;">is_<wbr>present_<wbr>on_<wbr>cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16810,7 +16835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16818,7 +16843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16826,7 +16851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16834,7 +16859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_latest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>latest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16842,7 +16867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16850,7 +16875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_recovery_point_count_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16858,7 +16883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectable_object_load_path_python" style="color: inherit; text-decoration: inherit;">protectable_<wbr>object_<wbr>load_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16866,7 +16891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16874,7 +16899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_group_name_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16882,7 +16907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16890,7 +16915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_disk_storage_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>disk_<wbr>storage_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17136,7 +17161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstorageusedinbytes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17144,7 +17169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscollocated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Collocated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17152,7 +17177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ispresentoncloud_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Present<wbr>On<wbr>Cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17160,7 +17185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17168,7 +17193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17176,7 +17201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17184,7 +17209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiselatestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17192,7 +17217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiseoldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17200,7 +17225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiserecoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17208,7 +17233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectableobjectloadpath_nodejs" style="color: inherit; text-decoration: inherit;">protectable<wbr>Object<wbr>Load<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17216,7 +17241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17224,7 +17249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17232,7 +17257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17240,7 +17265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totaldiskstoragesizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17252,7 +17277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_storage_used_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>storage_<wbr>used_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17260,7 +17285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_collocated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>collocated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17268,7 +17293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_present_on_cloud_python" style="color: inherit; text-decoration: inherit;">is_<wbr>present_<wbr>on_<wbr>cloud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17276,7 +17301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17284,7 +17309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17292,7 +17317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17300,7 +17325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_latest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>latest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17308,7 +17333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17316,7 +17341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_recovery_point_count_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17324,7 +17349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectable_object_load_path_python" style="color: inherit; text-decoration: inherit;">protectable_<wbr>object_<wbr>load_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17332,7 +17357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17340,7 +17365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_group_name_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17348,7 +17373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17356,7 +17381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_disk_storage_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>disk_<wbr>storage_<wbr>size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17650,7 +17675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupenginename_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Engine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17658,7 +17683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17666,7 +17691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17674,7 +17699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17682,7 +17707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17690,7 +17715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17698,7 +17723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17706,7 +17731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">pulumi.<wbr>Input<DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17714,7 +17739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17722,7 +17747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17730,7 +17755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17738,7 +17763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17746,7 +17771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17754,7 +17779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17762,7 +17787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17770,7 +17795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17778,7 +17803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17790,7 +17815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_engine_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>engine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17798,7 +17823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17806,7 +17831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17814,7 +17839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17822,7 +17847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17830,7 +17855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17838,7 +17863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17846,7 +17871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Input[DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17854,7 +17879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17862,7 +17887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17870,7 +17895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17878,7 +17903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17886,7 +17911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17894,7 +17919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17902,7 +17927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17910,7 +17935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17918,7 +17943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18050,7 +18075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disklunlist_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Lun<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18058,7 +18083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isinclusionlist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Inclusion<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18070,7 +18095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_lun_list_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>lun_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18078,7 +18103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_inclusion_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>inclusion_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18132,7 +18157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disklunlist_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Lun<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18140,7 +18165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isinclusionlist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Inclusion<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18152,7 +18177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_lun_list_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>lun_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18160,7 +18185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_inclusion_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>inclusion_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18230,7 +18255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18238,7 +18263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18246,7 +18271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18258,7 +18283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18266,7 +18291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18274,7 +18299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18312,7 +18337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusionproperties_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties</a></span>
+        <span class="property-type"><a href="#diskexclusionproperties">pulumi.<wbr>Input<Disk<wbr>Exclusion<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18324,7 +18349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_exclusion_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskexclusionproperties">Input[Disk<wbr>Exclusion<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18362,7 +18387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusionproperties_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">pulumi.<wbr>Input<Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18374,7 +18399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_exclusion_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Input[Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18700,7 +18725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18708,7 +18733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18716,7 +18741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18724,7 +18749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18732,7 +18757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18740,7 +18765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18748,7 +18773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18756,7 +18781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18764,7 +18789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18772,7 +18797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18780,7 +18805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18788,7 +18813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18796,7 +18821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18804,7 +18829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18812,7 +18837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18820,7 +18845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#protectionstate">pulumi.<wbr>Input<Protection<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18828,7 +18853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceassociations_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18836,7 +18861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18844,7 +18869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18856,7 +18881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18864,7 +18889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18872,7 +18897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18880,7 +18905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18888,7 +18913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18896,7 +18921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18904,7 +18929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18912,7 +18937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18920,7 +18945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18928,7 +18953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18936,7 +18961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18944,7 +18969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18952,7 +18977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18960,7 +18985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18968,7 +18993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18976,7 +19001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#protectionstate">Input[Protection<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18984,7 +19009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_associations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18992,7 +19017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19000,7 +19025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19326,7 +19351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19334,7 +19359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19342,7 +19367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19350,7 +19375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19358,7 +19383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19366,7 +19391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19374,7 +19399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19382,7 +19407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19390,7 +19415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19398,7 +19423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19406,7 +19431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19414,7 +19439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19422,7 +19447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19430,7 +19455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19438,7 +19463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19446,7 +19471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19454,7 +19479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceassociations_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19462,7 +19487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19470,7 +19495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19482,7 +19507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19490,7 +19515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19498,7 +19523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19506,7 +19531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19514,7 +19539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19522,7 +19547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19530,7 +19555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19538,7 +19563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19546,7 +19571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19554,7 +19579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19562,7 +19587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19570,7 +19595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19578,7 +19603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19586,7 +19611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19594,7 +19619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19602,7 +19627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19610,7 +19635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_associations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19618,7 +19643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19626,7 +19651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19698,7 +19723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcehealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourcehealthstatus">Resource<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#resourcehealthstatus">pulumi.<wbr>Input<Resource<wbr>Health<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19710,7 +19735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_health_status_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#resourcehealthstatus">Resource<wbr>Health<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#resourcehealthstatus">Input[Resource<wbr>Health<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19764,7 +19789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcehealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">Resource<wbr>Health<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19772,7 +19797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcehealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19784,7 +19809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_health_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">Sequence[Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">Input[Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19792,7 +19817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_health_status_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20168,7 +20193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20176,7 +20201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20184,7 +20209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20192,7 +20217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20200,7 +20225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20208,7 +20233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20216,7 +20241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20224,7 +20249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20232,7 +20257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">pulumi.<wbr>Input<Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20240,7 +20265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20248,7 +20273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20256,7 +20281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20264,7 +20289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20272,7 +20297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20280,7 +20305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20288,7 +20313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20296,7 +20321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20304,7 +20329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20312,7 +20337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20320,7 +20345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datasourcetype">pulumi.<wbr>Input<Data<wbr>Source<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20332,7 +20357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20340,7 +20365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20348,7 +20373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20356,7 +20381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20364,7 +20389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20372,7 +20397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20380,7 +20405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20388,7 +20413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20396,7 +20421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Input[Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20404,7 +20429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20412,7 +20437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20420,7 +20445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20428,7 +20453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20436,7 +20461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20444,7 +20469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20452,7 +20477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20460,7 +20485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20468,7 +20493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20476,7 +20501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20484,7 +20509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datasourcetype">Input[Data<wbr>Source<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20554,7 +20579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20562,7 +20587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20570,7 +20595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20582,7 +20607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20590,7 +20615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20598,7 +20623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20668,7 +20693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20676,7 +20701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20684,7 +20709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20696,7 +20721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20704,7 +20729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20712,7 +20737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21054,7 +21079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21062,7 +21087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21070,7 +21095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21078,7 +21103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21086,7 +21111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21094,7 +21119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletesynctimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21102,7 +21127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21110,7 +21135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21118,7 +21143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">pulumi.<wbr>Input<Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21126,7 +21151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21134,7 +21159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21142,7 +21167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21150,7 +21175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21158,7 +21183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21166,7 +21191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21174,7 +21199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21182,7 +21207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21190,7 +21215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21198,7 +21223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21206,7 +21231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21218,7 +21243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21226,7 +21251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21234,7 +21259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21242,7 +21267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21250,7 +21275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21258,7 +21283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21266,7 +21291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21274,7 +21299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21282,7 +21307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Input[Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21290,7 +21315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21298,7 +21323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21306,7 +21331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21314,7 +21339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21322,7 +21347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21330,7 +21355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21338,7 +21363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21346,7 +21371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21354,7 +21379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21362,7 +21387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21370,7 +21395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21578,7 +21603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21586,7 +21611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21594,7 +21619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21602,7 +21627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21614,7 +21639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21622,7 +21647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21630,7 +21655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21638,7 +21663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}

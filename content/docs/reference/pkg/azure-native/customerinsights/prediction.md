@@ -81,7 +81,7 @@ package main
 
 import (
 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -217,19 +217,41 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_analyze</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">grades</span><span class="p">:</span> <span class="nx">Optional[Sequence[PredictionGradesArgs]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">involved_interaction_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">involved_kpi_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">involved_relationships</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[PredictionMappingsArgs]</span> = None<span class="p">, </span><span class="nx">negative_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">positive_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prediction_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_profile_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">score_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">auto_analyze</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">grades</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PredictionGradesArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">involved_interaction_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">involved_kpi_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">involved_relationships</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PredictionMappingsArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">negative_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">positive_outcome_expression</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">prediction_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">primary_profile_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">scope_expression</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">score_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrediction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Prediction</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrediction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Prediction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Prediction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PredictionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -264,22 +286,32 @@ const prediction = new azure_native.customerinsights.Prediction("prediction", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PredictionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -631,7 +663,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoanalyze_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Analyze</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -639,7 +671,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -647,7 +679,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mappings_nodejs" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings</a></span>
+        <span class="property-type"><a href="#predictionmappings">pulumi.<wbr>Input<Prediction<wbr>Mappings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -655,7 +687,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#negativeoutcomeexpression_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Outcome<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -663,7 +695,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#positiveoutcomeexpression_nodejs" style="color: inherit; text-decoration: inherit;">positive<wbr>Outcome<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -671,7 +703,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#primaryprofiletype_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Profile<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Primary profile type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -679,7 +711,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -687,7 +719,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scopeexpression_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Scope expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +727,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scorelabel_nodejs" style="color: inherit; text-decoration: inherit;">score<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Score label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +735,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +743,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -719,7 +751,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grades_nodejs" style="color: inherit; text-decoration: inherit;">grades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiongrades">Prediction<wbr>Grades[]</a></span>
+        <span class="property-type"><a href="#predictiongrades">pulumi.<wbr>Input<pulumi.<wbr>Input<Prediction<wbr>Grades<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +759,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involvedinteractiontypes_nodejs" style="color: inherit; text-decoration: inherit;">involved<wbr>Interaction<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +767,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involvedkpitypes_nodejs" style="color: inherit; text-decoration: inherit;">involved<wbr>Kpi<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +775,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involvedrelationships_nodejs" style="color: inherit; text-decoration: inherit;">involved<wbr>Relationships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +783,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#predictionname_nodejs" style="color: inherit; text-decoration: inherit;">prediction<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -763,7 +795,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auto_analyze_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>analyze</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether do auto analyze.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -771,7 +803,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -779,7 +811,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mappings_python" style="color: inherit; text-decoration: inherit;">mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings<wbr>Args</a></span>
+        <span class="property-type"><a href="#predictionmappings">Input[Prediction<wbr>Mappings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +819,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#negative_outcome_expression_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>outcome_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Negative outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -795,7 +827,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#positive_outcome_expression_python" style="color: inherit; text-decoration: inherit;">positive_<wbr>outcome_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Positive outcome expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +835,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#primary_profile_type_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>profile_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Primary profile type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -811,7 +843,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -819,7 +851,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scope_expression_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Scope expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -827,7 +859,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#score_label_python" style="color: inherit; text-decoration: inherit;">score_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Score label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +867,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Description of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +875,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Display name of the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +883,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grades_python" style="color: inherit; text-decoration: inherit;">grades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiongrades">Sequence[Prediction<wbr>Grades<wbr>Args]</a></span>
+        <span class="property-type"><a href="#predictiongrades">Input[Prediction<wbr>Grades<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +891,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involved_interaction_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>interaction_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Interaction types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,7 +899,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involved_kpi_types_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>kpi_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}KPI types involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +907,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#involved_relationships_python" style="color: inherit; text-decoration: inherit;">involved_<wbr>relationships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Relationships involved in the prediction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +915,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#prediction_name_python" style="color: inherit; text-decoration: inherit;">prediction_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the prediction.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1178,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gradename_nodejs" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1206,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1292,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grade_nodejs" style="color: inherit; text-decoration: inherit;">grade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1300,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1308,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#score_nodejs" style="color: inherit; text-decoration: inherit;">score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1320,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grade_python" style="color: inherit; text-decoration: inherit;">grade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1328,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1336,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#score_python" style="color: inherit; text-decoration: inherit;">score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1406,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gradename_nodejs" style="color: inherit; text-decoration: inherit;">grade<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1434,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grade_name_python" style="color: inherit; text-decoration: inherit;">grade_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the grade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_score_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum score threshold.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1450,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_score_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum score threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1520,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grade_nodejs" style="color: inherit; text-decoration: inherit;">grade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1528,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1536,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#score_nodejs" style="color: inherit; text-decoration: inherit;">score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1548,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grade_python" style="color: inherit; text-decoration: inherit;">grade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The grade of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1556,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason of the link mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1564,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#score_python" style="color: inherit; text-decoration: inherit;">score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The score of the link mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generatedinteractiontypes_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Interaction<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generatedkpis_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generatedlinks_nodejs" style="color: inherit; text-decoration: inherit;">generated<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Generated links.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1662,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_interaction_types_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>interaction_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Generated interaction types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_kpis_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Generated KPIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generated_links_python" style="color: inherit; text-decoration: inherit;">generated_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Generated links.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -121,7 +121,7 @@ package main
 
 import (
 	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -342,19 +342,36 @@ const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManag
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftManagedClusterAgentPoolProfileArgs]]</span> = None<span class="p">, </span><span class="nx">auth_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterAuthProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_pool_profile</span><span class="p">:</span> <span class="nx">Optional[OpenShiftManagedClusterMasterPoolProfileArgs]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">open_shift_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[OpenShiftRouterProfileArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">agent_pool_profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OpenShiftManagedClusterAgentPoolProfileArgs]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">auth_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OpenShiftManagedClusterAuthProfileArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">master_pool_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OpenShiftManagedClusterMasterPoolProfileArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkProfileArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">open_shift_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PurchasePlanArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">router_profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OpenShiftRouterProfileArgs]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftManagedCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOpenShiftManagedCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OpenShiftManagedCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OpenShiftManagedCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OpenShiftManagedClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -389,22 +406,32 @@ const openShiftManagedCluster = new azure_native.containerservice.OpenShiftManag
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">OpenShiftManagedClusterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -676,7 +703,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#openshiftversion_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Shift<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -684,7 +711,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +719,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +727,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#authprofile_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +735,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +743,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#masterpoolprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Pool<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +751,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkprofile">pulumi.<wbr>Input<Network<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +759,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#purchaseplan">pulumi.<wbr>Input<Purchase<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +767,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +775,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#routerprofiles_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofile">Open<wbr>Shift<wbr>Router<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +783,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -768,7 +795,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#open_shift_version_python" style="color: inherit; text-decoration: inherit;">open_<wbr>shift_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Version of OpenShift specified when creating the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -776,7 +803,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +811,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +819,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#auth_profile_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +827,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +835,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#master_pool_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>pool_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +843,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Input[Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +851,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#purchaseplan">Input[Purchase<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +859,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the OpenShift managed cluster resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +867,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#router_profiles_python" style="color: inherit; text-decoration: inherit;">router_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofile">Sequence[Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofile">Input[Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +875,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peervnetid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_vnet_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_cidr_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peervnetid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_vnet_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CIDR of the Vnet to peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_cidr_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CIDR for the OpenShift Vnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the Vnet created for OSA cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customeradmingroupid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Admin<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_admin_group_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>admin_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customeradmingroupid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Admin<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1803,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The clientId password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_admin_group_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>admin_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The groupId to be granted cluster admin role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1827,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenantId associated with the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1945,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1953,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1961,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#openshiftcontainerservicevmsize">Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#openshiftcontainerservicevmsize">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize></a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">OSType</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ostype">pulumi.<wbr>Input<OSType></a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#openshiftagentpoolprofilerole">Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#openshiftagentpoolprofilerole">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role></a></span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1985,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2005,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2013,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#openshiftcontainerservicevmsize">Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#openshiftcontainerservicevmsize">Input[Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize]</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ostype">OSType</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ostype">Input[OSType]</a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#openshiftagentpoolprofilerole">Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#openshiftagentpoolprofilerole">Input[Open<wbr>Shift<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Role]</a></span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2155,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2163,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2207,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2223,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Define the role of the AgentPoolProfile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2285,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">pulumi.<wbr>Input<pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2297,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2347,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2401,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2483,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2503,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Input[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2613,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2621,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#openshiftcontainerservicevmsize">Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#openshiftcontainerservicevmsize">pulumi.<wbr>Input<Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize></a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">OSType</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ostype">pulumi.<wbr>Input<OSType></a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2657,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2665,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#openshiftcontainerservicevmsize">Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#openshiftcontainerservicevmsize">Input[Open<wbr>Shift<wbr>Container<wbr>Service<wbr>VMSize]</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2673,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ostype">OSType</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ostype">Input[OSType]</a></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2791,7 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2799,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2807,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2835,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) to host docker containers. The default value is 3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2843,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the master pool profile in the context of the subscription and resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_cidr_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subnet CIDR for the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2905,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2917,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2987,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicsubdomain_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3003,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3015,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Auto-allocated FQDN for the OpenShift router.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3023,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_subdomain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>subdomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DNS subdomain for OpenShift router.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3031,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the router profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3153,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3169,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3177,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3263,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3271,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3279,7 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3287,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3299,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3307,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3315,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The promotion code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3323,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}

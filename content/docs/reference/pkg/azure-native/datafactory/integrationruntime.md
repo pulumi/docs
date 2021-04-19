@@ -119,19 +119,29 @@ const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("inte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ManagedIntegrationRuntimeArgs, SelfHostedIntegrationRuntimeArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[ManagedIntegrationRuntimeArgs, SelfHostedIntegrationRuntimeArgs]]]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntime</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntime</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntime</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationRuntime</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationRuntimeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,22 +176,32 @@ const integrationRuntime = new azure_native.datafactory.IntegrationRuntime("inte
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IntegrationRuntimeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -341,7 +361,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -349,7 +369,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime</a> | <a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime</a></span>
+        <span class="property-type"><a href="#managedintegrationruntime">pulumi.<wbr>Input<Managed<wbr>Integration<wbr>Runtime<wbr>Args></a> | <a href="#selfhostedintegrationruntime">pulumi.<wbr>Input<Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -357,7 +377,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +385,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -377,7 +397,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -385,7 +405,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime<wbr>Args</a> | <a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedintegrationruntime">Input[Managed<wbr>Integration<wbr>Runtime<wbr>Args]</a> | <a href="#selfhostedintegrationruntime">Input[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -393,7 +413,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -401,7 +421,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The integration runtime name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -600,7 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The required version of Azure PowerShell to install.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -612,7 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The required version of Azure PowerShell to install.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -650,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The required version of Azure PowerShell to install.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -662,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The required version of Azure PowerShell to install.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -740,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linkedservicereference">pulumi.<wbr>Input<Linked<wbr>Service<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Input[Linked<wbr>Service<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">pulumi.<wbr>Input<Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Input[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">pulumi.<wbr>Input<Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args></a> | <a href="#securestring">pulumi.<wbr>Input<Secure<wbr>String<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -988,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Input[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args]</a> | <a href="#securestring">Input[Secure<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1074,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">pulumi.<wbr>Input<Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a> | <a href="#securestringresponse">pulumi.<wbr>Input<Secure<wbr>String<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1102,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Input[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a> | <a href="#securestringresponse">Input[Secure<wbr>String<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1172,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentname_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">pulumi.<wbr>Input<Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args></a> | <a href="#securestring">pulumi.<wbr>Input<Secure<wbr>String<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1192,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Input[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args]</a> | <a href="#securestring">Input[Secure<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentname_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">pulumi.<wbr>Input<Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a> | <a href="#securestringresponse">pulumi.<wbr>Input<Secure<wbr>String<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1274,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#component_name_python" style="color: inherit; text-decoration: inherit;">component_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the 3rd party component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Input[Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a> | <a href="#securestringresponse">Input[Secure<wbr>String<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1366,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimeentityreferencetype">Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#integrationruntimeentityreferencetype">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1386,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#integrationruntimeentityreferencetype">Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#integrationruntimeentityreferencetype">Input[Integration<wbr>Runtime<wbr>Entity<wbr>Reference<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1448,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1468,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of this referenced entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1476,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of this referenced entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1530,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variablename_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1538,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variablevalue_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1550,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1558,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variable_value_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1612,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variablename_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1620,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variablevalue_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1632,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variable_name_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1640,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#variable_value_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1758,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1766,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1782,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">Input[Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1842,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1850,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">Input[Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1968,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2020,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Input[Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2028,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2036,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum parallel executions count per node for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2044,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The node size requirement to managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2052,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The required number of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2060,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Input[Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2114,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2122,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#securestring">pulumi.<wbr>Input<Secure<wbr>String<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2134,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Input[Secure<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2196,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2204,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">pulumi.<wbr>Input<Secure<wbr>String<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI of the Azure blob container that contains the custom setup script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Input[Secure<wbr>String<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2294,7 +2314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dataflowcomputetype">Data<wbr>Flow<wbr>Compute<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#dataflowcomputetype">pulumi.<wbr>Input<Data<wbr>Flow<wbr>Compute<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2302,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetolive_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2322,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#dataflowcomputetype">Data<wbr>Flow<wbr>Compute<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#dataflowcomputetype">Input[Data<wbr>Flow<wbr>Compute<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2330,7 +2350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2338,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2408,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2416,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2424,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timetolive_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2436,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Compute type of the cluster which will execute data flow job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2444,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2452,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2522,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+        <span class="property-type"><a href="#entityreference">pulumi.<wbr>Input<Entity<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2530,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2538,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+        <span class="property-type"><a href="#entityreference">pulumi.<wbr>Input<Entity<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2550,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Input[Entity<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2558,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2566,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Input[Entity<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2636,7 +2656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">pulumi.<wbr>Input<Entity<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">pulumi.<wbr>Input<Entity<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2664,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Input[Entity<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2672,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to contain the staged data in the Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Input[Entity<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2860,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#securestring">pulumi.<wbr>Input<Secure<wbr>String<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminusername_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2876,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogpricingtier_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimessiscatalogpricingtier">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#integrationruntimessiscatalogpricingtier">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier></a></span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2884,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Server<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2892,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dualstandbypairname_nodejs" style="color: inherit; text-decoration: inherit;">dual<wbr>Standby<wbr>Pair<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2904,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Input[Secure<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2912,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_admin_user_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2920,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_pricing_tier_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>pricing_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#integrationruntimessiscatalogpricingtier">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#integrationruntimessiscatalogpricingtier">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Pricing<wbr>Tier]</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2928,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_server_endpoint_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>server_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dual_standby_pair_name_python" style="color: inherit; text-decoration: inherit;">dual_<wbr>standby_<wbr>pair_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3038,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">pulumi.<wbr>Input<Secure<wbr>String<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3046,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminusername_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,7 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogpricingtier_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3062,7 +3082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Server<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +3090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dualstandbypairname_nodejs" style="color: inherit; text-decoration: inherit;">dual<wbr>Standby<wbr>Pair<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3082,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Input[Secure<wbr>String<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3090,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_admin_user_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The administrator user name of catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3098,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_pricing_tier_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>pricing_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3106,7 +3126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_server_endpoint_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>server_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3114,7 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dual_standby_pair_name_python" style="color: inherit; text-decoration: inherit;">dual_<wbr>standby_<wbr>pair_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3282,7 +3302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3290,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3298,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3306,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimeedition">Integration<wbr>Runtime<wbr>Edition</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#integrationruntimeedition">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Edition></a></span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3314,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup | Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Args | Cmdkey<wbr>Setup<wbr>Args | Component<wbr>Setup<wbr>Args | Environment<wbr>Variable<wbr>Setup<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3322,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#integrationruntimelicensetype">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>License<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3330,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">Package<wbr>Store[]</a></span>
+        <span class="property-type"><a href="#packagestore">pulumi.<wbr>Input<pulumi.<wbr>Input<Package<wbr>Store<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3342,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3350,7 +3370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Input[Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Input[Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3366,7 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#integrationruntimeedition">Integration<wbr>Runtime<wbr>Edition</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#integrationruntimeedition">Input[Integration<wbr>Runtime<wbr>Edition]</a></span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3374,7 +3394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Args, Cmdkey<wbr>Setup<wbr>Args, Component<wbr>Setup<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Args, Cmdkey<wbr>Setup<wbr>Args, Component<wbr>Setup<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3382,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#integrationruntimelicensetype">Integration<wbr>Runtime<wbr>License<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#integrationruntimelicensetype">Input[Integration<wbr>Runtime<wbr>License<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3390,7 +3410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">Sequence[Package<wbr>Store<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packagestore">Input[Package<wbr>Store<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3524,7 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,7 +3552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3556,7 +3576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response | Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args | Cmdkey<wbr>Setup<wbr>Response<wbr>Args | Component<wbr>Setup<wbr>Response<wbr>Args | Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3564,7 +3584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3572,7 +3592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">Package<wbr>Store<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Package<wbr>Store<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3584,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3592,7 +3612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Input[Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3600,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Input[Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3608,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The edition for the SSIS Integration Runtime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3616,7 +3636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args, Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Component<wbr>Setup<wbr>Response<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args, Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Component<wbr>Setup<wbr>Response<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3624,7 +3644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}License type for bringing your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3632,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">Sequence[Package<wbr>Store<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">Input[Package<wbr>Store<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3702,7 +3722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3710,7 +3730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3718,7 +3738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3730,7 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3738,7 +3758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3746,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_net_id_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3816,7 +3836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3832,7 +3852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3844,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource IDs of the public IP addresses that this integration runtime will use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3852,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3860,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_net_id_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the VNet that this integration runtime will join.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3898,7 +3918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
+        <span class="property-type"><a href="#securestring">pulumi.<wbr>Input<Secure<wbr>String<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3910,7 +3930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Input[Secure<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3948,7 +3968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">pulumi.<wbr>Input<Secure<wbr>String<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3960,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Input[Secure<wbr>String<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3998,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4010,7 +4030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4048,7 +4068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4060,7 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the integration runtime to be shared.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4130,7 +4150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4138,7 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4146,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4158,7 +4178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4166,7 +4186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4174,7 +4194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4244,7 +4264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4252,7 +4272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4260,7 +4280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4272,7 +4292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4280,7 +4300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4288,7 +4308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4374,7 +4394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4382,7 +4402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4390,7 +4410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">pulumi.<wbr>Input<Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4398,7 +4418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4410,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">Input[Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4418,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4426,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_virtual_network_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">Input[Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4434,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4536,7 +4556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4544,7 +4564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4552,7 +4572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4560,7 +4580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">pulumi.<wbr>Input<Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4568,7 +4588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">pulumi.<wbr>Input<Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4580,7 +4600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime state, only valid for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4588,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Input[Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4596,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4604,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_virtual_network_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Input[Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4612,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Input[Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4666,7 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4674,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4686,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4694,7 +4714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4748,7 +4768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4756,7 +4776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4768,7 +4788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4776,7 +4796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4830,7 +4850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the package store{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4838,7 +4858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
+        <span class="property-type"><a href="#entityreference">pulumi.<wbr>Input<Entity<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4850,7 +4870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the package store{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4858,7 +4878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_store_linked_service_python" style="color: inherit; text-decoration: inherit;">package_<wbr>store_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Input[Entity<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4912,7 +4932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the package store{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4920,7 +4940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">pulumi.<wbr>Input<Entity<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4932,7 +4952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the package store{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4940,7 +4960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_store_linked_service_python" style="color: inherit; text-decoration: inherit;">package_<wbr>store_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Input[Entity<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4978,7 +4998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4990,7 +5010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5028,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5040,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of secure string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5094,7 +5114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5102,7 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">pulumi.<wbr>Input<Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args></a> | <a href="#linkedintegrationruntimerbacauthorization">pulumi.<wbr>Input<Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5114,7 +5134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5122,7 +5142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Input[Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args]</a> | <a href="#linkedintegrationruntimerbacauthorization">Input[Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5176,7 +5196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5184,7 +5204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">pulumi.<wbr>Input<Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args></a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">pulumi.<wbr>Input<Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5196,7 +5216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5204,7 +5224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Input[Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args]</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Input[Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}

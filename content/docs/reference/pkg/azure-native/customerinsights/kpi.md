@@ -89,7 +89,7 @@ package main
 
 import (
 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -232,19 +232,42 @@ const kpi = new azure_native.customerinsights.Kpi("kpi", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiAliasArgs]]</span> = None<span class="p">, </span><span class="nx">calculation_window</span><span class="p">:</span> <span class="nx">Optional[CalculationWindowTypes]</span> = None<span class="p">, </span><span class="nx">calculation_window_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityTypes]</span> = None<span class="p">, </span><span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expression</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extracts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KpiExtractArgs]]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function</span><span class="p">:</span> <span class="nx">Optional[KpiFunctions]</span> = None<span class="p">, </span><span class="nx">group_by</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kpi_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thres_holds</span><span class="p">:</span> <span class="nx">Optional[KpiThresholdsArgs]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KpiAliasArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">calculation_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CalculationWindowTypes]]</span> = None<span class="p">,</span>
+        <span class="nx">calculation_window_field_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntityTypes]]</span> = None<span class="p">,</span>
+        <span class="nx">entity_type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">expression</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">extracts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KpiExtractArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">function</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KpiFunctions]]</span> = None<span class="p">,</span>
+        <span class="nx">group_by</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">kpi_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">thres_holds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KpiThresholdsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKpi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Kpi</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKpi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Kpi</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Kpi</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KpiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,22 +302,32 @@ const kpi = new azure_native.customerinsights.Kpi("kpi", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">KpiArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -662,7 +695,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculationwindow_nodejs" style="color: inherit; text-decoration: inherit;">calculation<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#calculationwindowtypes">Calculation<wbr>Window<wbr>Types</a></span>
+        <span class="property-type"><a href="#calculationwindowtypes">pulumi.<wbr>Input<Calculation<wbr>Window<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -670,7 +703,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">pulumi.<wbr>Input<Entity<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -678,7 +711,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entitytypename_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -686,7 +719,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -694,7 +727,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpifunctions">Kpi<wbr>Functions</a></span>
+        <span class="property-type"><a href="#kpifunctions">pulumi.<wbr>Input<Kpi<wbr>Functions></a></span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -702,7 +735,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -710,7 +743,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +751,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialias">Kpi<wbr>Alias[]</a></span>
+        <span class="property-type"><a href="#kpialias">pulumi.<wbr>Input<pulumi.<wbr>Input<Kpi<wbr>Alias<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +759,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculationwindowfieldname_nodejs" style="color: inherit; text-decoration: inherit;">calculation<wbr>Window<wbr>Field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +767,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +775,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +783,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#extracts_nodejs" style="color: inherit; text-decoration: inherit;">extracts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextract">Kpi<wbr>Extract[]</a></span>
+        <span class="property-type"><a href="#kpiextract">pulumi.<wbr>Input<pulumi.<wbr>Input<Kpi<wbr>Extract<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +791,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +799,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#groupby_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +807,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kpiname_nodejs" style="color: inherit; text-decoration: inherit;">kpi<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +815,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thres<wbr>Holds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholds">Kpi<wbr>Thresholds</a></span>
+        <span class="property-type"><a href="#kpithresholds">pulumi.<wbr>Input<Kpi<wbr>Thresholds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +823,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -802,7 +835,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculation_window_python" style="color: inherit; text-decoration: inherit;">calculation_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#calculationwindowtypes">Calculation<wbr>Window<wbr>Types</a></span>
+        <span class="property-type"><a href="#calculationwindowtypes">Input[Calculation<wbr>Window<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}The calculation window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -810,7 +843,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">Input[Entity<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}The mapping entity type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -818,7 +851,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#entity_type_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The mapping entity name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -826,7 +859,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The computation expression for the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -834,7 +867,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpifunctions">Kpi<wbr>Functions</a></span>
+        <span class="property-type"><a href="#kpifunctions">Input[Kpi<wbr>Functions]</a></span>
     </dt>
     <dd>{{% md %}}The computation function for the KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -842,7 +875,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -850,7 +883,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +891,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialias">Sequence[Kpi<wbr>Alias<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kpialias">Input[Kpi<wbr>Alias<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +899,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#calculation_window_field_name_python" style="color: inherit; text-decoration: inherit;">calculation_<wbr>window_<wbr>field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of calculation window field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +907,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized description for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +915,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized display name for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +923,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#extracts_python" style="color: inherit; text-decoration: inherit;">extracts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextract">Sequence[Kpi<wbr>Extract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kpiextract">Input[Kpi<wbr>Extract<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +931,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The filter expression for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +939,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#group_by_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the group by properties for the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +947,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#kpi_name_python" style="color: inherit; text-decoration: inherit;">kpi_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the KPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +955,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#thres_holds_python" style="color: inherit; text-decoration: inherit;">thres_<wbr>holds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholds">Kpi<wbr>Thresholds<wbr>Args</a></span>
+        <span class="property-type"><a href="#kpithresholds">Input[Kpi<wbr>Thresholds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +963,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unit of measurement for the KPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1313,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1321,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1333,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1341,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1395,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}KPI alias name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1423,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1477,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1485,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extractname_nodejs" style="color: inherit; text-decoration: inherit;">extract<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1497,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1505,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extract_name_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1559,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extractname_nodejs" style="color: inherit; text-decoration: inherit;">extract<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The expression.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extract_name_python" style="color: inherit; text-decoration: inherit;">extract_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}KPI extract name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1707,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1715,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1723,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1735,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1743,7 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1751,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1789,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1801,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1871,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#increasingkpi_nodejs" style="color: inherit; text-decoration: inherit;">increasing<wbr>Kpi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1879,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowerlimit_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1887,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upperlimit_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1899,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#increasing_kpi_python" style="color: inherit; text-decoration: inherit;">increasing_<wbr>kpi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1907,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lower_limit_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1915,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upper_limit_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1985,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#increasingkpi_nodejs" style="color: inherit; text-decoration: inherit;">increasing<wbr>Kpi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1993,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lowerlimit_nodejs" style="color: inherit; text-decoration: inherit;">lower<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2001,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upperlimit_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2013,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#increasing_kpi_python" style="color: inherit; text-decoration: inherit;">increasing_<wbr>kpi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the KPI is an increasing KPI.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2021,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lower_limit_python" style="color: inherit; text-decoration: inherit;">lower_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The lower threshold limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2029,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upper_limit_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd></dl>
 {{% /choosable %}}

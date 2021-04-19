@@ -22,17 +22,19 @@ API Version: 2019-05-05-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getActionRuleByName<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetActionRuleByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetActionRuleByNameResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getActionRuleByName<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetActionRuleByNameArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetActionRuleByNameResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_action_rule_by_name(</span><span class="nx">action_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetActionRuleByNameResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_action_rule_by_name(</span><span class="nx">action_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetActionRuleByNameResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupActionRuleByName<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupActionRuleByNameArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupActionRuleByNameResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupActionRuleByName<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupActionRuleByNameArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupActionRuleByNameResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupActionRuleByName` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2019-05-05-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetActionRuleByName </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetActionRuleByNameResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetActionRuleByNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetActionRuleByNameResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetActionRuleByNameArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -404,7 +406,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +422,7 @@ The following output properties are available:
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +634,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +650,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +758,7 @@ The following output properties are available:
 <a href="#alertcontext_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +766,7 @@ The following output properties are available:
 <a href="#alertruleid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +774,7 @@ The following output properties are available:
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -780,7 +782,7 @@ The following output properties are available:
 <a href="#monitorcondition_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +790,7 @@ The following output properties are available:
 <a href="#monitorservice_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +798,7 @@ The following output properties are available:
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +806,7 @@ The following output properties are available:
 <a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -936,7 +938,7 @@ The following output properties are available:
 <a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +946,7 @@ The following output properties are available:
 <a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +954,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +962,7 @@ The following output properties are available:
 <a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +970,7 @@ The following output properties are available:
 <a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +978,7 @@ The following output properties are available:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +986,7 @@ The following output properties are available:
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1032,7 +1034,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1050,7 @@ The following output properties are available:
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1238,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1252,7 +1254,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1370,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1428,7 +1430,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1476,7 +1478,7 @@ The following output properties are available:
 <a href="#suppressionconfig_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1484,7 +1486,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1500,7 +1502,7 @@ The following output properties are available:
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1706,7 @@ The following output properties are available:
 <a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1714,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1730,7 @@ The following output properties are available:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

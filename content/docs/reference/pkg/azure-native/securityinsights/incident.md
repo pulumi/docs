@@ -71,7 +71,7 @@ package main
 
 import (
 	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -183,19 +183,40 @@ const incident = new azure_native.securityinsights.Incident("incident", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassification]]</span> = None<span class="p">, </span><span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentClassificationReason]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[IncidentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[IncidentOwnerInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentSeverity]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[Union[str, IncidentStatus]]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">classification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, IncidentClassification]]]</span> = None<span class="p">,</span>
+             <span class="nx">classification_comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">classification_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, IncidentClassificationReason]]]</span> = None<span class="p">,</span>
+             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">first_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IncidentLabelArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">last_activity_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IncidentOwnerInfoArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, IncidentSeverity]]]</span> = None<span class="p">,</span>
+             <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, IncidentStatus]]]</span> = None<span class="p">,</span>
+             <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIncident</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Incident</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIncident</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Incident</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Incident</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IncidentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,22 +251,32 @@ const incident = new azure_native.securityinsights.Incident("incident", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IncidentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -581,7 +612,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -589,7 +620,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentseverity">pulumi.<wbr>Input<Incident<wbr>Severity></a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -597,7 +628,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#incidentstatus">Incident<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentstatus">pulumi.<wbr>Input<Incident<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -605,7 +636,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -613,7 +644,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +652,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentclassification">pulumi.<wbr>Input<Incident<wbr>Classification></a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +660,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classificationcomment_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +668,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classificationreason_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentclassificationreason">pulumi.<wbr>Input<Incident<wbr>Classification<wbr>Reason></a></span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +676,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +684,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +692,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#firstactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Activity<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +700,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#incidentid_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +708,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label[]</a></span>
+        <span class="property-type"><a href="#incidentlabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Incident<wbr>Label<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +716,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#lastactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +724,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">pulumi.<wbr>Input<Incident<wbr>Owner<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -705,7 +736,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -713,7 +744,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentseverity">Input[Incident<wbr>Severity]</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -721,7 +752,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#incidentstatus">Incident<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentstatus">Input[Incident<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -729,7 +760,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +768,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +776,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentclassification">Input[Incident<wbr>Classification]</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +784,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_comment_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +792,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#classification_reason_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentclassificationreason">Input[Incident<wbr>Classification<wbr>Reason]</a></span>
     </dt>
     <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +800,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +808,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +816,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#first_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">first_<wbr>activity_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +824,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#incident_id_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +832,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">Sequence[Incident<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#incidentlabel">Input[Incident<wbr>Label<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +840,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#last_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +848,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Input[Incident<wbr>Owner<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1240,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertproductnames_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Product<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1248,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertscount_nodejs" style="color: inherit; text-decoration: inherit;">alerts<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1256,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bookmarkscount_nodejs" style="color: inherit; text-decoration: inherit;">bookmarks<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1264,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commentscount_nodejs" style="color: inherit; text-decoration: inherit;">comments<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1272,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alert_product_names_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>product_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1292,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_count_python" style="color: inherit; text-decoration: inherit;">alerts_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1300,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bookmarks_count_python" style="color: inherit; text-decoration: inherit;">bookmarks_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1308,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#comments_count_python" style="color: inherit; text-decoration: inherit;">comments_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1316,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1422,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1434,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1488,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1496,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labeltype_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1508,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1516,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_type_python" style="color: inherit; text-decoration: inherit;">label_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1602,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1784,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1882,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:securityinsights:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+$ pulumi import azure-native:securityinsights:Incident 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
 ```
 
 

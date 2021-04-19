@@ -22,17 +22,20 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationServiceEnvironmentManagedApiResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationServiceEnvironmentManagedApiResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_service_environment_managed_api(</span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationServiceEnvironmentManagedApiResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_service_environment_managed_api(</span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                    <span class="nx">integration_service_environment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                    <span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationServiceEnvironmentManagedApiResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationServiceEnvironmentManagedApiResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationServiceEnvironmentManagedApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationServiceEnvironmentManagedApiArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationServiceEnvironmentManagedApiResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationServiceEnvironmentManagedApi` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationServiceEnvironmentManagedApi </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationServiceEnvironmentManagedApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationServiceEnvironmentManagedApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationServiceEnvironmentManagedApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -576,7 +579,7 @@ The following output properties are available:
 <a href="#packagecontentlink_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +587,7 @@ The following output properties are available:
 <a href="#rediscacheconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Cache<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -636,7 +639,7 @@ The following output properties are available:
 <a href="#package_content_link_python" style="color: inherit; text-decoration: inherit;">package_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +647,7 @@ The following output properties are available:
 <a href="#redis_cache_connection_string_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>cache_<wbr>connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1032,7 +1035,7 @@ The following output properties are available:
 <a href="#deploymentparameters_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1080,7 +1083,7 @@ The following output properties are available:
 <a href="#wsdlservice_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1287,7 @@ The following output properties are available:
 <a href="#deployment_parameters_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1335,7 @@ The following output properties are available:
 <a href="#wsdl_service_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,7 +1443,7 @@ The following output properties are available:
 <a href="#apidefinitions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1451,7 @@ The following output properties are available:
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1483,7 @@ The following output properties are available:
 <a href="#generalinformation_csharp" style="color: inherit; text-decoration: inherit;">General<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1488,7 +1491,7 @@ The following output properties are available:
 <a href="#integrationserviceenvironment_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1499,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1515,7 @@ The following output properties are available:
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1767,7 @@ The following output properties are available:
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1775,7 @@ The following output properties are available:
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1807,7 @@ The following output properties are available:
 <a href="#general_information_python" style="color: inherit; text-decoration: inherit;">general_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1815,7 @@ The following output properties are available:
 <a href="#integration_service_environment_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1823,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1839,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

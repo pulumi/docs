@@ -22,17 +22,21 @@ API Version: 2021-03-15.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMongoDBResourceMongoDBCollection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMongoDBResourceMongoDBCollectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMongoDBResourceMongoDBCollectionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMongoDBResourceMongoDBCollection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMongoDBResourceMongoDBCollectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMongoDBResourceMongoDBCollectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mongo_db_resource_mongo_db_collection(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMongoDBResourceMongoDBCollectionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_mongo_db_resource_mongo_db_collection(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                              <span class="nx">collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                              <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMongoDBResourceMongoDBCollectionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMongoDBResourceMongoDBCollection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMongoDBResourceMongoDBCollectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMongoDBResourceMongoDBCollectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMongoDBResourceMongoDBCollection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMongoDBResourceMongoDBCollectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMongoDBResourceMongoDBCollectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMongoDBResourceMongoDBCollection` in the Go SDK.
 
@@ -41,7 +45,7 @@ API Version: 2021-03-15.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMongoDBResourceMongoDBCollection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMongoDBResourceMongoDBCollectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMongoDBResourceMongoDBCollectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMongoDBResourceMongoDBCollectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMongoDBResourceMongoDBCollectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -512,7 +516,7 @@ The following output properties are available:
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +576,7 @@ The following output properties are available:
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +640,7 @@ The following output properties are available:
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +820,7 @@ The following output properties are available:
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">Sequence[Mongo<wbr>Index<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">Sequence[Mongo<wbr>Index<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +980,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +988,7 @@ The following output properties are available:
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1036,7 +1040,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1048,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}

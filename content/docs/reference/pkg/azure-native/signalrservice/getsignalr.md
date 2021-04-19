@@ -22,17 +22,19 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSignalR<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSignalRResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSignalR<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSignalRArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSignalRResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_signal_r(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSignalRResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_signal_r(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSignalRResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSignalR<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSignalRResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSignalR<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSignalRArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSignalRResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSignalR` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSignalR </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSignalRResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSignalRArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSignalRResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSignalRArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1036,7 +1038,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1046,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1192,7 +1194,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1202,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1596,7 +1598,7 @@ If present, following values are allowed:
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1632,7 +1634,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1832,7 +1834,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1842,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1916,7 +1918,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1926,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}

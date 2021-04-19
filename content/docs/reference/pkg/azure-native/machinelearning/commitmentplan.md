@@ -28,19 +28,31 @@ $ pulumi import azure-native:machinelearning:CommitmentPlan myresource1 /subscri
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">commitment_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">commitment_plan_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceSkuArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCommitmentPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CommitmentPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCommitmentPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CommitmentPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CommitmentPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CommitmentPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +87,32 @@ $ pulumi import azure-native:machinelearning:CommitmentPlan myresource1 /subscri
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CommitmentPlanArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +304,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -290,7 +312,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#commitmentplanname_nodejs" style="color: inherit; text-decoration: inherit;">commitment<wbr>Plan<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -298,7 +320,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -306,7 +328,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -314,7 +336,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">pulumi.<wbr>Input<Resource<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -322,7 +344,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -334,7 +356,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -342,7 +364,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#commitment_plan_name_python" style="color: inherit; text-decoration: inherit;">commitment_<wbr>plan_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -350,7 +372,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -358,7 +380,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -366,7 +388,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcesku">Input[Resource<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +396,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -717,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chargeforoverage_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>For<wbr>Overage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -725,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chargeforplan_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>For<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -733,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -741,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedquantities_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Plan<wbr>Quantity<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Plan<wbr>Quantity<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -749,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxassociationlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Association<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -757,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxcapacitylimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -765,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincapacitylimit_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -773,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planmeter_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Meter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -781,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refillfrequencyindays_nodejs" style="color: inherit; text-decoration: inherit;">refill<wbr>Frequency<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -789,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspendplanonoverage_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Plan<wbr>On<wbr>Overage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#charge_for_overage_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>for_<wbr>overage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -809,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#charge_for_plan_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>for_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -817,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -825,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_quantities_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Plan<wbr>Quantity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[Plan<wbr>Quantity<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_association_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>association_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -841,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_capacity_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -849,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_capacity_limit_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -857,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_meter_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>meter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -865,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refill_frequency_in_days_python" style="color: inherit; text-decoration: inherit;">refill_<wbr>frequency_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -873,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suspend_plan_on_overage_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>plan_<wbr>on_<wbr>overage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -959,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowance_nodejs" style="color: inherit; text-decoration: inherit;">allowance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -967,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -975,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedquantitymeter_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Quantity<wbr>Meter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -983,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overagemeter_nodejs" style="color: inherit; text-decoration: inherit;">overage<wbr>Meter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -995,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowance_python" style="color: inherit; text-decoration: inherit;">allowance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1003,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1011,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_quantity_meter_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantity_<wbr>meter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1019,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overage_meter_python" style="color: inherit; text-decoration: inherit;">overage_<wbr>meter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1117,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1231,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -28,19 +28,41 @@ $ pulumi import azure-native:domainregistration:Domain myresource1 /subscription
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">consent</span><span class="p">:</span> <span class="nx">Optional[DomainPurchaseConsentArgs]</span> = None<span class="p">, </span><span class="nx">contact_admin</span><span class="p">:</span> <span class="nx">Optional[ContactArgs]</span> = None<span class="p">, </span><span class="nx">contact_billing</span><span class="p">:</span> <span class="nx">Optional[ContactArgs]</span> = None<span class="p">, </span><span class="nx">contact_registrant</span><span class="p">:</span> <span class="nx">Optional[ContactArgs]</span> = None<span class="p">, </span><span class="nx">contact_tech</span><span class="p">:</span> <span class="nx">Optional[ContactArgs]</span> = None<span class="p">, </span><span class="nx">dns_type</span><span class="p">:</span> <span class="nx">Optional[DnsType]</span> = None<span class="p">, </span><span class="nx">dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">privacy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_dns_type</span><span class="p">:</span> <span class="nx">Optional[DnsType]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">auth_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">consent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainPurchaseConsentArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">contact_admin</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContactArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">contact_billing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContactArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">contact_registrant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContactArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">contact_tech</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContactArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DnsType]]</span> = None<span class="p">,</span>
+           <span class="nx">dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">privacy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">target_dns_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DnsType]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +97,32 @@ $ pulumi import azure-native:domainregistration:Domain myresource1 /subscription
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -442,7 +474,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#consent_nodejs" style="color: inherit; text-decoration: inherit;">consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpurchaseconsent">Domain<wbr>Purchase<wbr>Consent</a></span>
+        <span class="property-type"><a href="#domainpurchaseconsent">pulumi.<wbr>Input<Domain<wbr>Purchase<wbr>Consent<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -450,7 +482,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactadmin_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -458,7 +490,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactbilling_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -466,7 +498,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactregistrant_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Registrant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -474,7 +506,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contacttech_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Tech</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">pulumi.<wbr>Input<Contact<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -482,7 +514,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +522,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authcode_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +530,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +538,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dnstype_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">pulumi.<wbr>Input<Dns<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +546,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dnszoneid_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +554,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +562,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +570,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +578,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#privacy_nodejs" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +586,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +594,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#targetdnstype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Dns<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">pulumi.<wbr>Input<Dns<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -574,7 +606,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#consent_python" style="color: inherit; text-decoration: inherit;">consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpurchaseconsent">Domain<wbr>Purchase<wbr>Consent<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainpurchaseconsent">Input[Domain<wbr>Purchase<wbr>Consent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -582,7 +614,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contact_admin_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Input[Contact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -590,7 +622,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contact_billing_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Input[Contact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -598,7 +630,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contact_registrant_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>registrant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Input[Contact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -606,7 +638,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contact_tech_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>tech</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
+        <span class="property-type"><a href="#contact">Input[Contact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -614,7 +646,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +654,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#auth_code_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +662,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +670,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dns_type_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">Input[Dns<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +678,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dns_zone_id_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure DNS Zone to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +686,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +694,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +702,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +710,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#privacy_python" style="color: inherit; text-decoration: inherit;">privacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +718,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +726,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#target_dns_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>dns_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">Input[Dns<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address1_nodejs" style="color: inherit; text-decoration: inherit;">address1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}First line of an Address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1273,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The city for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1281,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1289,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1297,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address2_nodejs" style="color: inherit; text-decoration: inherit;">address2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address1_python" style="color: inherit; text-decoration: inherit;">address1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}First line of an Address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1325,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The city for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1341,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The postal code for the address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1349,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state or province for the address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address2_python" style="color: inherit; text-decoration: inherit;">address2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The second line of the Address. Optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namefirst_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>First</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}First name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namelast_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1547,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Phone number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1555,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressmailing_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Address</a></span>
+        <span class="property-type"><a href="#address">pulumi.<wbr>Input<Address<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fax_nodejs" style="color: inherit; text-decoration: inherit;">fax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fax number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobtitle_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Job title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namemiddle_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Middle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Middle name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1599,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Email address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1607,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_first_python" style="color: inherit; text-decoration: inherit;">name_<wbr>first</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}First name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1615,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_last_python" style="color: inherit; text-decoration: inherit;">name_<wbr>last</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Phone number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_mailing_python" style="color: inherit; text-decoration: inherit;">address_<wbr>mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#address">Input[Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fax_python" style="color: inherit; text-decoration: inherit;">fax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fax number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_title_python" style="color: inherit; text-decoration: inherit;">job_<wbr>title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Job title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_middle_python" style="color: inherit; text-decoration: inherit;">name_<wbr>middle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Middle name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1663,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Organization contact belongs to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1759,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agreedat_nodejs" style="color: inherit; text-decoration: inherit;">agreed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agreedby_nodejs" style="color: inherit; text-decoration: inherit;">agreed<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agreementkeys_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agreed_at_python" style="color: inherit; text-decoration: inherit;">agreed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when the agreements were accepted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agreed_by_python" style="color: inherit; text-decoration: inherit;">agreed_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agreement_keys_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1921,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureresourcename_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customhostnamednsrecordtype_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1945,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostnametype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sitenames_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1973,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_resource_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_resource_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the Azure resource the hostname is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_host_name_dns_record_type_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>name_<wbr>dns_<wbr>record_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the DNS record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_name_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_names_python" style="color: inherit; text-decoration: inherit;">site_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2131,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2139,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2163,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2183,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2215,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

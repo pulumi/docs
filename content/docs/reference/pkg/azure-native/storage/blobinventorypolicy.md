@@ -90,7 +90,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -237,19 +237,29 @@ const blobInventoryPolicy = new azure_native.storage.BlobInventoryPolicy("blobIn
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blob_inventory_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[BlobInventoryPolicySchemaArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">blob_inventory_policy_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BlobInventoryPolicySchemaArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobInventoryPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobInventoryPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobInventoryPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobInventoryPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -284,22 +294,32 @@ const blobInventoryPolicy = new azure_native.storage.BlobInventoryPolicy("blobIn
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BlobInventoryPolicyArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -459,7 +479,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -467,7 +487,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyschema">Blob<wbr>Inventory<wbr>Policy<wbr>Schema</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyschema">pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Schema<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy object. It is composed of policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -475,7 +495,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +503,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#blobinventorypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Inventory<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the storage account blob inventory policy. It should always be 'default'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -495,7 +515,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -503,7 +523,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyschema">Blob<wbr>Inventory<wbr>Policy<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyschema">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy object. It is composed of policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -511,7 +531,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +539,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#blob_inventory_policy_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>inventory_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the storage account blob inventory policy. It should always be 'default'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -750,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilter">Blob<wbr>Inventory<wbr>Policy<wbr>Filter</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilter">pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -762,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilter">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilter">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -800,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -812,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobtypes_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includeblobversions_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Blob<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Includes blob versions in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Includes blob snapshots in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of strings for blob prefixes to be matched.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -934,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_blob_versions_python" style="color: inherit; text-decoration: inherit;">include_<wbr>blob_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Includes blob versions in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_snapshots_python" style="color: inherit; text-decoration: inherit;">include_<wbr>snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Includes blob snapshots in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of strings for blob prefixes to be matched.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1044,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobtypes_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1052,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includeblobversions_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Blob<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Includes blob versions in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Includes blob snapshots in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of strings for blob prefixes to be matched.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1080,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_blob_versions_python" style="color: inherit; text-decoration: inherit;">include_<wbr>blob_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Includes blob versions in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_snapshots_python" style="color: inherit; text-decoration: inherit;">include_<wbr>snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Includes blob snapshots in blob inventory when value set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of strings for blob prefixes to be matched.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1174,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinition">Blob<wbr>Inventory<wbr>Policy<wbr>Definition</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinition">pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1182,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Rule is enabled when set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1190,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1202,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinition">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinition">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1210,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Rule is enabled when set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1218,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1288,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1296,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Rule is enabled when set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1304,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1316,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1324,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Rule is enabled when set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1332,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1418,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container name where blob inventory files are stored. Must be pre-created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1426,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Policy is enabled if set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1434,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">Blob<wbr>Inventory<wbr>Policy<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1442,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inventoryruletype">Inventory<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#inventoryruletype">pulumi.<wbr>Input<Inventory<wbr>Rule<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1454,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container name where blob inventory files are stored. Must be pre-created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1462,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Policy is enabled if set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1470,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">Sequence[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1478,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#inventoryruletype">Inventory<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#inventoryruletype">Input[Inventory<wbr>Rule<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1564,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Container name where blob inventory files are stored. Must be pre-created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1572,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Policy is enabled if set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1580,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1588,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1600,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Container name where blob inventory files are stored. Must be pre-created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1608,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Policy is enabled if set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1616,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Sequence[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Input[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1624,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The valid value is Inventory{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1816,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -99,7 +99,7 @@ package main
 
 import (
 	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -332,7 +332,7 @@ package main
 
 import (
 	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -498,19 +498,28 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CostAllocationRulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                       <span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                       <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CostAllocationRulePropertiesArgs]]</span> = None<span class="p">,</span>
+                       <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCostAllocationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CostAllocationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCostAllocationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CostAllocationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CostAllocationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CostAllocationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -545,22 +554,32 @@ const costAllocationRule = new azure_native.costmanagement.CostAllocationRule("c
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CostAllocationRuleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -704,7 +723,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#billingaccountid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +731,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#costallocationruleproperties">pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +739,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -732,7 +751,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#billing_account_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BillingAccount ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +759,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruleproperties">Input[Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +767,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cost allocation rule name. The name cannot include spaces or any non alphanumeric characters other than '_' and '-'. The max length is 260 characters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -953,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -961,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -973,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -981,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1055,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Target resource for cost allocation{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1063,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresource">Source<wbr>Cost<wbr>Allocation<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresource">Target<wbr>Cost<wbr>Allocation<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresource">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresource">Input[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresource">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresource">Input[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1225,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Input[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Input[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</a></span>
+        <span class="property-type"><a href="#costallocationruledetails">pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1331,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rulestatus">Rule<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#rulestatus">pulumi.<wbr>Input<Rule<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetails">Input[Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1359,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#rulestatus">Rule<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#rulestatus">Input[Rule<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1367,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1469,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1477,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1485,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1493,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updateddate_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1513,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1521,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Input[Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1529,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1537,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_date_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time at which the rule was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of a cost allocation rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1645,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1653,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#costallocationresourcetype">pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Resource<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1661,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1681,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#costallocationresourcetype">Input[Cost<wbr>Allocation<wbr>Resource<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1689,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1759,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1775,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1787,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1803,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Source Resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1897,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#costallocationpolicytype">Cost<wbr>Allocation<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#costallocationpolicytype">pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Policy<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1905,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#costallocationresourcetype">pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Resource<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1913,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportion">Cost<wbr>Allocation<wbr>Proportion[]</a></span>
+        <span class="property-type"><a href="#costallocationproportion">pulumi.<wbr>Input<pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Proportion<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1925,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1933,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#costallocationpolicytype">Cost<wbr>Allocation<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#costallocationpolicytype">Input[Cost<wbr>Allocation<wbr>Policy<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1941,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#costallocationresourcetype">Cost<wbr>Allocation<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#costallocationresourcetype">Input[Cost<wbr>Allocation<wbr>Resource<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1949,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportion">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#costallocationproportion">Input[Cost<wbr>Allocation<wbr>Proportion<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2035,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2043,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2051,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2059,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Method of cost allocation for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2087,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of resources contained in this cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Input[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}

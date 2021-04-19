@@ -175,7 +175,7 @@ import (
 	"fmt"
 
 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -512,19 +512,31 @@ const adaptiveApplicationControl = new azure_native.security.AdaptiveApplication
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">asc_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforcement_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_recommendations</span><span class="p">:</span> <span class="nx">Optional[Sequence[PathRecommendationArgs]]</span> = None<span class="p">, </span><span class="nx">protection_mode</span><span class="p">:</span> <span class="nx">Optional[ProtectionModeArgs]</span> = None<span class="p">, </span><span class="nx">vm_recommendations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VmRecommendationArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">asc_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">enforcement_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">path_recommendations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PathRecommendationArgs]]]]</span> = None<span class="p">,</span>
+                               <span class="nx">protection_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProtectionModeArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">vm_recommendations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VmRecommendationArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAdaptiveApplicationControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AdaptiveApplicationControl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAdaptiveApplicationControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AdaptiveApplicationControl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AdaptiveApplicationControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AdaptiveApplicationControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -559,22 +571,32 @@ const adaptiveApplicationControl = new azure_native.security.AdaptiveApplication
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AdaptiveApplicationControlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -766,7 +788,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#asclocation_nodejs" style="color: inherit; text-decoration: inherit;">asc<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +796,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +804,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +812,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#pathrecommendations_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrecommendation">Path<wbr>Recommendation[]</a></span>
+        <span class="property-type"><a href="#pathrecommendation">pulumi.<wbr>Input<pulumi.<wbr>Input<Path<wbr>Recommendation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +820,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#protectionmode_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionmode">Protection<wbr>Mode</a></span>
+        <span class="property-type"><a href="#protectionmode">pulumi.<wbr>Input<Protection<wbr>Mode<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +828,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#vmrecommendations_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmrecommendation">Vm<wbr>Recommendation[]</a></span>
+        <span class="property-type"><a href="#vmrecommendation">pulumi.<wbr>Input<pulumi.<wbr>Input<Vm<wbr>Recommendation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -818,7 +840,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#asc_location_python" style="color: inherit; text-decoration: inherit;">asc_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location where ASC stores the data of the subscription. can be retrieved from Get locations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +848,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +856,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of an application control machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +864,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#path_recommendations_python" style="color: inherit; text-decoration: inherit;">path_<wbr>recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrecommendation">Sequence[Path<wbr>Recommendation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pathrecommendation">Input[Path<wbr>Recommendation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +872,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#protection_mode_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionmode">Protection<wbr>Mode<wbr>Args</a></span>
+        <span class="property-type"><a href="#protectionmode">Input[Protection<wbr>Mode<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +880,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#vm_recommendations_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmrecommendation">Sequence[Vm<wbr>Recommendation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmrecommendation">Input[Vm<wbr>Recommendation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issue_nodejs" style="color: inherit; text-decoration: inherit;">issue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofvms_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Vms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issue_python" style="color: inherit; text-decoration: inherit;">issue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An alert that machines within a group can have{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_vms_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>vms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The number of machines in the group that have this alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1395,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_nodejs" style="color: inherit; text-decoration: inherit;">common</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1427,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherinfo_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info</a></span>
+        <span class="property-type"><a href="#publisherinfo">pulumi.<wbr>Input<Publisher<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usersids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Sids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_nodejs" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendation">User<wbr>Recommendation[]</a></span>
+        <span class="property-type"><a href="#userrecommendation">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Recommendation<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1479,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_python" style="color: inherit; text-decoration: inherit;">common</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinfo">Input[Publisher<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_sids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>sids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendation">Sequence[User<wbr>Recommendation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userrecommendation">Input[User<wbr>Recommendation<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_nodejs" style="color: inherit; text-decoration: inherit;">common</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherinfo_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">pulumi.<wbr>Input<Publisher<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usersids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Sids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_nodejs" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">User<wbr>Recommendation<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Recommendation<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#common_python" style="color: inherit; text-decoration: inherit;">common</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the application is commonly run on the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the file (for Linux files - Executable is used){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full path of the file, or an identifier of the application{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Input[Publisher<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the rule to be allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_sids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>sids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">Sequence[User<wbr>Recommendation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">Input[User<wbr>Recommendation<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exe_nodejs" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executable_nodejs" style="color: inherit; text-decoration: inherit;">executable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msi_nodejs" style="color: inherit; text-decoration: inherit;">msi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1951,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1963,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exe_python" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executable_python" style="color: inherit; text-decoration: inherit;">executable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1979,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msi_python" style="color: inherit; text-decoration: inherit;">msi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2073,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exe_nodejs" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2081,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executable_nodejs" style="color: inherit; text-decoration: inherit;">executable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msi_nodejs" style="color: inherit; text-decoration: inherit;">msi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2109,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exe_python" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#executable_python" style="color: inherit; text-decoration: inherit;">executable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#msi_python" style="color: inherit; text-decoration: inherit;">msi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The application control policy enforcement/protection mode of the machine group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2219,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binaryname_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2243,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2255,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_name_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2279,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2365,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binaryname_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2373,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2401,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binary_name_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The "OriginalName" field taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The product name taken from the file's version resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2425,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The binary file version taken from the file's version resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2479,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationaction_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2499,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2561,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationaction_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Represents a user that is recommended to be allowed for a certain rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2675,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2683,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcementsupport_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2691,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationaction_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2699,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2711,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2719,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcement_support_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2727,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2735,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2821,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationstatus_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcementsupport_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendationaction_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2857,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_status_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration status of the machines group or machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2865,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enforcement_support_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The machine supportability of Enforce feature{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendation_action_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recommendation action of the machine or rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2881,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource id of the machine{{% /md %}}</dd></dl>
 {{% /choosable %}}

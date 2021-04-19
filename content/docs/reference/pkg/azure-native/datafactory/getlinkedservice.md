@@ -22,17 +22,20 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLinkedService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLinkedServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLinkedService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLinkedServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLinkedServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_linked_service(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLinkedServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_linked_service(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLinkedServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLinkedService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLinkedServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLinkedService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLinkedServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLinkedServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLinkedService` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLinkedService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLinkedServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLinkedServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLinkedServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLinkedServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -404,7 +407,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +431,7 @@ The following output properties are available:
 <a href="#mwsauthtoken_csharp" style="color: inherit; text-decoration: inherit;">Mws<wbr>Auth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -436,7 +439,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +447,7 @@ The following output properties are available:
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +755,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +779,7 @@ The following output properties are available:
 <a href="#mws_auth_token_python" style="color: inherit; text-decoration: inherit;">mws_<wbr>auth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Amazon MWS authentication token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +787,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +795,7 @@ The following output properties are available:
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret key used to access data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +859,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -880,7 +883,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +891,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1111,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1135,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1143,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the Amazon Redshift source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1191,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1223,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1231,7 @@ The following output properties are available:
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1416,7 +1419,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1451,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1459,7 @@ The following output properties are available:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1507,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1531,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1539,7 @@ The following output properties are available:
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1555,7 @@ The following output properties are available:
 <a href="#sessiontoken_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1756,7 +1759,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1783,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1791,7 @@ The following output properties are available:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Amazon S3 Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1807,7 @@ The following output properties are available:
 <a href="#session_token_python" style="color: inherit; text-decoration: inherit;">session_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The session token for the S3 temporary security credential.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1836,7 +1839,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1852,7 +1855,7 @@ The following output properties are available:
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1868,7 +1871,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1892,7 +1895,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2088,7 +2091,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2104,7 +2107,7 @@ The following output properties are available:
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Batch account access key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2120,7 +2123,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2147,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2192,7 +2195,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2219,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2235,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2468,7 +2471,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2495,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2511,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Storage Gen2 account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2532,7 +2535,7 @@ The following output properties are available:
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2567,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2599,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2607,7 @@ The following output properties are available:
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2639,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2904,7 +2907,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2939,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2968,7 +2971,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2976,7 +2979,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3008,7 +3011,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3056,7 +3059,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3072,7 +3075,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3088,7 +3091,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3284,7 +3287,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3300,7 +3303,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3319,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Kusto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3364,7 +3367,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3396,7 +3399,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3420,7 +3423,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3664,7 +3667,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3696,7 +3699,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3720,7 +3723,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Analytics account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3776,7 +3779,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3800,7 +3803,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3827,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4100,7 +4103,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4124,7 +4127,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4148,7 +4151,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key of the application used to authenticate against the Azure Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4188,7 +4191,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4212,7 +4215,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4236,7 +4239,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4392,7 +4395,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4416,7 +4419,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4440,7 +4443,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4464,7 +4467,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4488,7 +4491,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4608,7 +4611,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5004,7 +5007,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5028,7 +5031,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5148,7 +5151,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5180,7 +5183,7 @@ The following output properties are available:
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5196,7 +5199,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5244,7 +5247,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5252,7 +5255,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5260,7 +5263,7 @@ The following output properties are available:
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5528,7 +5531,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5544,7 +5547,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5592,7 +5595,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5600,7 +5603,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5608,7 +5611,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5664,7 +5667,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5688,7 +5691,7 @@ The following output properties are available:
 <a href="#functionkey_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5696,7 +5699,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5844,7 +5847,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5868,7 +5871,7 @@ The following output properties are available:
 <a href="#function_key_python" style="color: inherit; text-decoration: inherit;">function_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Function or Host key for Azure Function App.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5876,7 +5879,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5908,7 +5911,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5924,7 +5927,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6040,7 +6043,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6056,7 +6059,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6080,7 +6083,7 @@ The following output properties are available:
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6164,7 +6167,7 @@ The following output properties are available:
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6188,7 +6191,7 @@ The following output properties are available:
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6212,7 +6215,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6236,7 +6239,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6252,7 +6255,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6464,7 +6467,7 @@ The following output properties are available:
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API key for accessing the Azure ML model endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6488,7 +6491,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6512,7 +6515,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6528,7 +6531,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6592,7 +6595,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6616,7 +6619,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6632,7 +6635,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6868,7 +6871,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6892,7 +6895,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6908,7 +6911,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against the endpoint of a published Azure ML Service pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6940,7 +6943,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6972,7 +6975,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6980,7 +6983,7 @@ The following output properties are available:
 <a href="#pwd_csharp" style="color: inherit; text-decoration: inherit;">Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7120,7 +7123,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7152,7 +7155,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7160,7 +7163,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7192,7 +7195,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7216,7 +7219,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7224,7 +7227,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7372,7 +7375,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7396,7 +7399,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7404,7 +7407,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7428,7 +7431,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7460,7 +7463,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7468,7 +7471,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7608,7 +7611,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7640,7 +7643,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7648,7 +7651,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7680,7 +7683,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7704,7 +7707,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7712,7 +7715,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7860,7 +7863,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7884,7 +7887,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin Key for Azure Search service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7892,7 +7895,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7932,7 +7935,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7956,7 +7959,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7964,7 +7967,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7980,7 +7983,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8208,7 +8211,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8232,7 +8235,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8240,7 +8243,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8256,7 +8259,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Data Warehouse.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8284,6 +8287,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alwaysencryptedsettings_csharp">
+<a href="#alwaysencryptedsettings_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -8304,7 +8315,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8328,7 +8339,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8336,7 +8347,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8352,7 +8363,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8375,6 +8386,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alwaysencryptedsettings_go">
+<a href="#alwaysencryptedsettings_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -8468,6 +8487,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alwaysencryptedsettings_nodejs">
+<a href="#alwaysencryptedsettings_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -8560,6 +8587,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="always_encrypted_settings_python">
+<a href="#always_encrypted_settings_python" style="color: inherit; text-decoration: inherit;">always_<wbr>encrypted_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -8580,7 +8615,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8604,7 +8639,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8612,7 +8647,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8628,7 +8663,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8656,6 +8691,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alwaysencryptedsettings_csharp">
+<a href="#alwaysencryptedsettings_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -8676,7 +8719,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8700,7 +8743,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8708,7 +8751,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8724,7 +8767,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8747,6 +8790,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alwaysencryptedsettings_go">
+<a href="#alwaysencryptedsettings_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -8840,6 +8891,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alwaysencryptedsettings_nodejs">
+<a href="#alwaysencryptedsettings_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -8932,6 +8991,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="always_encrypted_settings_python">
+<a href="#always_encrypted_settings_python" style="color: inherit; text-decoration: inherit;">always_<wbr>encrypted_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -8952,7 +9019,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8976,7 +9043,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8984,7 +9051,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9000,7 +9067,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key of the service principal used to authenticate against Azure SQL Managed Instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9024,7 +9091,7 @@ The following output properties are available:
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9040,7 +9107,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9072,7 +9139,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9080,7 +9147,7 @@ The following output properties are available:
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9252,7 +9319,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9268,7 +9335,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9300,7 +9367,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9308,7 +9375,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9332,7 +9399,7 @@ The following output properties are available:
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9348,7 +9415,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9380,7 +9447,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9388,7 +9455,7 @@ The following output properties are available:
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9560,7 +9627,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of accountKey in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9576,7 +9643,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9608,7 +9675,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9616,7 +9683,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of sasToken in sas uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9664,7 +9731,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9688,7 +9755,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9696,7 +9763,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9916,7 +9983,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9940,7 +10007,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9948,7 +10015,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10004,7 +10071,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10044,7 +10111,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10052,7 +10119,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10068,7 +10135,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10400,7 +10467,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10440,7 +10507,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10448,7 +10515,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Common Data Service for Apps instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10464,7 +10531,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10536,7 +10603,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10568,7 +10635,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10576,7 +10643,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10836,7 +10903,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10868,7 +10935,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10876,7 +10943,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10924,7 +10991,7 @@ The following output properties are available:
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10948,7 +11015,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10996,7 +11063,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11004,7 +11071,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11296,7 +11363,7 @@ The following output properties are available:
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11320,7 +11387,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11368,7 +11435,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11376,7 +11443,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11440,7 +11507,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11456,7 +11523,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11596,7 +11663,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11612,7 +11679,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11636,7 +11703,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11652,7 +11719,7 @@ The following output properties are available:
 <a href="#credstring_csharp" style="color: inherit; text-decoration: inherit;">Cred<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of credString in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11676,7 +11743,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11816,7 +11883,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11832,7 +11899,7 @@ The following output properties are available:
 <a href="#cred_string_python" style="color: inherit; text-decoration: inherit;">cred_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of credString in connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11856,7 +11923,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11880,7 +11947,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11896,7 +11963,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11988,7 +12055,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12004,7 +12071,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12044,7 +12111,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12092,7 +12159,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12100,7 +12167,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12368,7 +12435,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12416,7 +12483,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12424,7 +12491,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12464,7 +12531,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12496,7 +12563,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12504,7 +12571,7 @@ The following output properties are available:
 <a href="#pwd_csharp" style="color: inherit; text-decoration: inherit;">Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12644,7 +12711,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12676,7 +12743,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12684,7 +12751,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12716,7 +12783,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12748,7 +12815,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12772,7 +12839,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12968,7 +13035,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13000,7 +13067,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13024,7 +13091,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13064,7 +13131,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13104,7 +13171,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13112,7 +13179,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13128,7 +13195,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13460,7 +13527,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13500,7 +13567,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13508,7 +13575,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics CRM instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13524,7 +13591,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13596,7 +13663,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13636,7 +13703,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13644,7 +13711,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13660,7 +13727,7 @@ The following output properties are available:
 <a href="#serviceprincipalcredential_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13992,7 +14059,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14032,7 +14099,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14040,7 +14107,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the Dynamics instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14056,7 +14123,7 @@ The following output properties are available:
 <a href="#service_principal_credential_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14128,7 +14195,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14152,7 +14219,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14160,7 +14227,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14404,7 +14471,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14428,7 +14495,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14436,7 +14503,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14492,7 +14559,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14516,7 +14583,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14524,7 +14591,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14696,7 +14763,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14720,7 +14787,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14728,7 +14795,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14776,7 +14843,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14816,7 +14883,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14824,7 +14891,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15076,7 +15143,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15116,7 +15183,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15124,7 +15191,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the FTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15172,7 +15239,7 @@ The following output properties are available:
 <a href="#developertoken_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15196,7 +15263,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15204,7 +15271,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15244,7 +15311,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15252,7 +15319,7 @@ The following output properties are available:
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15544,7 +15611,7 @@ The following output properties are available:
 <a href="#developer_token_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The developer token associated with the manager account that you use to grant access to the AdWords API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15568,7 +15635,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15576,7 +15643,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15616,7 +15683,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15624,7 +15691,7 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15696,7 +15763,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15704,7 +15771,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15744,7 +15811,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15752,7 +15819,7 @@ The following output properties are available:
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16092,7 +16159,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of the google application used to acquire the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16100,7 +16167,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16140,7 +16207,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16148,7 +16215,7 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16204,7 +16271,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16228,7 +16295,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16236,7 +16303,7 @@ The following output properties are available:
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16408,7 +16475,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16432,7 +16499,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16440,7 +16507,7 @@ The following output properties are available:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Google Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16472,7 +16539,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16504,7 +16571,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16512,7 +16579,7 @@ The following output properties are available:
 <a href="#pwd_csharp" style="color: inherit; text-decoration: inherit;">Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16652,7 +16719,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16684,7 +16751,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16692,7 +16759,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16748,7 +16815,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16788,7 +16855,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16796,7 +16863,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17120,7 +17187,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17160,7 +17227,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17168,7 +17235,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17224,7 +17291,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17256,7 +17323,7 @@ The following output properties are available:
 <a href="#hcataloglinkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Hcatalog<wbr>Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the Azure SQL linked service that points to the HCatalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17272,7 +17339,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17280,7 +17347,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17288,7 +17355,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17524,7 +17591,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17556,7 +17623,7 @@ The following output properties are available:
 <a href="#hcatalog_linked_service_name_python" style="color: inherit; text-decoration: inherit;">hcatalog_<wbr>linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the Azure SQL linked service that points to the HCatalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17572,7 +17639,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17580,7 +17647,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17588,7 +17655,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}HDInsight cluster password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17636,7 +17703,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Storage linked service to be used by the on-demand cluster for storing and processing data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17668,7 +17735,7 @@ The following output properties are available:
 <a href="#additionallinkedservicenames_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Linked<wbr>Service<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17692,7 +17759,7 @@ The following output properties are available:
 <a href="#clusterpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17700,7 +17767,7 @@ The following output properties are available:
 <a href="#clustersshpassword_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ssh<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17732,7 +17799,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17780,7 +17847,7 @@ The following output properties are available:
 <a href="#hcataloglinkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Hcatalog<wbr>Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17828,7 +17895,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17836,7 +17903,7 @@ The following output properties are available:
 <a href="#scriptactions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Script<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17852,7 +17919,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18536,7 +18603,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Storage linked service to be used by the on-demand cluster for storing and processing data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18568,7 +18635,7 @@ The following output properties are available:
 <a href="#additional_linked_service_names_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>linked_<wbr>service_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18592,7 +18659,7 @@ The following output properties are available:
 <a href="#cluster_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to access the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18600,7 +18667,7 @@ The following output properties are available:
 <a href="#cluster_ssh_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ssh_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to SSH remotely connect cluster’s node (for Linux).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18632,7 +18699,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18680,7 +18747,7 @@ The following output properties are available:
 <a href="#hcatalog_linked_service_name_python" style="color: inherit; text-decoration: inherit;">hcatalog_<wbr>linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18728,7 +18795,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18736,7 +18803,7 @@ The following output properties are available:
 <a href="#script_actions_python" style="color: inherit; text-decoration: inherit;">script_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptactionresponse">Sequence[Script<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scriptactionresponse">Sequence[Script<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18752,7 +18819,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key for the service principal id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18840,7 +18907,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18864,7 +18931,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18872,7 +18939,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19068,7 +19135,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19092,7 +19159,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19100,7 +19167,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Windows authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19164,7 +19231,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19204,7 +19271,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19212,7 +19279,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19680,7 +19747,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19720,7 +19787,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19728,7 +19795,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19856,7 +19923,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19896,7 +19963,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19904,7 +19971,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20180,7 +20247,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20220,7 +20287,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20228,7 +20295,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20260,7 +20327,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20276,7 +20343,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20284,7 +20351,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20308,7 +20375,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20316,7 +20383,7 @@ The following output properties are available:
 <a href="#refreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20560,7 +20627,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20576,7 +20643,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Hubspot application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20584,7 +20651,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20608,7 +20675,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20616,7 +20683,7 @@ The following output properties are available:
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The refresh token obtained when initially authenticating your OAuth integration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20696,7 +20763,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20728,7 +20795,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20736,7 +20803,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21068,7 +21135,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21100,7 +21167,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21108,7 +21175,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name when using UsernameAndPassword.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21180,7 +21247,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21188,7 +21255,7 @@ The following output properties are available:
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21212,7 +21279,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21220,7 +21287,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21432,7 +21499,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21440,7 +21507,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21464,7 +21531,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21472,7 +21539,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21636,7 +21703,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21660,7 +21727,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21668,7 +21735,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21936,7 +22003,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21960,7 +22027,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21968,7 +22035,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22140,7 +22207,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22156,7 +22223,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22180,7 +22247,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22392,7 +22459,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token from Magento.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22408,7 +22475,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22432,7 +22499,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22480,7 +22547,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22512,7 +22579,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22520,7 +22587,7 @@ The following output properties are available:
 <a href="#pwd_csharp" style="color: inherit; text-decoration: inherit;">Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22660,7 +22727,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22692,7 +22759,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22700,7 +22767,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22740,7 +22807,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22748,7 +22815,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22772,7 +22839,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23016,7 +23083,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your Marketo service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23024,7 +23091,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23048,7 +23115,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23112,7 +23179,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23120,7 +23187,7 @@ The following output properties are available:
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23144,7 +23211,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23152,7 +23219,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23364,7 +23431,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23372,7 +23439,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23396,7 +23463,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23404,7 +23471,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23452,7 +23519,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23468,7 +23535,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23608,7 +23675,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23624,7 +23691,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23688,7 +23755,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23720,7 +23787,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23728,7 +23795,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24036,7 +24103,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24068,7 +24135,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24076,7 +24143,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24132,7 +24199,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24148,7 +24215,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24288,7 +24355,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24304,7 +24371,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24336,7 +24403,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24360,7 +24427,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24368,7 +24435,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24516,7 +24583,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24540,7 +24607,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24548,7 +24615,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24572,7 +24639,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24604,7 +24671,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24612,7 +24679,7 @@ The following output properties are available:
 <a href="#pwd_csharp" style="color: inherit; text-decoration: inherit;">Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24752,7 +24819,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24784,7 +24851,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24792,7 +24859,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24864,7 +24931,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24888,7 +24955,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24896,7 +24963,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24904,7 +24971,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcert_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Embedded<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24912,7 +24979,7 @@ The following output properties are available:
 <a href="#serviceprincipalembeddedcertpassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Embedded<wbr>Cert<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24928,7 +24995,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25308,7 +25375,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25332,7 +25399,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25340,7 +25407,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password of the OData service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25348,7 +25415,7 @@ The following output properties are available:
 <a href="#service_principal_embedded_cert_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>embedded_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25356,7 +25423,7 @@ The following output properties are available:
 <a href="#service_principal_embedded_cert_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>embedded_<wbr>cert_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25372,7 +25439,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25428,7 +25495,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25436,7 +25503,7 @@ The following output properties are available:
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25460,7 +25527,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25468,7 +25535,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25680,7 +25747,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25688,7 +25755,7 @@ The following output properties are available:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access credential portion of the connection string specified in driver-specific property-value format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25712,7 +25779,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25720,7 +25787,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25760,7 +25827,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25784,7 +25851,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25808,7 +25875,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -25988,7 +26055,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the application's key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26012,7 +26079,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26036,7 +26103,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26068,7 +26135,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26092,7 +26159,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26100,7 +26167,7 @@ The following output properties are available:
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26272,7 +26339,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26296,7 +26363,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26304,7 +26371,7 @@ The following output properties are available:
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26344,7 +26411,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26368,7 +26435,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26376,7 +26443,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26524,7 +26591,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26548,7 +26615,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26556,7 +26623,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26580,7 +26647,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26604,7 +26671,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26628,7 +26695,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26856,7 +26923,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the username key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26880,7 +26947,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26904,7 +26971,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27052,7 +27119,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27060,7 +27127,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27084,7 +27151,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27328,7 +27395,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your PayPal application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27336,7 +27403,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27360,7 +27427,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27440,7 +27507,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27480,7 +27547,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27488,7 +27555,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27836,7 +27903,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27876,7 +27943,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27884,7 +27951,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27948,7 +28015,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27972,7 +28039,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27980,7 +28047,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28128,7 +28195,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28152,7 +28219,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28160,7 +28227,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28232,7 +28299,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28264,7 +28331,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28272,7 +28339,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28676,7 +28743,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28708,7 +28775,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28716,7 +28783,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28772,7 +28839,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28780,7 +28847,7 @@ The following output properties are available:
 <a href="#accesstokensecret_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28804,7 +28871,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28828,7 +28895,7 @@ The following output properties are available:
 <a href="#consumersecret_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28860,7 +28927,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29096,7 +29163,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for OAuth 1.0 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29104,7 +29171,7 @@ The following output properties are available:
 <a href="#access_token_secret_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token secret for OAuth 1.0 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29128,7 +29195,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29152,7 +29219,7 @@ The following output properties are available:
 <a href="#consumer_secret_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer secret for OAuth 1.0 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29184,7 +29251,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29232,7 +29299,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29240,7 +29307,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29264,7 +29331,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29508,7 +29575,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Responsys application. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29516,7 +29583,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29540,7 +29607,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29628,7 +29695,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29660,7 +29727,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29668,7 +29735,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29684,7 +29751,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30024,7 +30091,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30056,7 +30123,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30064,7 +30131,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password used in Basic authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30080,7 +30147,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The application's key used in AadServicePrincipal authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30128,7 +30195,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30160,7 +30227,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30168,7 +30235,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30176,7 +30243,7 @@ The following output properties are available:
 <a href="#securitytoken_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30380,7 +30447,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30412,7 +30479,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30420,7 +30487,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30428,7 +30495,7 @@ The following output properties are available:
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30468,7 +30535,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30476,7 +30543,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30508,7 +30575,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30744,7 +30811,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with the Salesforce Marketing Cloud application. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30752,7 +30819,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30784,7 +30851,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30840,7 +30907,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30880,7 +30947,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30888,7 +30955,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30896,7 +30963,7 @@ The following output properties are available:
 <a href="#securitytoken_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31116,7 +31183,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31156,7 +31223,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31164,7 +31231,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication of the Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31172,7 +31239,7 @@ The following output properties are available:
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The security token is optional to remotely access Salesforce instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31228,7 +31295,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31252,7 +31319,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31260,7 +31327,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31480,7 +31547,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31504,7 +31571,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31512,7 +31579,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31552,7 +31619,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31576,7 +31643,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31584,7 +31651,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31756,7 +31823,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31780,7 +31847,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31788,7 +31855,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31828,7 +31895,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31852,7 +31919,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31860,7 +31927,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32032,7 +32099,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32056,7 +32123,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32064,7 +32131,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32104,7 +32171,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32136,7 +32203,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32144,7 +32211,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32356,7 +32423,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32388,7 +32455,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32396,7 +32463,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP HANA server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32444,7 +32511,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32500,7 +32567,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32508,7 +32575,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32816,7 +32883,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32872,7 +32939,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32880,7 +32947,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP BW server where the open hub destination is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32944,7 +33011,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33000,7 +33067,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33008,7 +33075,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33436,7 +33503,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33492,7 +33559,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33500,7 +33567,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to access the SAP server where the table is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33820,7 +33887,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33828,7 +33895,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33852,7 +33919,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33860,7 +33927,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34168,7 +34235,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret for OAuth2 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34176,7 +34243,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34200,7 +34267,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34208,7 +34275,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name for Basic and OAuth2 authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34280,7 +34347,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34312,7 +34379,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34320,7 +34387,7 @@ The following output properties are available:
 <a href="#passphrase_csharp" style="color: inherit; text-decoration: inherit;">Pass<wbr>Phrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34328,7 +34395,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34344,7 +34411,7 @@ The following output properties are available:
 <a href="#privatekeycontent_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34652,7 +34719,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34684,7 +34751,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34692,7 +34759,7 @@ The following output properties are available:
 <a href="#pass_phrase_python" style="color: inherit; text-decoration: inherit;">pass_<wbr>phrase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password to decrypt the SSH private key if the SSH private key is encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34700,7 +34767,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password to logon the SFTP server for Basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34716,7 +34783,7 @@ The following output properties are available:
 <a href="#private_key_content_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34764,7 +34831,7 @@ The following output properties are available:
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -34796,7 +34863,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34820,7 +34887,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -34992,7 +35059,7 @@ The following output properties are available:
 <a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -35024,7 +35091,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35048,7 +35115,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -35072,7 +35139,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35088,7 +35155,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35112,7 +35179,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35324,7 +35391,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35340,7 +35407,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35364,7 +35431,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35420,7 +35487,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35444,7 +35511,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35452,7 +35519,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -35600,7 +35667,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35624,7 +35691,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35632,7 +35699,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -35696,7 +35763,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35736,7 +35803,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35744,7 +35811,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36140,7 +36207,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36180,7 +36247,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36188,7 +36255,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password corresponding to the user name that you provided in the Username field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36233,6 +36300,122 @@ The following output properties are available:
     <dd>{{% md %}}The user name that you use to access Spark Server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alwaysencryptedakvauthtype_csharp">
+<a href="#alwaysencryptedakvauthtype_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Akv<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_csharp">
+<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Azure Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alwaysencryptedakvauthtype_go">
+<a href="#alwaysencryptedakvauthtype_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Akv<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_go">
+<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Azure Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="alwaysencryptedakvauthtype_nodejs">
+<a href="#alwaysencryptedakvauthtype_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Encrypted<wbr>Akv<wbr>Auth<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_nodejs">
+<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Azure Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="always_encrypted_akv_auth_type_python">
+<a href="#always_encrypted_akv_auth_type_python" style="color: inherit; text-decoration: inherit;">always_<wbr>encrypted_<wbr>akv_<wbr>auth_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The key of the service principal used to authenticate against Azure Key Vault.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sqlserverlinkedserviceresponse">Sql<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</h4>
 
 
@@ -36248,6 +36431,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alwaysencryptedsettings_csharp">
+<a href="#alwaysencryptedsettings_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -36260,7 +36451,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36284,7 +36475,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36292,7 +36483,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36315,6 +36506,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="alwaysencryptedsettings_go">
+<a href="#alwaysencryptedsettings_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -36384,6 +36583,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="alwaysencryptedsettings_nodejs">
+<a href="#alwaysencryptedsettings_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Encrypted<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -36452,6 +36659,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="always_encrypted_settings_python">
+<a href="#always_encrypted_settings_python" style="color: inherit; text-decoration: inherit;">always_<wbr>encrypted_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlalwaysencryptedpropertiesresponse">Sql<wbr>Always<wbr>Encrypted<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sql always encrypted properties.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -36464,7 +36679,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36488,7 +36703,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36496,7 +36711,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The on-premises Windows authentication password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36536,7 +36751,7 @@ The following output properties are available:
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36544,7 +36759,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36584,7 +36799,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36860,7 +37075,7 @@ The following output properties are available:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The client secret associated with your Square application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36868,7 +37083,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36908,7 +37123,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36988,7 +37203,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37012,7 +37227,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37020,7 +37235,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37264,7 +37479,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37288,7 +37503,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37296,7 +37511,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37344,7 +37559,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37376,7 +37591,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37384,7 +37599,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37596,7 +37811,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37628,7 +37843,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37636,7 +37851,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37676,7 +37891,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37708,7 +37923,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37716,7 +37931,7 @@ The following output properties are available:
 <a href="#pwd_csharp" style="color: inherit; text-decoration: inherit;">Pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37856,7 +38071,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37888,7 +38103,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37896,7 +38111,7 @@ The following output properties are available:
 <a href="#pwd_python" style="color: inherit; text-decoration: inherit;">pwd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure key vault secret reference of password in connection string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -37964,7 +38179,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -38048,7 +38263,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for Basic authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -38080,7 +38295,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -38088,7 +38303,7 @@ The following output properties are available:
 <a href="#pfx_csharp" style="color: inherit; text-decoration: inherit;">Pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -38164,7 +38379,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -38172,7 +38387,7 @@ The following output properties are available:
 <a href="#pfx_python" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -38196,7 +38411,7 @@ The following output properties are available:
 <a href="#typeproperties_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webanonymousauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#webbasicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#webclientcertificateauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webanonymousauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Anonymous<wbr>Authentication<wbr>Response</a> | <a href="#webbasicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Basic<wbr>Authentication<wbr>Response</a> | <a href="#webclientcertificateauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38212,7 +38427,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38228,7 +38443,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -38328,7 +38543,7 @@ The following output properties are available:
 <a href="#type_properties_python" style="color: inherit; text-decoration: inherit;">type_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webanonymousauthenticationresponse">Web<wbr>Anonymous<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#webbasicauthenticationresponse">Web<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#webclientcertificateauthenticationresponse">Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webanonymousauthenticationresponse">Web<wbr>Anonymous<wbr>Authentication<wbr>Response</a> | <a href="#webbasicauthenticationresponse">Web<wbr>Basic<wbr>Authentication<wbr>Response</a> | <a href="#webclientcertificateauthenticationresponse">Web<wbr>Client<wbr>Certificate<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Web linked service properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38344,7 +38559,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38360,7 +38575,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -38384,7 +38599,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38400,7 +38615,7 @@ The following output properties are available:
 <a href="#consumerkey_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38432,7 +38647,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38440,7 +38655,7 @@ The following output properties are available:
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd><dt class="property-optional"
@@ -38687,7 +38902,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38703,7 +38918,7 @@ The following output properties are available:
 <a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The consumer key associated with the Xero application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38735,7 +38950,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38743,7 +38958,7 @@ The following output properties are available:
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
 ).{{% /md %}}</dd><dt class="property-optional"
@@ -38784,7 +38999,7 @@ The following output properties are available:
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38800,7 +39015,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38840,7 +39055,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39060,7 +39275,7 @@ The following output properties are available:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access token for Zoho authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39076,7 +39291,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39116,7 +39331,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

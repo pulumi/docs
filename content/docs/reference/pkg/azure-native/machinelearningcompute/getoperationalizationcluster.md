@@ -22,17 +22,19 @@ API Version: 2017-08-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOperationalizationCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOperationalizationClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOperationalizationClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOperationalizationCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOperationalizationClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOperationalizationClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_operationalization_cluster(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOperationalizationClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_operationalization_cluster(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOperationalizationClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOperationalizationCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOperationalizationClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOperationalizationClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOperationalizationCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOperationalizationClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOperationalizationClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOperationalizationCluster` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2017-08-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOperationalizationCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetOperationalizationClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOperationalizationClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOperationalizationClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOperationalizationClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -724,7 +726,7 @@ The following output properties are available:
 <a href="#orchestratorproperties_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +734,7 @@ The following output properties are available:
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -904,7 +906,7 @@ The following output properties are available:
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +914,7 @@ The following output properties are available:
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1312,7 +1314,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1396,7 +1398,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1412,7 +1414,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1448,7 +1450,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1464,7 +1466,7 @@ The following output properties are available:
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1482,7 @@ The following output properties are available:
 <a href="#serviceauth_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1488,7 +1490,7 @@ The following output properties are available:
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1574,7 @@ The following output properties are available:
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1590,7 @@ The following output properties are available:
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1598,7 @@ The following output properties are available:
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1612,7 +1614,7 @@ The following output properties are available:
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1648,7 +1650,7 @@ The following output properties are available:
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}

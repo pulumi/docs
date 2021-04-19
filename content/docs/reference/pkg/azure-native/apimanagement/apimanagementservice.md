@@ -113,7 +113,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -358,7 +358,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -504,7 +504,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -663,7 +663,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1039,7 +1039,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1326,7 +1326,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -1420,19 +1420,45 @@ const apiManagementService = new azure_native.apimanagement.ApiManagementService
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">api_version_constraint</span><span class="p">:</span> <span class="nx">Optional[ApiVersionConstraintArgs]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">custom_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">disable_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_client_certificate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hostname_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostnameConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ApiManagementServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ApiManagementServiceSkuPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualNetworkType]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AdditionalLocationArgs]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">api_version_constraint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiVersionConstraintArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CertificateConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">custom_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">disable_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">enable_client_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">hostname_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[HostnameConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiManagementServiceIdentityArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">restore</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiManagementServiceSkuPropertiesArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                         <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, VirtualNetworkType]]]</span> = None<span class="p">,</span>
+                         <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiManagementService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiManagementService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiManagementService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiManagementService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiManagementService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiManagementServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1467,22 +1493,32 @@ const apiManagementService = new azure_native.apimanagement.ApiManagementService
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApiManagementServiceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1898,7 +1934,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#publisheremail_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Publisher email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1906,7 +1942,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Publisher name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1914,7 +1950,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1922,7 +1958,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">pulumi.<wbr>Input<Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1966,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionallocation">Additional<wbr>Location[]</a></span>
+        <span class="property-type"><a href="#additionallocation">pulumi.<wbr>Input<pulumi.<wbr>Input<Additional<wbr>Location<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Additional datacenter locations of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1974,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#apiversionconstraint_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionconstraint">Api<wbr>Version<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#apiversionconstraint">pulumi.<wbr>Input<Api<wbr>Version<wbr>Constraint<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Control Plane Apis version constraint for the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1982,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfiguration">Certificate<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#certificateconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1990,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#customproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1962,7 +1998,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#disablegateway_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +2006,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#enableclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +2014,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#hostnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameconfiguration">Hostname<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#hostnameconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Hostname<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Custom hostname configuration of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1986,7 +2022,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceidentity">Api<wbr>Management<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#apimanagementserviceidentity">pulumi.<wbr>Input<Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1994,7 +2030,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2038,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#notificationsenderemail_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Sender<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2046,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#restore_nodejs" style="color: inherit; text-decoration: inherit;">restore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2054,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2062,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2034,7 +2070,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2042,7 +2078,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtualnetworktype_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworktype">Virtual<wbr>Network<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#virtualnetworktype">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2050,7 +2086,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2062,7 +2098,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#publisher_email_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Publisher email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2070,7 +2106,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Publisher name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2078,7 +2114,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2086,7 +2122,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Input[Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2094,7 +2130,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#additional_locations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionallocation">Sequence[Additional<wbr>Location<wbr>Args]</a></span>
+        <span class="property-type"><a href="#additionallocation">Input[Additional<wbr>Location<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Additional datacenter locations of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2102,7 +2138,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#api_version_constraint_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionconstraint">Api<wbr>Version<wbr>Constraint<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiversionconstraint">Input[Api<wbr>Version<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Control Plane Apis version constraint for the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2146,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfiguration">Sequence[Certificate<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateconfiguration">Input[Certificate<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2118,7 +2154,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#custom_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2162,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#disable_gateway_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2170,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#enable_client_certificate_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2178,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#hostname_configurations_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameconfiguration">Sequence[Hostname<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hostnameconfiguration">Input[Hostname<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Custom hostname configuration of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2186,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceidentity">Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceidentity">Input[Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2158,7 +2194,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2202,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#notification_sender_email_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>sender_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2210,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#restore_python" style="color: inherit; text-decoration: inherit;">restore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2218,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2190,7 +2226,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2234,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Input[Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2206,7 +2242,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtual_network_type_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#virtualnetworktype">Virtual<wbr>Network<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#virtualnetworktype">Input[Virtual<wbr>Network<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2214,7 +2250,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2829,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2837,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">pulumi.<wbr>Input<Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablegateway_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2861,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2873,7 +2909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2881,7 +2917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Input[Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_gateway_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2897,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Input[Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2905,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3055,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3087,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">pulumi.<wbr>Input<Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disablegateway_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3111,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3123,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_regional_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>regional_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3131,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3139,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Private Static Load Balanced IP addresses of the API Management service which is deployed in an Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3147,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard, Premium and Isolated SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3155,7 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Input[Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3163,7 +3199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disable_gateway_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3171,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Input[Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3239,7 +3275,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#apimidentitytype">Apim<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#apimidentitytype">pulumi.<wbr>Input<Apim<wbr>Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3247,7 +3283,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Properties<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3262,7 +3298,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#apimidentitytype">Apim<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#apimidentitytype">Input[Apim<wbr>Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3306,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Identity<wbr>Properties<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3365,7 +3401,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3373,7 +3409,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3381,7 +3417,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3425,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3404,7 +3440,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3412,7 +3448,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client tenant id of the identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3420,7 +3456,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3428,7 +3464,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3485,7 +3521,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3493,7 +3529,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutype">Sku<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skutype">pulumi.<wbr>Input<Sku<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Name of the Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3505,7 +3541,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3513,7 +3549,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skutype">Sku<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skutype">Input[Sku<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Name of the Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3567,7 +3603,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3575,7 +3611,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3587,7 +3623,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3595,7 +3631,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3633,7 +3669,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#minapiversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit control plane API calls to API Management service with version equal to or newer than this value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3645,7 +3681,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#min_api_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit control plane API calls to API Management service with version equal to or newer than this value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3683,7 +3719,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#minapiversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Limit control plane API calls to API Management service with version equal to or newer than this value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3695,7 +3731,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#min_api_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Limit control plane API calls to API Management service with version equal to or newer than this value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3815,7 +3851,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3823,7 +3859,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information</a></span>
+        <span class="property-type"><a href="#certificateinformation">pulumi.<wbr>Input<Certificate<wbr>Information<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3831,7 +3867,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3839,7 +3875,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3851,7 +3887,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3895,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Input[Certificate<wbr>Information<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3903,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3911,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3961,7 +3997,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3969,7 +4005,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">pulumi.<wbr>Input<Certificate<wbr>Information<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3977,7 +4013,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3985,7 +4021,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3997,7 +4033,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4005,7 +4041,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Input[Certificate<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4013,7 +4049,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4021,7 +4057,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4091,7 +4127,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4099,7 +4135,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subject of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4107,7 +4143,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4119,7 +4155,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4127,7 +4163,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subject of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4135,7 +4171,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4205,7 +4241,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4213,7 +4249,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subject of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4221,7 +4257,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4233,7 +4269,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4241,7 +4277,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subject of the certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4249,7 +4285,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4415,7 +4451,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hostname to configure on the Api Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4423,7 +4459,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hostnametype">Hostname<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hostnametype">pulumi.<wbr>Input<Hostname<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4431,7 +4467,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information</a></span>
+        <span class="property-type"><a href="#certificateinformation">pulumi.<wbr>Input<Certificate<wbr>Information<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4439,7 +4475,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4447,7 +4483,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#defaultsslbinding_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4455,7 +4491,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4463,7 +4499,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4471,7 +4507,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi. The secret should be of type *application/x-pkcs12*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4479,7 +4515,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specify true to always negotiate client certificate on the hostname. Default Value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4491,7 +4527,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hostname to configure on the Api Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4499,7 +4535,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hostnametype">Hostname<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hostnametype">Input[Hostname<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4507,7 +4543,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Input[Certificate<wbr>Information<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4515,7 +4551,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4523,7 +4559,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#default_ssl_binding_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4531,7 +4567,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4539,7 +4575,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4547,7 +4583,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi. The secret should be of type *application/x-pkcs12*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4555,7 +4591,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specify true to always negotiate client certificate on the hostname. Default Value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4721,7 +4757,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hostname to configure on the Api Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4729,7 +4765,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4737,7 +4773,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">pulumi.<wbr>Input<Certificate<wbr>Information<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4745,7 +4781,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4753,7 +4789,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#defaultsslbinding_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4797,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4769,7 +4805,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4777,7 +4813,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi. The secret should be of type *application/x-pkcs12*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4785,7 +4821,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specify true to always negotiate client certificate on the hostname. Default Value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4797,7 +4833,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hostname to configure on the Api Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4805,7 +4841,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4813,7 +4849,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Input[Certificate<wbr>Information<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4821,7 +4857,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Certificate Password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4829,7 +4865,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#default_ssl_binding_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4837,7 +4873,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 Encoded certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4845,7 +4881,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4853,7 +4889,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided, auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi. The secret should be of type *application/x-pkcs12*{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4861,7 +4897,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specify true to always negotiate client certificate on the hostname. Default Value is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4995,7 +5031,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5003,7 +5039,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5015,7 +5051,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5023,7 +5059,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5077,7 +5113,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5085,7 +5121,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5097,7 +5133,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5105,7 +5141,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5143,7 +5179,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource ID of a subnet in a virtual network to deploy the API Management service in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5155,7 +5191,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource ID of a subnet in a virtual network to deploy the API Management service in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5225,7 +5261,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnetname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5233,7 +5269,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnetid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The virtual network ID. This is typically a GUID. Expect a null GUID by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5241,7 +5277,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource ID of a subnet in a virtual network to deploy the API Management service in.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5253,7 +5289,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subnetname_python" style="color: inherit; text-decoration: inherit;">subnetname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the subnet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5261,7 +5297,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#vnetid_python" style="color: inherit; text-decoration: inherit;">vnetid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The virtual network ID. This is typically a GUID. Expect a null GUID by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5269,7 +5305,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource ID of a subnet in a virtual network to deploy the API Management service in.{{% /md %}}</dd></dl>
 {{% /choosable %}}

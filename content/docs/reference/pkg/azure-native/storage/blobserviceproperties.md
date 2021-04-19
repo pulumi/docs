@@ -67,7 +67,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -276,7 +276,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -538,19 +538,37 @@ const blobServiceProperties = new azure_native.storage.BlobServiceProperties("bl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_snapshot_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_services_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">change_feed</span><span class="p">:</span> <span class="nx">Optional[ChangeFeedArgs]</span> = None<span class="p">, </span><span class="nx">container_delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DeleteRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[CorsRulesArgs]</span> = None<span class="p">, </span><span class="nx">default_service_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DeleteRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_versioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_access_time_tracking_policy</span><span class="p">:</span> <span class="nx">Optional[LastAccessTimeTrackingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[RestorePolicyPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">automatic_snapshot_policy_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">blob_services_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">change_feed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ChangeFeedArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">container_delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeleteRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CorsRulesArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">default_service_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">delete_retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeleteRetentionPolicyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">is_versioning_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                          <span class="nx">last_access_time_tracking_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LastAccessTimeTrackingPolicyArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RestorePolicyPropertiesArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobServiceProperties</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobServiceProperties</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobServiceProperties</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobServiceProperties</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobServiceProperties</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BlobServicePropertiesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -585,22 +603,32 @@ const blobServiceProperties = new azure_native.storage.BlobServiceProperties("bl
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BlobServicePropertiesArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -888,7 +916,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -896,7 +924,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +932,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#automaticsnapshotpolicyenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Snapshot<wbr>Policy<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of isVersioningEnabled property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +940,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#blobservicesname_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Services<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the blob Service within the specified storage account. Blob Service Name must be 'default'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +948,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#changefeed_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Feed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#changefeed">Change<wbr>Feed</a></span>
+        <span class="property-type"><a href="#changefeed">pulumi.<wbr>Input<Change<wbr>Feed<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for change feed events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +956,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#containerdeleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">pulumi.<wbr>Input<Delete<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for container soft delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -936,7 +964,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Cors<wbr>Rules</a></span>
+        <span class="property-type"><a href="#corsrules">pulumi.<wbr>Input<Cors<wbr>Rules<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +972,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#defaultserviceversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +980,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#deleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">pulumi.<wbr>Input<Delete<wbr>Retention<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob soft delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +988,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#isversioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Versioning<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Versioning is enabled if set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +996,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#lastaccesstimetrackingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">pulumi.<wbr>Input<Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +1004,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepolicyproperties">Restore<wbr>Policy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#restorepolicyproperties">pulumi.<wbr>Input<Restore<wbr>Policy<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob restore policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,7 +1016,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -996,7 +1024,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1032,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#automatic_snapshot_policy_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>snapshot_<wbr>policy_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of isVersioningEnabled property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +1040,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#blob_services_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>services_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the blob Service within the specified storage account. Blob Service Name must be 'default'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +1048,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#change_feed_python" style="color: inherit; text-decoration: inherit;">change_<wbr>feed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#changefeed">Change<wbr>Feed<wbr>Args</a></span>
+        <span class="property-type"><a href="#changefeed">Input[Change<wbr>Feed<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for change feed events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1056,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#container_delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">container_<wbr>delete_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Input[Delete<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for container soft delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1036,7 +1064,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Cors<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#corsrules">Input[Cors<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1044,7 +1072,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#default_service_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1052,7 +1080,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Input[Delete<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob soft delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1088,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#is_versioning_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>versioning_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Versioning is enabled if set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1096,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#last_access_time_tracking_policy_python" style="color: inherit; text-decoration: inherit;">last_<wbr>access_<wbr>time_<wbr>tracking_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Input[Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1104,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepolicyproperties">Restore<wbr>Policy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepolicyproperties">Input[Restore<wbr>Policy<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob restore policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1393,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether change feed event logging is enabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is 146000 days (400 years). A null value indicates an infinite retention of the change feed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1519,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1579,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1681,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1689,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1697,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1705,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1713,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1725,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1733,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1741,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1749,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. A list of response headers to expose to CORS clients.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1757,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">Cors<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#corsrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Cors<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1807,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">Sequence[Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corsrule">Input[Cors<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1845,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Cors<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cors<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">Input[Cors<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1911,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1931,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1993,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2013,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether DeleteRetentionPolicy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2107,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2115,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobtype_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#name">Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#name">pulumi.<wbr>Input<Name></a></span>
     </dt>
     <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackinggranularityindays_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Granularity<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_type_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#name">Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#name">Input[Name]</a></span>
     </dt>
     <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracking_granularity_in_days_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>granularity_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobtype_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackinggranularityindays_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Granularity<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2289,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}When set to true last access time based tracking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_type_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2305,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the policy. The valid value is AccessTimeTracking. This field is currently read only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2313,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracking_granularity_in_days_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>granularity_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2389,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Blob restore is enabled if set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2397,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2409,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Blob restore is enabled if set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2503,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Blob restore is enabled if set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastenabledtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Enabled<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of minRestoreTime property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2519,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minrestoretime_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Restore<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the minimum date and time that the restore can be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2539,7 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Blob restore is enabled if set to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2547,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_enabled_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>enabled_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Deprecated in favor of minRestoreTime property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_restore_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>restore_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the minimum date and time that the restore can be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2563,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2617,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2625,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2637,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2645,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -71,7 +71,7 @@ package main
 
 import (
 	iotspaces "github.com/pulumi/pulumi-azure-native/sdk/go/azure/iotspaces"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -177,19 +177,31 @@ const ioTSpace = new azure_native.iotspaces.IoTSpace("ioTSpace", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[IoTSpacesPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[IoTSpacesSkuInfoArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTSpacesPropertiesArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IoTSpacesSkuInfoArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIoTSpace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTSpace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIoTSpace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IoTSpace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IoTSpace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IoTSpaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,22 +236,32 @@ const ioTSpace = new azure_native.iotspaces.IoTSpace("ioTSpace", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IoTSpaceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -431,7 +453,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the IoTSpaces instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -439,7 +461,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesskuinfo">Io<wbr>TSpaces<wbr>Sku<wbr>Info</a></span>
+        <span class="property-type"><a href="#iotspacesskuinfo">pulumi.<wbr>Input<Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +469,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -455,7 +477,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesproperties">Io<wbr>TSpaces<wbr>Properties</a></span>
+        <span class="property-type"><a href="#iotspacesproperties">pulumi.<wbr>Input<Io<wbr>TSpaces<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The common properties of a IoTSpaces service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +485,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the IoTSpaces instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -471,7 +493,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -483,7 +505,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the IoTSpaces instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -491,7 +513,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesskuinfo">Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#iotspacesskuinfo">Input[Io<wbr>TSpaces<wbr>Sku<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +521,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -507,7 +529,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotspacesproperties">Io<wbr>TSpaces<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#iotspacesproperties">Input[Io<wbr>TSpaces<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a IoTSpaces service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +537,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the IoTSpaces instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +545,7 @@ The IoTSpace resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -690,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainer_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerproperties">Storage<wbr>Container<wbr>Properties</a></span>
+        <span class="property-type"><a href="#storagecontainerproperties">pulumi.<wbr>Input<Storage<wbr>Container<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_container_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerproperties">Storage<wbr>Container<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagecontainerproperties">Input[Storage<wbr>Container<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -788,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementapiurl_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Api<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The management Api endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -796,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -804,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webportalurl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Portal<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The management UI endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainer_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Storage<wbr>Container<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#storagecontainerpropertiesresponse">pulumi.<wbr>Input<Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -824,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_api_url_python" style="color: inherit; text-decoration: inherit;">management_<wbr>api_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The management Api endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -832,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -840,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#web_portal_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>portal_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The management UI endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_container_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagecontainerpropertiesresponse">Input[Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties of the designated storage container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -920,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#iotspacessku">Io<wbr>TSpaces<wbr>Sku</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#iotspacessku">pulumi.<wbr>Input<Io<wbr>TSpaces<wbr>Sku></a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -932,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#iotspacessku">Io<wbr>TSpaces<wbr>Sku</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#iotspacessku">Input[Io<wbr>TSpaces<wbr>Sku]</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -970,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -982,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1068,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1104,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1214,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection string of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of storage container in the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subscription identifier of the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}

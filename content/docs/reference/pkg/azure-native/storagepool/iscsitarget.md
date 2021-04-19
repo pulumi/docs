@@ -90,7 +90,7 @@ package main
 
 import (
 	storagepool "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagepool"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -222,19 +222,30 @@ const iscsiTarget = new azure_native.storagepool.IscsiTarget("iscsiTarget", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">disk_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iscsi_target_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_iqn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpgs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TargetPortalGroupCreateArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">disk_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">iscsi_target_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">target_iqn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tpgs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TargetPortalGroupCreateArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IscsiTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -269,22 +280,32 @@ const iscsiTarget = new azure_native.storagepool.IscsiTarget("iscsiTarget", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">IscsiTargetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -460,7 +481,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#diskpoolname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -468,7 +489,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -476,7 +497,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tpgs_nodejs" style="color: inherit; text-decoration: inherit;">tpgs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetportalgroupcreate">Target<wbr>Portal<wbr>Group<wbr>Create[]</a></span>
+        <span class="property-type"><a href="#targetportalgroupcreate">pulumi.<wbr>Input<pulumi.<wbr>Input<Target<wbr>Portal<wbr>Group<wbr>Create<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -484,7 +505,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#iscsitargetname_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Target<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the iSCSI target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -492,7 +513,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targetiqn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -504,7 +525,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#disk_pool_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -512,7 +533,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -520,7 +541,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tpgs_python" style="color: inherit; text-decoration: inherit;">tpgs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetportalgroupcreate">Sequence[Target<wbr>Portal<wbr>Group<wbr>Create<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetportalgroupcreate">Input[Target<wbr>Portal<wbr>Group<wbr>Create<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +549,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#iscsi_target_name_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>target_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the iSCSI target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +557,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#target_iqn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -815,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initiatoriqn_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mappedluns_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -839,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -851,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initiator_iqn_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -859,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapped_luns_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -867,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initiatoriqn_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -969,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mappedluns_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -977,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -985,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initiator_iqn_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1005,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapped_luns_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1013,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1021,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1075,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1083,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prodmodewriteprotect_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Mode<wbr>Write<wbr>Protect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prod_mode_write_protect_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>mode_<wbr>write_<wbr>protect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1157,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1165,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prodmodewriteprotect_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Mode<wbr>Write<wbr>Protect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1185,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prod_mode_write_protect_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>mode_<wbr>write_<wbr>protect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddiskazureresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1247,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_azure_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>azure_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1267,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1321,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddiskazureresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1329,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1341,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_azure_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>azure_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1349,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1419,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">Acl[]</a></span>
+        <span class="property-type"><a href="#acl">pulumi.<wbr>Input<pulumi.<wbr>Input<Acl<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1427,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Attributes</a></span>
+        <span class="property-type"><a href="#attributes">pulumi.<wbr>Input<Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1435,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">Iscsi<wbr>Lun[]</a></span>
+        <span class="property-type"><a href="#iscsilun">pulumi.<wbr>Input<pulumi.<wbr>Input<Iscsi<wbr>Lun<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">Sequence[Acl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#acl">Input[Acl<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1455,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributes">Input[Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">Sequence[Iscsi<wbr>Lun<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iscsilun">Input[Iscsi<wbr>Lun<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1581,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">Acl<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#aclresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Acl<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1589,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#attributesresponse">pulumi.<wbr>Input<Attributes<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1597,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of private IPv4 addresses to connect to the iSCSI target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1605,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Iscsi<wbr>Lun<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1613,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port used by iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1621,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The tag associated with the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1633,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aclresponse">Input[Acl<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1641,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Input[Attributes<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1649,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of private IPv4 addresses to connect to the iSCSI target.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1657,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">Input[Iscsi<wbr>Lun<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1665,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port used by iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1673,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The tag associated with the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}

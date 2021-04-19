@@ -161,6 +161,7 @@ class MyStack : Stack
                 { "administratorLogin", "cloudsa" },
                 { "administratorLoginPassword", "<administratorLoginPassword>" },
                 { "createMode", "Default" },
+                { "minimalTlsVersion", "TLS1_2" },
                 { "sslEnforcement", "Enabled" },
                 { "storageProfile", new AzureNative.DBforMariaDB.Inputs.StorageProfileArgs
                 {
@@ -213,6 +214,7 @@ server = azure_native.dbformariadb.Server("server",
         "administratorLogin": "cloudsa",
         "administratorLoginPassword": "<administratorLoginPassword>",
         "createMode": "Default",
+        "minimalTlsVersion": "TLS1_2",
         "sslEnforcement": "Enabled",
         "storageProfile": azure_native.dbformariadb.StorageProfileArgs(
             backup_retention_days=7,
@@ -251,6 +253,7 @@ const server = new azure_native.dbformariadb.Server("server", {
         administratorLogin: "cloudsa",
         administratorLoginPassword: "<administratorLoginPassword>",
         createMode: "Default",
+        minimalTlsVersion: "TLS1_2",
         sslEnforcement: "Enabled",
         storageProfile: {
             backupRetentionDays: 7,
@@ -495,19 +498,31 @@ const server = new azure_native.dbformariadb.Server("server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[ServerPropertiesForDefaultCreateArgs, ServerPropertiesForGeoRestoreArgs, ServerPropertiesForReplicaArgs, ServerPropertiesForRestoreArgs]]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -542,22 +557,32 @@ const server = new azure_native.dbformariadb.Server("server", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -749,7 +774,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</a></span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">pulumi.<wbr>Input<Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args></a> | <a href="#serverpropertiesforgeorestore">pulumi.<wbr>Input<Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args></a> | <a href="#serverpropertiesforreplica">pulumi.<wbr>Input<Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args></a> | <a href="#serverpropertiesforrestore">pulumi.<wbr>Input<Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -757,7 +782,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +790,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +798,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +806,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +814,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -801,7 +826,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Input[Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args]</a> | <a href="#serverpropertiesforgeorestore">Input[Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args]</a> | <a href="#serverpropertiesforreplica">Input[Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args]</a> | <a href="#serverpropertiesforrestore">Input[Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -809,7 +834,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +842,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location the resource resides in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +850,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +858,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +866,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Application-specific metadata in the form of key-value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,6 +944,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -1044,6 +1077,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -1167,6 +1208,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -1292,6 +1341,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id of a replica server.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
@@ -1385,6 +1442,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
+<h4 id="minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>TLSEnforcement<wbr>Disabled</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum_TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum_TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum_TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>Minimal<wbr>Tls<wbr>Version<wbr>Enum<wbr>TLSEnforcement<wbr>Disabled</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>TLSEnforcement<wbr>Disabled</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>TLS1_0</dt>
+    <dd>TLS1_0</dd><dt>TLS1_1</dt>
+    <dd>TLS1_1</dd><dt>TLS1_2</dt>
+    <dd>TLS1_2</dd><dt>TLS_ENFORCEMENT_DISABLED</dt>
+    <dd>TLSEnforcementDisabled</dd></dl>
+{{% /choosable %}}
+
 <h4 id="privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1418,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1430,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">pulumi.<wbr>Input<Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1554,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1562,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Input[Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1570,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Input[Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1624,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id of the private endpoint connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1632,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">pulumi.<wbr>Input<Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1644,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id of the private endpoint connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1652,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Input[Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1722,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1730,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1738,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1750,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1758,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1766,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1791,6 +1882,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -1844,6 +1943,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -1884,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1892,15 +1999,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#minimaltlsversionenum">pulumi.<wbr>Input<Minimal<wbr>Tls<wbr>Version<wbr>Enum></a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccessenum">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">pulumi.<wbr>Input<Ssl<wbr>Enforcement<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serverversion">pulumi.<wbr>Input<Server<wbr>Version></a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1936,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1944,15 +2059,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password of the administrator login.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#minimaltlsversionenum">Input[Minimal<wbr>Tls<wbr>Version<wbr>Enum]</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccessenum">Input[Public<wbr>Network<wbr>Access<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1960,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Input[Ssl<wbr>Enforcement<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Input[Storage<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serverversion">Input[Server<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,6 +2117,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2038,6 +2169,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2078,15 +2217,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#minimaltlsversionenum">pulumi.<wbr>Input<Minimal<wbr>Tls<wbr>Version<wbr>Enum></a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccessenum">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2094,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">pulumi.<wbr>Input<Ssl<wbr>Enforcement<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2102,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serverversion">pulumi.<wbr>Input<Server<wbr>Version></a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2122,15 +2269,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#minimaltlsversionenum">Input[Minimal<wbr>Tls<wbr>Version<wbr>Enum]</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccessenum">Input[Public<wbr>Network<wbr>Access<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Input[Ssl<wbr>Enforcement<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2146,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Input[Storage<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2154,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serverversion">Input[Server<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2172,6 +2327,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2216,6 +2379,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2256,15 +2427,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#minimaltlsversionenum">pulumi.<wbr>Input<Minimal<wbr>Tls<wbr>Version<wbr>Enum></a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccessenum">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">pulumi.<wbr>Input<Ssl<wbr>Enforcement<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2280,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2288,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serverversion">pulumi.<wbr>Input<Server<wbr>Version></a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2300,15 +2479,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The master server id to create replica from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#minimaltlsversionenum">Input[Minimal<wbr>Tls<wbr>Version<wbr>Enum]</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccessenum">Input[Public<wbr>Network<wbr>Access<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2316,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Input[Ssl<wbr>Enforcement<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Input[Storage<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serverversion">Input[Server<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,6 +2544,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_csharp">
+<a href="#minimaltlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Maria<wbr>DB.<wbr>Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -2410,6 +2605,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="minimaltlsversion_go">
+<a href="#minimaltlsversion_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#minimaltlsversionenum">Minimal<wbr>Tls<wbr>Version<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
@@ -2450,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2458,15 +2661,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceserverid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimaltlsversion_nodejs">
+<a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#minimaltlsversionenum">pulumi.<wbr>Input<Minimal<wbr>Tls<wbr>Version<wbr>Enum></a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccessenum">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2474,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">pulumi.<wbr>Input<Ssl<wbr>Enforcement<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serverversion">pulumi.<wbr>Input<Server<wbr>Version></a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2502,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Restore point creation time (ISO8601 format), specifying the time to restore from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2510,15 +2721,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_server_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source server id to restore from.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimal_tls_version_python">
+<a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#minimaltlsversionenum">Input[Minimal<wbr>Tls<wbr>Version<wbr>Enum]</a></span>
+    </dt>
+    <dd>{{% md %}}Enforce a minimal Tls version for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccessenum">Public<wbr>Network<wbr>Access<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccessenum">Input[Public<wbr>Network<wbr>Access<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2526,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_enforcement_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">Input[Ssl<wbr>Enforcement<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2534,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Input[Storage<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2542,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#serverversion">Server<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serverversion">Input[Server<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}Server version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2670,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2678,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2686,7 +2905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The family of hardware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2694,7 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skutier">pulumi.<wbr>Input<Sku<wbr>Tier></a></span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2714,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2722,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2730,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The family of hardware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2738,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2746,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skutier">Sku<wbr>Tier</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skutier">Input[Sku<wbr>Tier]</a></span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2848,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2856,7 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The family of hardware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2872,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2880,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2892,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2900,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The scale up/out capacity, representing server's compute units.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2908,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The family of hardware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2916,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size code, to be interpreted by resource as appropriate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2924,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tier of the particular SKU, e.g. Basic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3092,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Backup retention days for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3100,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georedundantbackup_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Redundant<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#georedundantbackup">Geo<wbr>Redundant<wbr>Backup</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#georedundantbackup">pulumi.<wbr>Input<Geo<wbr>Redundant<wbr>Backup></a></span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3108,7 +3327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautogrow_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Autogrow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageautogrow">Storage<wbr>Autogrow</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storageautogrow">pulumi.<wbr>Input<Storage<wbr>Autogrow></a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3116,7 +3335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagemb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>MB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3128,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_days_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Backup retention days for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3136,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_redundant_backup_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>redundant_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#georedundantbackup">Geo<wbr>Redundant<wbr>Backup</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#georedundantbackup">Input[Geo<wbr>Redundant<wbr>Backup]</a></span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3144,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_autogrow_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>autogrow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#storageautogrow">Storage<wbr>Autogrow</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storageautogrow">Input[Storage<wbr>Autogrow]</a></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3152,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_mb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3238,7 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Backup retention days for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3246,7 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#georedundantbackup_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Redundant<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3254,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageautogrow_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Autogrow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3262,7 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagemb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>MB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3274,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_days_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Backup retention days for the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3282,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#geo_redundant_backup_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>redundant_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable Geo-redundant or not for server backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3290,7 +3509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_autogrow_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>autogrow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enable Storage Auto Grow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3298,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_mb_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max storage allowed for a server.{{% /md %}}</dd></dl>
 {{% /choosable %}}

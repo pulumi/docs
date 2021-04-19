@@ -60,7 +60,7 @@ package main
 
 import (
 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -135,19 +135,31 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowlist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AllowlistCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">denylist_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DenylistCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">device_security_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ThresholdCustomAlertRuleArgs]]</span> = None<span class="p">, </span><span class="nx">time_window_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeWindowCustomAlertRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">allowlist_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AllowlistCustomAlertRuleArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">denylist_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DenylistCustomAlertRuleArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">device_security_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ThresholdCustomAlertRuleArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">time_window_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeWindowCustomAlertRuleArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeviceSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceSecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeviceSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceSecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeviceSecurityGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeviceSecurityGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,22 +194,32 @@ const deviceSecurityGroup = new azure_native.security.DeviceSecurityGroup("devic
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DeviceSecurityGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -389,7 +411,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +419,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowlistrules_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertrule">Allowlist<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -405,7 +427,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#denylistrules_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertrule">Denylist<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#denylistcustomalertrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -413,7 +435,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#devicesecuritygroupname_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Security<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +443,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertrule">Threshold<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +451,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#timewindowrules_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertrule">Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -441,7 +463,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -449,7 +471,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowlist_rules_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertrule">Sequence[Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertrule">Input[Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -457,7 +479,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#denylist_rules_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertrule">Sequence[Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#denylistcustomalertrule">Input[Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -465,7 +487,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#device_security_group_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>security_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the device security group. Note that the name of the device security group is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -473,7 +495,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertrule">Sequence[Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertrule">Input[Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +503,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#time_window_rules_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertrule">Sequence[Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertrule">Input[Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowlistvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -672,7 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -684,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowlist_values_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -692,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -794,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowlistvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowlist<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -802,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -810,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -818,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -826,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowlist_values_python" style="color: inherit; text-decoration: inherit;">allowlist_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The values to allow. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -846,7 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -854,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -862,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -870,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -924,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denylistvalues_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -932,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -944,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denylist_values_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -952,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1054,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denylistvalues_nodejs" style="color: inherit; text-decoration: inherit;">denylist<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1062,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1070,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1078,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1086,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1098,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#denylist_values_python" style="color: inherit; text-decoration: inherit;">denylist_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The values to deny. The format of the values depends on the rule type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1106,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1114,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1122,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1130,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value type of the items in the list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1200,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1208,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1216,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1228,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1236,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1244,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1346,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1354,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1362,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1370,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1378,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1390,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1398,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1406,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1414,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1422,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1508,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1516,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1524,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1532,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timewindowsize_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1544,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1552,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1560,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1568,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_window_size_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1686,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1694,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1702,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1710,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthreshold_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1718,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minthreshold_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1726,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timewindowsize_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1738,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1746,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The display name of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1754,7 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Status of the custom alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1762,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_threshold_python" style="color: inherit; text-decoration: inherit;">max_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1770,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_threshold_python" style="color: inherit; text-decoration: inherit;">min_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1778,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_window_size_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
